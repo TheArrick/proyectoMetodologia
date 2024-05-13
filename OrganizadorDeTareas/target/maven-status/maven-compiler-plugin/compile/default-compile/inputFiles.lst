@@ -2,8 +2,11 @@
 /Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Modelo/Escritor.java
 /Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/Tarea.java
 /Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatLin/Par.java
+/Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/VentanaInicio.java
 /Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/GestorGeneral.java
+/Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/Registrarse.java
 /Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatLin/NodeTE.java
+/Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/IniciarSesion.java
 /Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/Hora.java
 /Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatLin/NodoSE.java
 /Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/Main.java
@@ -11,6 +14,7 @@
 /Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatLin/ListaSE.java
 /Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatLin/List.java
 /Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/Fecha.java
+/Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/prueba.java
 /Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatLin/NodeDE.java
 /Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatLin/Pila.java
 /Users/Arrick/NetBeansProjects/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/GestorUser.java

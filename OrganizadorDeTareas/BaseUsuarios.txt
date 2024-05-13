@@ -1,2 +1,5 @@
 Arrick|netBeans@123
 sebas|Miguel@123
+Arrick3|Arricksito@123
+Arricksito|Arricksito@1234
+Apolinar|Sebas@1234

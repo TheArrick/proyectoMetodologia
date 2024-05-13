@@ -76,6 +76,7 @@ public class GestorUser{
         }
         return us;
     }
+    
 
     public Usuario buscarUsuarioNom(String nombUser){
         Usuario us = null;
