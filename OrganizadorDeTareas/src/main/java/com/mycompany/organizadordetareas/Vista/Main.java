@@ -70,7 +70,7 @@ public class Main {
             }
 
         } while (!segura);
-        if (gestorUsuarios.registrarUsuario(new Usuario(nombreUsuario, contrasenaUsuario))) {
+        if (gestorUsuarios.registrarUsuario(new Usuario(nombreUsuario, contrasenaUsuario, "", 1))) {
             System.out.println("Usuario creado exitosamente, por favor inicie sesion");
         } else {
             System.out.println("Error, el usuario ingresado ya existe, intente de nuevo");

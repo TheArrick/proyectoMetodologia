@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.organizadordetareas.Vista;
+import com.mycompany.organizadordetareas.Controlador.*;
 
 /**
  *
@@ -11,6 +12,7 @@ package com.mycompany.organizadordetareas.Vista;
 public class VentanaInicio extends javax.swing.JFrame {
     private IniciarSesion in; 
     private Registrarse re;
+    private GestorUser gesUs;
 
     /**
      * Creates new form VentanaInicio
@@ -20,6 +22,8 @@ public class VentanaInicio extends javax.swing.JFrame {
         setLocation(400,500);
         setResizable(false);
         setSize(1000,800);
+        gesUs = new GestorUser();
+        setLocationRelativeTo(null);
         
     }
 

@@ -13,17 +13,21 @@ import com.mycompany.organizadordetareas.Controlador.*;
  */
 public class IniciarSesion extends javax.swing.JFrame {
     private VentanaInicio v1;
-    private final GestorUser gestorUsuarios = new GestorUser();
+    private OlvidasteContrasena olvCont;
+    private GestorUser gestorUsuarios;
     /**
      * Creates new form IniciarSesion
      */
     public IniciarSesion() {
+        gestorUsuarios = new GestorUser();
         initComponents();
         setLocation(400,500);
         setSize(1000,800);
         setResizable(false);
         jLabel3.setVisible(false);
         bienvenido.setVisible(false);
+        setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -37,12 +41,13 @@ public class IniciarSesion extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         nomUsuario = new javax.swing.JTextField();
-        contraseña = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         bienvenido = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        campoContras = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,12 +61,6 @@ public class IniciarSesion extends javax.swing.JFrame {
         nomUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomUsuarioActionPerformed(evt);
-            }
-        });
-
-        contraseña.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                contraseñaActionPerformed(evt);
             }
         });
 
@@ -81,6 +80,21 @@ public class IniciarSesion extends javax.swing.JFrame {
         bienvenido.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
         bienvenido.setText("Bienvenido Papu");
 
+        jButton3.setForeground(new java.awt.Color(51, 102, 255));
+        jButton3.setText("¿Olvidaste u contraseña?");
+        jButton3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        campoContras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoContrasActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -93,19 +107,21 @@ public class IniciarSesion extends javax.swing.JFrame {
                 .addContainerGap(375, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nomUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(36, 36, 36)
-                                .addComponent(jButton2)))
-                        .addGap(422, 422, 422))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(bienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(340, 340, 340))))
+                        .addGap(340, 340, 340))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(nomUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel1)
+                                .addComponent(jLabel2)
+                                .addComponent(jLabel3)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(36, 36, 36)
+                                    .addComponent(jButton2)))
+                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(campoContras, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(422, 422, 422))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,17 +130,19 @@ public class IniciarSesion extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(nomUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72)
+                .addGap(37, 37, 37)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
+                .addGap(18, 18, 18)
+                .addComponent(campoContras, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(jButton3)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton2)
                 .addGap(63, 63, 63)
                 .addComponent(bienvenido)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(49, 49, 49))
         );
@@ -143,7 +161,8 @@ public class IniciarSesion extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         String usuario = nomUsuario.getText();
-        String contra = contraseña.getText();
+        char[] con = campoContras.getPassword();
+        String contra = new String(con);
         bienvenido.setVisible(false);
         jLabel3.setVisible(false);
         if(usuario.equals("") || contra.equals("")){
@@ -162,9 +181,17 @@ public class IniciarSesion extends javax.swing.JFrame {
           
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void contraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contraseñaActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // boton olvidaste 
+            olvCont = new OlvidasteContrasena();
+            olvCont.setV1(this);
+            olvCont.setVisible(true);
+            this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void campoContrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoContrasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_contraseñaActionPerformed
+    }//GEN-LAST:event_campoContrasActionPerformed
     public void setV1(VentanaInicio v1){
         this.v1 = v1;
     }
@@ -205,9 +232,10 @@ public class IniciarSesion extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bienvenido;
-    private javax.swing.JTextField contraseña;
+    private javax.swing.JPasswordField campoContras;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -16,11 +16,15 @@ public class Usuario{
     private String nombre;
     private Path dirAs;
     private File file;
+    private int ind;
+    private String respuesta;
 
-    public Usuario(String name, String contra){
+    public Usuario(String name, String contra, String r, int i){
         this.contrasena = contra;
         this.nombre = name;
         this.dirAs = Paths.get("Usuarios", nombre);
+        respuesta = r;
+        ind = i;
     }
 
     public String getContra(){
@@ -40,6 +44,18 @@ public class Usuario{
     }
     
     public String toString(){
-        return nombre+"|"+contrasena;
+        return nombre+"|"+contrasena+"|"+respuesta+"|"+ind;
+    }
+    
+    public int getIndicePregunta(){
+        return ind;
+    }
+    
+    public String getRespuesta(){
+        return respuesta;
+    }
+    
+    public void setContrasena(String cont){
+        contrasena = cont;
     }
 }

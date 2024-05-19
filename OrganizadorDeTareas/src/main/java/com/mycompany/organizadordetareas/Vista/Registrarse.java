@@ -15,6 +15,8 @@ import java.util.regex.Pattern;
 public class Registrarse extends javax.swing.JFrame {
     private final GestorUser gestorUsuarios = new GestorUser();
     private VentanaInicio v1;
+    private String pregAleatoria;
+    private int ind;
     /**
      * Creates new form Registrarse
      */
@@ -24,10 +26,14 @@ public class Registrarse extends javax.swing.JFrame {
         setSize(1000,800);
         setResizable(false);
         errContra.setVisible(false); 
-     errContras.setVisible(false);
-     errUsuario.setVisible(false);
-     exito.setVisible(false);
-    rellenar_label.setVisible(false);
+        errContras.setVisible(false);
+        errUsuario.setVisible(false);
+        exito.setVisible(false);
+        rellenar_label.setVisible(false);
+        ind = (int)(Math.random()*(5) + 1);
+        pregAleatoria = gestorUsuarios.getPreguntaEnPos(ind);
+        preguntaSeguridad.setText(pregAleatoria);
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -40,8 +46,6 @@ public class Registrarse extends javax.swing.JFrame {
     private void initComponents() {
 
         text_usuario = new javax.swing.JTextField();
-        text_contrase = new javax.swing.JTextField();
-        text_recontra = new javax.swing.JTextField();
         usuarioLabel = new javax.swing.JLabel();
         contraLabel = new javax.swing.JLabel();
         reescribrirLabel = new javax.swing.JLabel();
@@ -52,18 +56,16 @@ public class Registrarse extends javax.swing.JFrame {
         rellenar_label = new javax.swing.JLabel();
         exito = new javax.swing.JLabel();
         volver = new javax.swing.JButton();
+        preguntaSeguridad = new javax.swing.JLabel();
+        campoResp = new javax.swing.JTextField();
+        campoContra1 = new javax.swing.JPasswordField();
+        campoContra2 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         text_usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 text_usuarioActionPerformed(evt);
-            }
-        });
-
-        text_recontra.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                text_recontraActionPerformed(evt);
             }
         });
 
@@ -98,42 +100,50 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
 
+        preguntaSeguridad.setText("jLabel1");
+
+        campoResp.setToolTipText("");
+        campoResp.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoRespActionPerformed(evt);
+            }
+        });
+
+        campoContra2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                campoContra2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 98, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(errContra)
-                        .addGap(52, 52, 52))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(exito, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(310, 310, 310))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(405, 405, 405)
+                        .addGap(187, 187, 187)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(usuarioLabel)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(text_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                                .addComponent(text_recontra, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-                                                .addComponent(text_contrase, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)))
-                                        .addComponent(reescribrirLabel))
-                                    .addComponent(contraLabel))
+                                    .addComponent(text_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(usuarioLabel))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(errUsuario)
+                                .addGap(63, 63, 63)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(preguntaSeguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(campoResp, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(contraLabel)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(3, 3, 3)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(82, 82, 82)
-                                        .addComponent(errUsuario))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(91, 91, 91)
-                                        .addComponent(errContras))))))
+                                        .addComponent(reescribrirLabel)
+                                        .addGap(92, 92, 92)
+                                        .addComponent(errContras))
+                                    .addComponent(campoContra2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(campoContra1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(397, 397, 397)
                         .addComponent(rellenar_label))
@@ -144,27 +154,46 @@ public class Registrarse extends javax.swing.JFrame {
                         .addGap(38, 38, 38)
                         .addComponent(volver)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 98, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(errContra)
+                        .addGap(52, 52, 52))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(exito, javax.swing.GroupLayout.PREFERRED_SIZE, 269, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(310, 310, 310))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addComponent(usuarioLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(errUsuario))
-                .addGap(39, 39, 39)
-                .addComponent(contraLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(text_contrase, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
-                    .addComponent(errContras))
-                .addGap(26, 26, 26)
-                .addComponent(reescribrirLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(text_recontra, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addComponent(usuarioLabel)
+                        .addGap(12, 12, 12)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(errUsuario)
+                            .addComponent(text_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(contraLabel))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(88, 88, 88)
+                        .addComponent(preguntaSeguridad)
+                        .addGap(18, 18, 18)
+                        .addComponent(campoResp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addComponent(campoContra1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(reescribrirLabel)
+                        .addGap(28, 28, 28))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(errContras, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(40, 40, 40)))
+                .addComponent(campoContra2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(errContra, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rellenar_label)
@@ -172,7 +201,7 @@ public class Registrarse extends javax.swing.JFrame {
                 .addComponent(btn_registrarse)
                 .addGap(18, 18, 18)
                 .addComponent(exito, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 138, Short.MAX_VALUE)
                 .addComponent(volver)
                 .addGap(42, 42, 42))
         );
@@ -183,10 +212,6 @@ public class Registrarse extends javax.swing.JFrame {
     private void text_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_usuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_text_usuarioActionPerformed
-
-    private void text_recontraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_text_recontraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_text_recontraActionPerformed
     
     public  boolean validarContraSegura(String contrasena) {
         // Al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter
@@ -201,16 +226,18 @@ public class Registrarse extends javax.swing.JFrame {
 
     private void btn_registrarseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registrarseActionPerformed
         String tex_usuario = text_usuario.getText();
-        String tex_contra = text_contrase.getText();
-        String tex_recontra = text_recontra.getText();
+        char [] cont1 = campoContra1.getPassword();
+        char [] cont2 = campoContra2.getPassword();
+        String tex_contra = new String(cont1);
+        String tex_recontra = new String(cont2);
+        String textResp = campoResp.getText();
         
         errContra.setVisible(false); 
-     errContras.setVisible(false);
-     errUsuario.setVisible(false);
-     
+        errContras.setVisible(false);
+        errUsuario.setVisible(false);
     rellenar_label.setVisible(false);
         boolean valida = validarContraSegura(tex_contra);
-        if(tex_usuario.equals("") || tex_contra.equals("")){
+        if(tex_usuario.equals("") || tex_contra.equals("")||textResp.equals("")){
             rellenar_label.setVisible(true);
         }else{
             if(!valida){             
@@ -221,7 +248,7 @@ public class Registrarse extends javax.swing.JFrame {
                   
                 }else{
                    Usuario user = gestorUsuarios.buscarUsuarioNom(tex_usuario);
-                   if (!gestorUsuarios.registrarUsuario(new Usuario(tex_usuario, tex_contra))) {
+                   if (!gestorUsuarios.registrarUsuario(new Usuario(tex_usuario, tex_contra, textResp, ind))) {
                         errUsuario.setVisible(true);
                     } else {
                         exito.setVisible(true);
@@ -241,6 +268,14 @@ public class Registrarse extends javax.swing.JFrame {
         this.setVisible(false);
    
     }//GEN-LAST:event_volverActionPerformed
+
+    private void campoRespActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoRespActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoRespActionPerformed
+
+    private void campoContra2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoContra2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoContra2ActionPerformed
     public void setV1(VentanaInicio v1){
         this.v1 = v1;
     }
@@ -281,15 +316,17 @@ public class Registrarse extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_registrarse;
+    private javax.swing.JPasswordField campoContra1;
+    private javax.swing.JPasswordField campoContra2;
+    private javax.swing.JTextField campoResp;
     private javax.swing.JLabel contraLabel;
     private javax.swing.JLabel errContra;
     private javax.swing.JLabel errContras;
     private javax.swing.JLabel errUsuario;
     private javax.swing.JLabel exito;
+    private javax.swing.JLabel preguntaSeguridad;
     private javax.swing.JLabel reescribrirLabel;
     private javax.swing.JLabel rellenar_label;
-    private javax.swing.JTextField text_contrase;
-    private javax.swing.JTextField text_recontra;
     private javax.swing.JTextField text_usuario;
     private javax.swing.JLabel usuarioLabel;
     private javax.swing.JButton volver;

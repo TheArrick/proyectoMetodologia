@@ -13,10 +13,16 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.io.IOException;
 
+
 public class GestorUser{
     private ArrayList<Usuario> users;
     private boolean creado;
     private Escritor escritor;
+    private final String[]preguntas = { "¿Cuál es tu animal favorito?",
+                                        "¿Cuál es tu color favorito?" ,
+                                        "¿En qué ciudad naciste?" ,
+                                        "¿Cuál es tu marca favorita" ,
+                                        "¿Cuál es tu pelicula favorita?" };
 
     public GestorUser(){
         users = new ArrayList();
@@ -28,13 +34,19 @@ public class GestorUser{
         for(int i = 0; i<base.size();i++){
             String nom = base.get(i)[0];
             String cont = base.get(i)[1];
-
-            Usuario us = new Usuario(nom,cont);
+            String res = base.get(i)[2];
+            int ind = Integer.parseInt(base.get(i)[3]);
+            
+            Usuario us = new Usuario(nom,cont,res,ind);
 
             creado = true;
             registrarUsuario(us);
             creado = false;
         }
+    }
+    
+    public String getPreguntaEnPos(int pos){
+        return preguntas[pos];
     }
 
     public boolean registrarUsuario(Usuario user){
@@ -109,6 +121,24 @@ public class GestorUser{
             }
         }
         directorio.delete();
+    }
+    
+    public boolean verificarRecuperacion(String nombre, String res){
+        Usuario us = buscarUsuarioNom(nombre);
+        boolean flag = false;
+        if(us != null){
+            if(us.getRespuesta().equals(res)){
+                flag = true;
+            }
+        }
+        return flag;
+    }
+    
+    public void modificarContraseña(String nombre, String contraNueva){
+        Usuario us = buscarUsuarioNom(nombre);
+        escritor.eliminar(us.toString());
+        us.setContrasena(contraNueva);
+        escritor.escribir(us.toString());
     }
 }
 

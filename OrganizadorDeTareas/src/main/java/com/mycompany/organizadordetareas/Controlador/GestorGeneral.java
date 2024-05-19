@@ -300,6 +300,7 @@ public class GestorGeneral {
             escritorTarea.escribir(tarea.toString()); // Escribe la tarea en archivo si la bandera lo permite
         }
     }
+    
 
     public boolean validarTiempo(Hora hora, Fecha fecha, String tipo){
         boolean res;
@@ -415,7 +416,7 @@ public class GestorGeneral {
      * Metodo para buscar un objeto Tarea
      * @param titulo, listaTareas.
      */
-    private Tarea buscarTareaObjeto(String s){
+    public Tarea buscarTareaObjeto(String s){
         ListaSE<Tarea> listaT = pqTarea.inOrder();
         Tarea tarea = null;
         ArrayList<Tarea> listaCoin = new ArrayList<>();
@@ -469,7 +470,7 @@ public class GestorGeneral {
      * Metodo para buscar un objeto Evento
      * @param titulo, listaTareas.
      */
-    private Evento buscarEventoObjeto(String s){
+    public Evento buscarEventoObjeto(String s){
         ListaSE<Evento> listaE = pqEvento.inOrder(); // Obtiene la lista de eventos ordenados
         Evento evento = null;
         ArrayList<Evento> listaCoin = new ArrayList<>();
