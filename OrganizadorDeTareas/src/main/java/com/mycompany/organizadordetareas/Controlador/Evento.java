@@ -106,6 +106,10 @@ public class Evento extends Pendiente implements Comparable<Evento> {
     public int getPrioridad() {
         return prioridad;
     }
+    
+    public String getLugar(){
+        return lugar;
+    }
 
     /**
      * Compara este evento con otro evento basado en su prioridad.

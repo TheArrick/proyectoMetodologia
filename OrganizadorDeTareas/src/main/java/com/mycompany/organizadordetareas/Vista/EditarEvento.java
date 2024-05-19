@@ -5,30 +5,49 @@
 package com.mycompany.organizadordetareas.Vista;
 
 import com.mycompany.organizadordetareas.Controlador.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *
  * @author Arrick
  */
 public class EditarEvento extends javax.swing.JFrame {
-
-    private static Evento eventito;
+    Evento evento;
+    
     private GestorGeneral g;
     /**
      * Creates new form EditarEvento
      */
     public EditarEvento(Evento evento) {
+        this.evento = evento;
         initComponents();
-        setSize(1000,600);
+        setSize(1000,800);
         setLocation(400,500);
         setResizable(false);
         
         modificar_titulo.setText(evento.getTitulo());
         modificar_descripcion.setText(evento.getDescripcion());
         modificar_hora.setText(evento.getHora().toString());
-        modificar_fecha.setText(evento.getHora().toString());
+        modificar_fecha.setText(evento.getFecha().toString());
+        modificar_lugar.setText(evento.getLugar());
+        modificar_prioridad.setSelectedItem(Integer.toString(evento.getPrioridad()));
+        horaNoValida.setVisible(false);
+        fechaNoValida.setVisible(false);
     }
-
+    private boolean validarHora(String cad) {
+        String patron = "^([01]?[0-9]|2[0-3]):[0-5][0-9]$";
+        Pattern pattern = Pattern.compile(patron);
+        Matcher matcher = pattern.matcher(cad);
+        return matcher.matches();
+    }
+    
+    private boolean validarFecha(String cad) {
+        String patron = "^([0-2][0-9]|3[0-1])-(0[1-9]|1[0-2])-(\\d{4})$";
+        Pattern pattern = Pattern.compile(patron);
+        Matcher matcher = pattern.matcher(cad);
+        return matcher.matches();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -54,6 +73,8 @@ public class EditarEvento extends javax.swing.JFrame {
         modificar_prioridad = new javax.swing.JComboBox<>();
         cancelar = new javax.swing.JButton();
         guardar = new javax.swing.JButton();
+        horaNoValida = new javax.swing.JLabel();
+        fechaNoValida = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -110,6 +131,10 @@ public class EditarEvento extends javax.swing.JFrame {
             }
         });
 
+        horaNoValida.setText("Hora no valida");
+
+        fechaNoValida.setText("Fecha no valida");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -128,7 +153,9 @@ public class EditarEvento extends javax.swing.JFrame {
                             .addComponent(jLabel4)
                             .addComponent(jLabel3)
                             .addComponent(jLabel5)
-                            .addComponent(jLabel7))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(horaNoValida)
+                                .addComponent(jLabel7)))
                         .addGap(155, 155, 155)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(modificar_descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -138,11 +165,13 @@ public class EditarEvento extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(modificar_hora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(131, 131, 131)
-                                .addComponent(jLabel6)
-                                .addGap(56, 56, 56)
-                                .addComponent(modificar_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)))
-                .addGap(54, 54, 54))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(fechaNoValida)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel6)
+                                        .addGap(56, 56, 56)
+                                        .addComponent(modificar_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(207, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(cancelar)
@@ -175,7 +204,11 @@ public class EditarEvento extends javax.swing.JFrame {
                     .addComponent(modificar_hora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(modificar_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addGap(89, 89, 89)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(horaNoValida)
+                    .addComponent(fechaNoValida))
+                .addGap(66, 66, 66)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(modificar_prioridad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -206,16 +239,24 @@ public class EditarEvento extends javax.swing.JFrame {
     }//GEN-LAST:event_modificar_fechaActionPerformed
 
     private void guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarActionPerformed
+        horaNoValida.setVisible(false);
+        fechaNoValida.setVisible(false);
         String titulo = modificar_titulo.getText();
         String descripcion = modificar_descripcion.getText();
         String lugar = modificar_lugar.getText();
         String hora = modificar_hora.getText();
         String fecha = modificar_fecha.getText();
-        String prioridad = (String)modificar_prioridad.getSelectedItem();
-        
-        g.modificarTitulo(hora, titulo, WIDTH);
-        
-        
+        int prioridad = Integer.parseInt((String)modificar_prioridad.getSelectedItem());
+        if(!validarHora(hora)){
+            horaNoValida.setVisible(true);
+        }else{
+            if(!validarFecha(fecha)){
+            fechaNoValida.setVisible(true);
+            }else{
+                g.modificarTitulo(titulo, evento.getTitulo());
+                evento.getTitulo();
+            }
+        }        
     }//GEN-LAST:event_guardarActionPerformed
 
     /**
@@ -244,11 +285,12 @@ public class EditarEvento extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(EditarEvento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        Evento evento = new Evento("montymontya", "esto tes un ejemplo", new Hora(13, 30), new Fecha(20, 5, 2024), 3, "Umss");
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                EditarEvento editar_evento = new EditarEvento(eventito);
+                EditarEvento editar_evento = new EditarEvento(evento);
                 editar_evento.setVisible(true);
             }
             
@@ -257,7 +299,9 @@ public class EditarEvento extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelar;
+    private javax.swing.JLabel fechaNoValida;
     private javax.swing.JButton guardar;
+    private javax.swing.JLabel horaNoValida;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

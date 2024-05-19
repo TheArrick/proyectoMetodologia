@@ -5,6 +5,8 @@
 package com.mycompany.organizadordetareas.Vista;
 
 import com.mycompany.organizadordetareas.Controlador.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -29,7 +31,12 @@ public class EditarTarea extends javax.swing.JFrame {
        
         setResizable(false);
     }
-
+    private  boolean validarHora(String cad) {
+        String patron = "^([01]?[0-9]|2[0-3]):[0-5][0-9]$";
+        Pattern pattern = Pattern.compile(patron);
+        Matcher matcher = pattern.matcher(cad);
+        return matcher.matches();
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

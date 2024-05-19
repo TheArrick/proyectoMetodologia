@@ -253,7 +253,7 @@ public class CrearEvento extends javax.swing.JFrame {
     }//GEN-LAST:event_txtHoraActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String titulo = txtTitulo.getText();
+        /*String titulo = txtTitulo.getText();
         String descripcion = txtDescripcion.getText();
         String hora = txtHora.getText();
         String fecha = txtFecha.getText();
@@ -262,7 +262,7 @@ public class CrearEvento extends javax.swing.JFrame {
         Evento ev;
         g.registrarEvento(new Evento(titulo,descripcion,hora,fecha,lugar,prioridad));
         menuUs.setVisible(true);
-        this.setVisible(false);
+        this.setVisible(false);*/
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public void setMenuUs(MenuUsuario menuUs){

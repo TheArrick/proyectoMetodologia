@@ -256,6 +256,18 @@ public class GestorGeneral {
         }
         return res;
     }
+    //modificado en void
+    public void modificarTitulo(String nuevoTitulo, String titulo){
+        Evento ev =  buscarEventoObjeto(titulo);
+                String eAntiguo = ev.toString();
+                ev.setTitulo(nuevoTitulo);
+                String eNuevo = ev.toString();
+                escritorEvento.eliminar(eAntiguo);
+                escritorEvento.escribir(eNuevo);
+                ArrayList<String[]> datosEv = escritorEvento.leerTodo();
+                reiniciarArbolEv();
+                registrarBaseEv(datosEv);    
+    }
 
     public boolean modificarPrioridad(int p, String titulo, int tipo){
         boolean res = false;

@@ -187,7 +187,7 @@ public class CrearTarea extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String titulo = txtTitulo.getText();
+        /*String titulo = txtTitulo.getText();
         String hora = txtHora.getText();
         String fecha = txtFecha.getText();
         String prioridad = (String) listPrio.getSelectedItem();
@@ -195,7 +195,7 @@ public class CrearTarea extends javax.swing.JFrame {
         datosTar.add(new String[]{titulo,hora,fecha,prioridad});
         g.registrarTarea(datosTar); 
         menuUs.setVisible(true);
-        this.setVisible(false);
+        this.setVisible(false);*/
     }//GEN-LAST:event_jButton2ActionPerformed
     
     private boolean validarHora(String cad) {
