@@ -9,6 +9,7 @@ import java.util.regex.*;
 import java.time.LocalDateTime;
 import com.mycompany.organizadordetareas.Controlador.*;
 import com.mycompany.organizadordetareas.Controlador.estDatos.estDatLin.*;
+import com.mycompany.organizadordetareas.Modelo.*;
 //._.
 
 /**

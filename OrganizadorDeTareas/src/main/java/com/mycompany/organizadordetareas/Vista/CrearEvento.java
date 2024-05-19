@@ -5,10 +5,12 @@
 package com.mycompany.organizadordetareas.Vista;
 
 import com.mycompany.organizadordetareas.Controlador.Evento;
+import com.mycompany.organizadordetareas.Controlador.Fecha;
 import com.mycompany.organizadordetareas.Controlador.GestorGeneral;
+import com.mycompany.organizadordetareas.Controlador.Hora;
 import com.mycompany.organizadordetareas.Controlador.Usuario;
-import java.util.ArrayList;
-
+import com.mycompany.organizadordetareas.Controlador.Validadores;
+// ._. (flag internacional pluggin)
 /**
  *
  * @author Usuario
@@ -16,13 +18,15 @@ import java.util.ArrayList;
 public class CrearEvento extends javax.swing.JFrame {
 
     private MenuUsuario menuUs;
-    private Usuario us;
     private GestorGeneral g;
+    private Usuario us;
     /**
      * Creates new form CrearEvento
      */
     public CrearEvento() {
         initComponents();
+        lblHoraX.setVisible(false);
+        lblFechaX.setVisible(false);
     }
 
     /**
@@ -50,6 +54,8 @@ public class CrearEvento extends javax.swing.JFrame {
         listPrio = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        lblHoraX = new javax.swing.JLabel();
+        lblFechaX = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lorem Ipsum - App");
@@ -138,6 +144,10 @@ public class CrearEvento extends javax.swing.JFrame {
             }
         });
 
+        lblHoraX.setText("Hora incorrecta, siga el formato hh:mm");
+
+        lblFechaX.setText("Fecha incorrecta, siga el formato dd-mm-aaaa");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -159,36 +169,37 @@ public class CrearEvento extends javax.swing.JFrame {
                 .addGap(155, 155, 155)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblEvento)
+                        .addGap(97, 97, 97)
+                        .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblEvento4)
+                        .addGap(42, 42, 42)
+                        .addComponent(listPrio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(lblEvento3)
                         .addGap(60, 60, 60)
-                        .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblHoraX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtHora))
                         .addGap(64, 64, 64)
-                        .addComponent(lblEvento5)
-                        .addGap(60, 60, 60)
-                        .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblEvento5)
+                                .addGap(60, 60, 60)
+                                .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblFechaX)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblEvento1)
+                            .addComponent(lblEvento2))
+                        .addGap(55, 55, 55)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblEvento)
-                                .addGap(97, 97, 97)
-                                .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblEvento4)
-                                .addGap(42, 42, 42)
-                                .addComponent(listPrio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblEvento1)
-                                    .addComponent(lblEvento2))
-                                .addGap(55, 55, 55)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(24, 24, 24)
-                                        .addComponent(txtLugar, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                                .addGap(24, 24, 24)
+                                .addComponent(txtLugar, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,7 +226,11 @@ public class CrearEvento extends javax.swing.JFrame {
                     .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblEvento5))
-                .addGap(30, 30, 30)
+                .addGap(8, 8, 8)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblHoraX)
+                    .addComponent(lblFechaX))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblEvento4)
                     .addComponent(listPrio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -253,14 +268,37 @@ public class CrearEvento extends javax.swing.JFrame {
     }//GEN-LAST:event_txtHoraActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+<<<<<<< HEAD
         /*String titulo = txtTitulo.getText();
+=======
+        Validadores valid = new Validadores();
+        String titulo = txtTitulo.getText();
+>>>>>>> f86a25d (estoy aqui auron)
         String descripcion = txtDescripcion.getText();
         String hora = txtHora.getText();
         String fecha = txtFecha.getText();
         String lugar = txtLugar.getText();
-        String prioridad = (String) listPrio.getSelectedItem();
-        Evento ev;
-        g.registrarEvento(new Evento(titulo,descripcion,hora,fecha,lugar,prioridad));
+        int prioridad = (int) listPrio.getSelectedItem();
+        Hora horaVal = new Hora(0,0);
+        Fecha fechaVal = new Fecha(0,0,0);
+        if(!valid.validarHora(hora)){
+            lblHoraX.setVisible(true);
+        }else{
+            String[] partes = hora.split(":");
+            int h = Integer.parseInt(partes[0]);
+            int m = Integer.parseInt(partes[1]);
+            horaVal = new Hora(h,m);
+        }
+        if(!valid.validarHora(fecha)){
+            lblFechaX.setVisible(true);
+        }else{
+            String[] partes = fecha.split("-");
+            int dd = Integer.parseInt(partes[0]);
+            int mm = Integer.parseInt(partes[3]);
+            int aaaa = Integer.parseInt(partes[2]);
+            fechaVal = new Fecha(dd,mm,aaaa);
+        }
+        g.registrarEvento(new Evento(titulo,descripcion,horaVal,fechaVal,prioridad,lugar));
         menuUs.setVisible(true);
         this.setVisible(false);*/
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -298,6 +336,7 @@ public class CrearEvento extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new CrearEvento().setVisible(true);
             }
@@ -315,6 +354,8 @@ public class CrearEvento extends javax.swing.JFrame {
     private javax.swing.JLabel lblEvento3;
     private javax.swing.JLabel lblEvento4;
     private javax.swing.JLabel lblEvento5;
+    private javax.swing.JLabel lblFechaX;
+    private javax.swing.JLabel lblHoraX;
     private javax.swing.JComboBox<String> listPrio;
     private javax.swing.JTextField txtDescripcion;
     private javax.swing.JTextField txtFecha;

@@ -15,6 +15,7 @@ public class IniciarSesion extends javax.swing.JFrame {
     private VentanaInicio v1;
     private OlvidasteContrasena olvCont;
     private GestorUser gestorUsuarios;
+    private MenuUsuario menuUs;
     /**
      * Creates new form IniciarSesion
      */
@@ -177,8 +178,8 @@ public class IniciarSesion extends javax.swing.JFrame {
             }
         
         }
-        
-          
+        menuUs.setVisible(true);
+        this.dispose(); 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
