@@ -419,7 +419,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuUsuario(new Usuario("Arrick", "netBeans@123")).setVisible(true);
+                new MenuUsuario(new Usuario("Arrick", "netBeans@123","a",5)).setVisible(true);
             }
         });
     }

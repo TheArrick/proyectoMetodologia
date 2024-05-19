@@ -4,6 +4,7 @@
  */
 package com.mycompany.organizadordetareas.Vista;
 
+import com.mycompany.organizadordetareas.Controlador.Evento;
 import com.mycompany.organizadordetareas.Controlador.GestorGeneral;
 import com.mycompany.organizadordetareas.Controlador.Usuario;
 import java.util.ArrayList;
@@ -258,9 +259,8 @@ public class CrearEvento extends javax.swing.JFrame {
         String fecha = txtFecha.getText();
         String lugar = txtLugar.getText();
         String prioridad = (String) listPrio.getSelectedItem();
-        ArrayList<String[]> datosEv = new ArrayList<>();
-        datosEv.add(new String[]{titulo,descripcion,hora,fecha,lugar,prioridad});
-        g.registrarBaseEv(datosEv);
+        Evento ev;
+        g.registrarEvento(new Evento(titulo,descripcion,hora,fecha,lugar,prioridad));
         menuUs.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
