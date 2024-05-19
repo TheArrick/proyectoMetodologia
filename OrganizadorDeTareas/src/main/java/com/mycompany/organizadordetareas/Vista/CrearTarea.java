@@ -7,6 +7,8 @@ package com.mycompany.organizadordetareas.Vista;
 import com.mycompany.organizadordetareas.Controlador.GestorGeneral;
 import com.mycompany.organizadordetareas.Controlador.Usuario;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  *
@@ -191,10 +193,24 @@ public class CrearTarea extends javax.swing.JFrame {
         String prioridad = (String) listPrio.getSelectedItem();
         ArrayList<String[]> datosTar = new ArrayList<>();
         datosTar.add(new String[]{titulo,hora,fecha,prioridad});
-        g.registrarBaseTar(datosTar); 
+        g.registrarTarea(datosTar); 
         menuUs.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+    
+    private boolean validarHora(String cad) {
+        String patron = "^([01]?[0-9]|2[0-3]):[0-5][0-9]$";
+        Pattern pattern = Pattern.compile(patron);
+        Matcher matcher = pattern.matcher(cad);
+        return matcher.matches();
+    }
+
+    private boolean validarFecha(String cad) {
+        String patron = "^([0-2][0-9]|3[0-1])-(0[1-9]|1[0-2])-(\\d{4})$";
+        Pattern pattern = Pattern.compile(patron);
+        Matcher matcher = pattern.matcher(cad);
+        return matcher.matches();
+    }
     
     public void setMenuUs(MenuUsuario menuUs){
         this.menuUs = menuUs;

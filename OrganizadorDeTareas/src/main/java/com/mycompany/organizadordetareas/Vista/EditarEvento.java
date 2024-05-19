@@ -213,7 +213,7 @@ public class EditarEvento extends javax.swing.JFrame {
         String fecha = modificar_fecha.getText();
         String prioridad = (String)modificar_prioridad.getSelectedItem();
         
-        g.modificarTitulo(hora, titulo, WIDTH)
+        g.modificarTitulo(hora, titulo, WIDTH);
         
         
     }//GEN-LAST:event_guardarActionPerformed
