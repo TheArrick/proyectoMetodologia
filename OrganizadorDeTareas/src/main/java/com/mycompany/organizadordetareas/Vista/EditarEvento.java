@@ -15,6 +15,7 @@ import java.util.regex.Pattern;
 public class EditarEvento extends javax.swing.JFrame {
     Evento evento;
     
+    
     private GestorGeneral g;
     /**
      * Creates new form EditarEvento

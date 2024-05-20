@@ -1,1 +1,6 @@
 pol|Pol@1234|ardidas|3
+Miguel|Sebas@123|negro|1
+Miguel2|Sebas@123|InkaCola|3
+Sebas|Miguel@123|Lima peru|2
+Pol2|Pol@1234|ardidas|3
+PolOficial|Polsito@1|Star wars 8|4

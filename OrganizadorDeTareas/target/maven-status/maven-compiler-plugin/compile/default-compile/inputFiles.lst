@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/CrearTarea.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatLin/ListaSE.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/EditarTarea.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatLin/List.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/EditarEvento.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatLin/Par.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/Registrarse.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/IniciarSesion.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/MenuUsuario.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatLin/NodeTE.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatLin/NodeDE.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/Evento.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/prueba.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/GestorUser.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/Hora.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatLin/Pila.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatNoLin/ArbolBB.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/Usuario.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/Main.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/estDatos/estDatLin/NodoSE.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Modelo/Escritor.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/CrearEvento.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/Tarea.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/GestorGeneral.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/Fecha.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Controlador/Pendiente.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/OlvidasteContrasena.java
-/Users/Arrick/proyectoMetodologia/OrganizadorDeTareas/src/main/java/com/mycompany/organizadordetareas/Vista/VentanaInicio.java
-=======
 C:\Users\Usuario\Documents\new VidaGit\proyectoMetodologia\OrganizadorDeTareas\src\main\java\com\mycompany\organizadordetareas\Controlador\Validadores.java
 C:\Users\Usuario\Documents\new VidaGit\proyectoMetodologia\OrganizadorDeTareas\src\main\java\com\mycompany\organizadordetareas\Vista\Main.java
 C:\Users\Usuario\Documents\new VidaGit\proyectoMetodologia\OrganizadorDeTareas\src\main\java\com\mycompany\organizadordetareas\Controlador\GestorGeneral.java
@@ -57,4 +27,3 @@ C:\Users\Usuario\Documents\new VidaGit\proyectoMetodologia\OrganizadorDeTareas\s
 C:\Users\Usuario\Documents\new VidaGit\proyectoMetodologia\OrganizadorDeTareas\src\main\java\com\mycompany\organizadordetareas\Vista\EditarTarea.java
 C:\Users\Usuario\Documents\new VidaGit\proyectoMetodologia\OrganizadorDeTareas\src\main\java\com\mycompany\organizadordetareas\Controlador\estDatos\estDatNoLin\ArbolBB.java
 C:\Users\Usuario\Documents\new VidaGit\proyectoMetodologia\OrganizadorDeTareas\src\main\java\com\mycompany\organizadordetareas\Controlador\Evento.java
->>>>>>> f86a25d (estoy aqui auron)

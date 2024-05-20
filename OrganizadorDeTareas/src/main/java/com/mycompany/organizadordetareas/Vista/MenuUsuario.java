@@ -15,6 +15,8 @@ public class MenuUsuario extends javax.swing.JFrame {
 //Atributo Usuario para poder acceder a su nombre y su ruta
    private CrearEvento crearEv;
    private CrearTarea crearTar;
+   private EditarEvento editEvento;
+   private EditarTarea editTarea;
    Usuario user;
    GestorGeneral g;
     /**
@@ -22,6 +24,7 @@ public class MenuUsuario extends javax.swing.JFrame {
      * @param u es el usuario que inicio sesion
      */
     public MenuUsuario(Usuario u) {
+        setLocationRelativeTo(null);
         user = u;
         g = new GestorGeneral(u);
         initComponents();
@@ -92,12 +95,13 @@ public class MenuUsuario extends javax.swing.JFrame {
         });
     
     }
- private void meterEventos(){
+ public void meterEventos(){
         JPanel panelEventos = new JPanel();
         panelEventos.setLayout(new GridLayout(0, 1)); // Establecer un diseño de cuadrícula
         
         // Supongamos que tienes un arreglo de nombres de eventos
-        String[] nombresEventos = {};
+        String aux = g.imprimirOrdenadoEvento();
+        String[] nombresEventos = aux.split("\n");
         
         // Añadir etiquetas con los nombres de los eventos al panel
         for (String nombre : nombresEventos) {
@@ -108,12 +112,13 @@ public class MenuUsuario extends javax.swing.JFrame {
         scrollEvento.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
     }
     
-    private void meterTareas(){
+    public void meterTareas(){
         JPanel panelTareas = new JPanel();
         panelTareas.setLayout(new GridLayout(0, 1)); // Establecer un diseño de cuadrícula
         
         // Supongamos que tienes un arreglo de nombres de eventos
-        String[] nombresTareas = {};
+        String aux = g.imprimirOrdenadoTarea();
+        String[] nombresTareas = aux.split("\n");
         
         // Añadir etiquetas con los nombres de los eventos al panel
         for (String nombre : nombresTareas) {
@@ -141,7 +146,6 @@ public class MenuUsuario extends javax.swing.JFrame {
         bttnAddEvento = new javax.swing.JButton();
         bttnAddTarea = new javax.swing.JButton();
         scrollEvento = new javax.swing.JScrollPane();
-        jScrollPane2 = new javax.swing.JScrollPane();
         scrollTarea = new javax.swing.JScrollPane();
         bttnEliminarTarea = new javax.swing.JButton();
         bttnEditarTarea = new javax.swing.JButton();
@@ -179,8 +183,6 @@ public class MenuUsuario extends javax.swing.JFrame {
                 bttnAddTareaActionPerformed(evt);
             }
         });
-
-        jScrollPane2.setViewportView(scrollTarea);
 
         bttnEliminarTarea.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         bttnEliminarTarea.setText("Eliminar");
@@ -244,48 +246,45 @@ public class MenuUsuario extends javax.swing.JFrame {
                 .addGap(75, 75, 75)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblBienvenida, javax.swing.GroupLayout.DEFAULT_SIZE, 230, Short.MAX_VALUE)
+                        .addGap(435, 435, 435)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(txtBuscarTarea, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGap(6, 6, 6)
+                                    .addComponent(txtBuscarEvento))))
+                        .addGap(121, 121, 121))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblEvento)
+                        .addGap(33, 33, 33)
+                        .addComponent(bttnAddEvento)
+                        .addGap(86, 86, 86)
+                        .addComponent(lblTarea)
+                        .addGap(32, 32, 32)
+                        .addComponent(bttnAddTarea)
+                        .addGap(531, 531, 531))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblEvento)
-                                .addGap(33, 33, 33)
-                                .addComponent(bttnAddEvento)
-                                .addGap(86, 86, 86)
-                                .addComponent(lblTarea)
-                                .addGap(32, 32, 32)
-                                .addComponent(bttnAddTarea))
+                                .addComponent(scrollEvento, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(scrollTarea, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(scrollEvento)
-                                        .addGap(2, 2, 2))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(bttnEliminarEvento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(bttnEditarEvento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addComponent(bttnCerrarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(18, 18, 18)
+                                .addComponent(bttnEliminarTarea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addComponent(bttnEliminarTarea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(bttnEditarTarea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jScrollPane2)
-                                        .addGap(4, 4, 4)))))
-                        .addGap(250, 250, 250))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblBienvenida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(435, 435, 435)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(txtBuscarTarea, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(6, 6, 6)
-                            .addComponent(txtBuscarEvento))))
-                .addGap(121, 121, 121))
+                                .addComponent(bttnEditarTarea, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(531, 531, 531))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -309,17 +308,17 @@ public class MenuUsuario extends javax.swing.JFrame {
                 .addComponent(txtBuscarEvento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(scrollEvento, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
-                                .addGap(2, 2, 2)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(42, 42, 42)
                         .addComponent(txtBuscarTarea, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addComponent(scrollTarea, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                            .addComponent(scrollEvento, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(bttnEliminarTarea, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bttnEditarTarea, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -335,6 +334,7 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void bttnAddEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnAddEventoActionPerformed
         crearEv = new CrearEvento();
+        //Se instancia el MenuUsuario asi que las demas clases pueden usar a libertad el MenuUsuario actualizado automaticamente.
         crearEv.setMenuUs(this);
         crearEv.setVisible(true);
         this.dispose();
@@ -342,13 +342,24 @@ public class MenuUsuario extends javax.swing.JFrame {
 
     private void bttnAddTareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnAddTareaActionPerformed
         crearTar = new CrearTarea();
+        //Se instancia el MenuUsuario asi que las demas clases pueden usar a libertad el MenuUsuario actualizado automaticamente.
         crearTar.setMenuUs(this);
         crearTar.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_bttnAddTareaActionPerformed
 
     private void bttnEditarTareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnEditarTareaActionPerformed
-        //Linkear con el frame de arrick
+        String nombre = JOptionPane.showInputDialog(null, "Ingrese el titulo de la tarea a editar:", "Editar Tarea", JOptionPane.QUESTION_MESSAGE);
+                if(nombre!=null){
+                    Tarea posibleTarea = g.buscarTareaObjeto(nombre);
+                    if(posibleTarea!=null){
+                        editTarea = new EditarTarea(posibleTarea);
+                        editTarea.setVisible(true);
+                        this.dispose();
+                    }else{
+                        JOptionPane.showMessageDialog(null, "No se logro encontrar su tarea");
+                    }
+                }
     }//GEN-LAST:event_bttnEditarTareaActionPerformed
 
     private void bttnEliminarTareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnEliminarTareaActionPerformed
@@ -371,7 +382,17 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_bttnEliminarEventoActionPerformed
 
     private void bttnEditarEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnEditarEventoActionPerformed
-        //Linkear con el frame de arrick
+        String nombre = JOptionPane.showInputDialog(null, "Ingrese el titulo DEL EVENTO a editar:", "Editar Evento", JOptionPane.QUESTION_MESSAGE);
+                if(nombre!=null){
+                    Evento posibleEvento = g.buscarEventoObjeto(nombre);
+                    if(posibleEvento!=null){
+                        editEvento = new EditarEvento(posibleEvento);
+                        editEvento.setVisible(true);
+                        this.dispose();
+                    }else{
+                        JOptionPane.showMessageDialog(null, "No se logro encontrar su evento");
+                    }
+                }
     }//GEN-LAST:event_bttnEditarEventoActionPerformed
 
     private void bttnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bttnCerrarSesionActionPerformed
@@ -380,13 +401,28 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_bttnCerrarSesionActionPerformed
 
     private void txtBuscarEventoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscarEventoActionPerformed
-        /*String texto = txtBuscarEvento.getText();
-        g.buscarEvento(texto);*/
+        String nombre = txtBuscarEvento.getText();
+                if(nombre!=null){
+                    Evento posibleEvento = g.buscarEventoObjeto(nombre);
+                    if(posibleEvento!=null){
+                        //Lanzar un frame para mostrar tarea y evento
+
+                    }else{
+                        JOptionPane.showMessageDialog(null, "No se logro encontrar su evento");
+                    }
+                }
     }//GEN-LAST:event_txtBuscarEventoActionPerformed
 
     private void txtBuscarTareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBuscarTareaActionPerformed
-        /*String texto = txtBuscarTarea.getText();
-        g.buscarTarea(texto);*/
+        String nombre = txtBuscarTarea.getText();
+                if(nombre!=null){
+                    Tarea posibleTarea = g.buscarTareaObjeto(nombre);
+                    if(posibleTarea!=null){
+                        //Lanzar un frame para mostrar tarea y evento
+                    }else{
+                        JOptionPane.showMessageDialog(null, "No se logro encontrar su tarea");
+                    }
+                }
     }//GEN-LAST:event_txtBuscarTareaActionPerformed
 
     /**
@@ -415,7 +451,7 @@ public class MenuUsuario extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MenuUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -432,7 +468,6 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JButton bttnEditarTarea;
     private javax.swing.JButton bttnEliminarEvento;
     private javax.swing.JButton bttnEliminarTarea;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lblBienvenida;
     private javax.swing.JLabel lblEvento;
     private javax.swing.JLabel lblLogo;

@@ -6,9 +6,9 @@ package com.mycompany.organizadordetareas.Vista;
 
 import com.mycompany.organizadordetareas.Controlador.Evento;
 import com.mycompany.organizadordetareas.Controlador.Fecha;
-import com.mycompany.organizadordetareas.Controlador.GestorGeneral;
+//import com.mycompany.organizadordetareas.Controlador.GestorGeneral;
 import com.mycompany.organizadordetareas.Controlador.Hora;
-import com.mycompany.organizadordetareas.Controlador.Usuario;
+//import com.mycompany.organizadordetareas.Controlador.Usuario;
 import com.mycompany.organizadordetareas.Controlador.Validadores;
 // ._. (flag internacional pluggin)
 /**
@@ -18,12 +18,13 @@ import com.mycompany.organizadordetareas.Controlador.Validadores;
 public class CrearEvento extends javax.swing.JFrame {
 
     private MenuUsuario menuUs;
-    private GestorGeneral g;
-    private Usuario us;
+    //private GestorGeneral g;
+    //private Usuario us;
     /**
      * Creates new form CrearEvento
      */
     public CrearEvento() {
+        setLocationRelativeTo(null);
         initComponents();
         lblHoraX.setVisible(false);
         lblFechaX.setVisible(false);
@@ -268,17 +269,14 @@ public class CrearEvento extends javax.swing.JFrame {
     }//GEN-LAST:event_txtHoraActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-<<<<<<< HEAD
-        /*String titulo = txtTitulo.getText();
-=======
+
         Validadores valid = new Validadores();
         String titulo = txtTitulo.getText();
->>>>>>> f86a25d (estoy aqui auron)
         String descripcion = txtDescripcion.getText();
         String hora = txtHora.getText();
         String fecha = txtFecha.getText();
         String lugar = txtLugar.getText();
-        int prioridad = (int) listPrio.getSelectedItem();
+        int prioridad = Integer.parseInt(listPrio.getSelectedItem().toString());
         Hora horaVal = new Hora(0,0);
         Fecha fechaVal = new Fecha(0,0,0);
         if(!valid.validarHora(hora)){
@@ -289,18 +287,19 @@ public class CrearEvento extends javax.swing.JFrame {
             int m = Integer.parseInt(partes[1]);
             horaVal = new Hora(h,m);
         }
-        if(!valid.validarHora(fecha)){
+        if(!valid.validarFecha(fecha)){
             lblFechaX.setVisible(true);
         }else{
             String[] partes = fecha.split("-");
             int dd = Integer.parseInt(partes[0]);
-            int mm = Integer.parseInt(partes[3]);
+            int mm = Integer.parseInt(partes[1]);
             int aaaa = Integer.parseInt(partes[2]);
             fechaVal = new Fecha(dd,mm,aaaa);
         }
-        g.registrarEvento(new Evento(titulo,descripcion,horaVal,fechaVal,prioridad,lugar));
+        menuUs.g.registrarEvento(new Evento(titulo,descripcion,horaVal,fechaVal,prioridad,lugar));
         menuUs.setVisible(true);
-        this.setVisible(false);*/
+        this.setVisible(false);
+        menuUs.meterEventos();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public void setMenuUs(MenuUsuario menuUs){

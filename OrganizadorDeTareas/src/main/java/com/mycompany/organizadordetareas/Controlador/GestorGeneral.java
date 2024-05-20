@@ -423,7 +423,26 @@ public class GestorGeneral {
         }
         // Imprime las tareas ordenadas
     }
-
+    
+    public String imprimirOrdenadoEvento(){
+        ListaSE<Evento> lisEvento = pqEvento.inOrder();
+        String str = "";
+        for(int i = 0; i < lisEvento.length(); i++){
+            str = str + lisEvento.get(i).mostrar() + "\n";
+        }
+        return str;
+    }
+    
+    public String imprimirOrdenadoTarea(){
+        ListaSE<Tarea> lisTarea = pqTarea.inOrder();
+        String str = "";
+        System.out.println("Tareas Pendientes: ");
+        for(int i = 0; i < lisTarea.length(); i++){ 
+            str = str + lisTarea.get(i).mostrar() + "\n";
+        }
+        return str;
+    }
+    
     /**
      * Metodo para buscar un objeto Tarea
      * @param titulo, listaTareas.

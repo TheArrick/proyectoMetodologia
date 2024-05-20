@@ -5,10 +5,10 @@
 package com.mycompany.organizadordetareas.Vista;
 
 import com.mycompany.organizadordetareas.Controlador.Fecha;
-import com.mycompany.organizadordetareas.Controlador.GestorGeneral;
+//import com.mycompany.organizadordetareas.Controlador.GestorGeneral;
 import com.mycompany.organizadordetareas.Controlador.Hora;
 import com.mycompany.organizadordetareas.Controlador.Tarea;
-import com.mycompany.organizadordetareas.Controlador.Usuario;
+//import com.mycompany.organizadordetareas.Controlador.Usuario;
 import com.mycompany.organizadordetareas.Controlador.Validadores;
 
 /**
@@ -18,14 +18,13 @@ import com.mycompany.organizadordetareas.Controlador.Validadores;
 public class CrearTarea extends javax.swing.JFrame {
 
     private MenuUsuario menuUs;
-    private Usuario us;
-    private GestorGeneral g;
+    //private Usuario us;
+    //private GestorGeneral g;
     /**
      * Creates new form CrearEvento
      */
     public CrearTarea() {
-        us = new Usuario("Arvi","Arvi@123","a",5);
-        g = new GestorGeneral(us);
+        setLocationRelativeTo(null);
         initComponents();
         lblHoraX.setVisible(false);
         lblFechaX.setVisible(false);
@@ -204,7 +203,7 @@ public class CrearTarea extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        /*String titulo = txtTitulo.getText();
+        String titulo = txtTitulo.getText();
         String hora = txtHora.getText();
         String fecha = txtFecha.getText();
         int prioridad = Integer.parseInt(listPrio.getSelectedItem().toString());
@@ -224,13 +223,14 @@ public class CrearTarea extends javax.swing.JFrame {
         }else{
             String[] partes = fecha.split("-");
             int dd = Integer.parseInt(partes[0]);
-            int mm = Integer.parseInt(partes[3]);
+            int mm = Integer.parseInt(partes[1]);
             int aaaa = Integer.parseInt(partes[2]);
             fechaVal = new Fecha(dd,mm,aaaa);
         }
-        g.registrarTarea(new Tarea(titulo,horaVal,fechaVal,prioridad));
+        menuUs.g.registrarTarea(new Tarea(titulo,horaVal,fechaVal,prioridad));
         menuUs.setVisible(true);
-        this.setVisible(false);*/
+        this.setVisible(false);
+        menuUs.meterTareas();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     public void setMenuUs(MenuUsuario menuUs){

@@ -58,6 +58,7 @@ public class GestorUser{
                 File file;
                 try {
                     Files.createDirectories(user.getDirAs());
+                    System.out.println(Files.createDirectories(user.getDirAs()).toString());
                 } catch (IOException e) {
                     System.err.println("Error al crear la carpeta: " + e.getMessage());
                 }

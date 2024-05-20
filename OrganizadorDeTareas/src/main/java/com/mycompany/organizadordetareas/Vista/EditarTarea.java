@@ -16,17 +16,16 @@ public class EditarTarea extends javax.swing.JFrame {
     /**
      * Creates new form EditarTarea
      */
-     static Evento eventito;
-    Evento event;
-    public EditarTarea(Evento evento) {
-        event = evento;
-        eventito = evento;
+     static Tarea tareita; //pq static ridiculo
+    Tarea tar;
+    public EditarTarea(Tarea tarea) { // ey esto es Tarea no evento
+        tar = tarea;
+        tareita = tarea;
         initComponents();
         setSize(1000,600);
         setLocation(400,500);
-        titulo.setText(evento.getTitulo());
-        descripcion.setText(evento.getDescripcion());
-        hora.setText(evento.getHora().toString());
+        titulo.setText(tarea.getTitulo());
+        hora.setText(tarea.getHora().toString());
         
        
         setResizable(false);
@@ -260,7 +259,7 @@ public class EditarTarea extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                EditarTarea editar = new EditarTarea(eventito);
+                EditarTarea editar = new EditarTarea(tareita);
                 editar.setVisible(true);
             }
         });
