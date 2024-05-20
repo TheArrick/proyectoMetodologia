@@ -4,11 +4,12 @@
  */
 package com.mycompany.organizadordetareas.Vista;
 
-import com.mycompany.organizadordetareas.Controlador.GestorGeneral;
-import com.mycompany.organizadordetareas.Controlador.Usuario;
-import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import com.mycompany.organizadordetareas.Controlador.Fecha;
+//import com.mycompany.organizadordetareas.Controlador.GestorGeneral;
+import com.mycompany.organizadordetareas.Controlador.Hora;
+import com.mycompany.organizadordetareas.Controlador.Tarea;
+//import com.mycompany.organizadordetareas.Controlador.Usuario;
+import com.mycompany.organizadordetareas.Controlador.Validadores;
 
 /**
  *
@@ -17,13 +18,16 @@ import java.util.regex.Pattern;
 public class CrearTarea extends javax.swing.JFrame {
 
     private MenuUsuario menuUs;
-    private Usuario us;
-    private GestorGeneral g;
+    //private Usuario us;
+    //private GestorGeneral g;
     /**
      * Creates new form CrearEvento
      */
     public CrearTarea() {
+        setLocationRelativeTo(null);
         initComponents();
+        lblHoraX.setVisible(false);
+        lblFechaX.setVisible(false);
     }
 
     /**
@@ -47,6 +51,8 @@ public class CrearTarea extends javax.swing.JFrame {
         listPrio = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        lblHoraX = new javax.swing.JLabel();
+        lblFechaX = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lorem Ipsum - App");
@@ -104,6 +110,10 @@ public class CrearTarea extends javax.swing.JFrame {
             }
         });
 
+        lblHoraX.setText("Hora incorrecta, siga el formato hh:mm");
+
+        lblFechaX.setText("Fecha incorrecta, siga el formato dd-mm-aaaa");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -140,6 +150,10 @@ public class CrearTarea extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHoraX)
+                    .addComponent(lblFechaX))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -156,11 +170,13 @@ public class CrearTarea extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblEvento3)
-                    .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblHoraX))
                 .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblEvento5)
-                    .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblFechaX))
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblEvento4)
@@ -187,31 +203,36 @@ public class CrearTarea extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        /*String titulo = txtTitulo.getText();
+        String titulo = txtTitulo.getText();
         String hora = txtHora.getText();
         String fecha = txtFecha.getText();
-        String prioridad = (String) listPrio.getSelectedItem();
-        ArrayList<String[]> datosTar = new ArrayList<>();
-        datosTar.add(new String[]{titulo,hora,fecha,prioridad});
-        g.registrarTarea(datosTar); 
+        int prioridad = Integer.parseInt(listPrio.getSelectedItem().toString());
+        Validadores valid = new Validadores();
+        Hora horaVal = new Hora(0,0);
+        Fecha fechaVal = new Fecha(0,0,0);
+        if(!valid.validarHora(hora)){
+            lblHoraX.setVisible(true);
+        }else{
+            String[] partes = hora.split(":");
+            int h = Integer.parseInt(partes[0]);
+            int m = Integer.parseInt(partes[1]);
+            horaVal = new Hora(h,m);
+        }
+        if(!valid.validarFecha(fecha)){
+            lblFechaX.setVisible(true);
+        }else{
+            String[] partes = fecha.split("-");
+            int dd = Integer.parseInt(partes[0]);
+            int mm = Integer.parseInt(partes[1]);
+            int aaaa = Integer.parseInt(partes[2]);
+            fechaVal = new Fecha(dd,mm,aaaa);
+        }
+        menuUs.g.registrarTarea(new Tarea(titulo,horaVal,fechaVal,prioridad));
         menuUs.setVisible(true);
-        this.setVisible(false);*/
+        this.setVisible(false);
+        menuUs.meterTareas();
     }//GEN-LAST:event_jButton2ActionPerformed
-    
-    private boolean validarHora(String cad) {
-        String patron = "^([01]?[0-9]|2[0-3]):[0-5][0-9]$";
-        Pattern pattern = Pattern.compile(patron);
-        Matcher matcher = pattern.matcher(cad);
-        return matcher.matches();
-    }
 
-    private boolean validarFecha(String cad) {
-        String patron = "^([0-2][0-9]|3[0-1])-(0[1-9]|1[0-2])-(\\d{4})$";
-        Pattern pattern = Pattern.compile(patron);
-        Matcher matcher = pattern.matcher(cad);
-        return matcher.matches();
-    }
-    
     public void setMenuUs(MenuUsuario menuUs){
         this.menuUs = menuUs;
     }
@@ -261,6 +282,8 @@ public class CrearTarea extends javax.swing.JFrame {
     private javax.swing.JLabel lblEvento3;
     private javax.swing.JLabel lblEvento4;
     private javax.swing.JLabel lblEvento5;
+    private javax.swing.JLabel lblFechaX;
+    private javax.swing.JLabel lblHoraX;
     private javax.swing.JComboBox<String> listPrio;
     private javax.swing.JTextField txtFecha;
     private javax.swing.JTextField txtHora;

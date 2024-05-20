@@ -15,10 +15,12 @@ public class IniciarSesion extends javax.swing.JFrame {
     private VentanaInicio v1;
     private OlvidasteContrasena olvCont;
     private GestorUser gestorUsuarios;
+    private MenuUsuario menuUs;
     /**
      * Creates new form IniciarSesion
      */
     public IniciarSesion() {
+        
         gestorUsuarios = new GestorUser();
         initComponents();
         setLocation(400,500);
@@ -172,13 +174,15 @@ public class IniciarSesion extends javax.swing.JFrame {
             Usuario user = gestorUsuarios.buscarUsuario(usuario, contra);
             if (user != null) {
                 bienvenido.setVisible(true);
+                menuUs = new MenuUsuario(user);
+                menuUs.setVisible(true);
+                this.dispose(); 
             } else {
                 jLabel3.setVisible(true);
             }
         
         }
         
-          
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

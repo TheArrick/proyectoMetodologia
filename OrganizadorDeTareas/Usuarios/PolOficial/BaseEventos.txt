@@ -1,0 +1,4 @@
+Examen|Elementyos pipiipi backtracking|1245|06062024|624 memi 2|3|true
+a|a|1245|06062024|a|3|true
+a|a|1245|06062024|a|3|true
+examen|dsa|1245|06062024|sdfafas|3|true
