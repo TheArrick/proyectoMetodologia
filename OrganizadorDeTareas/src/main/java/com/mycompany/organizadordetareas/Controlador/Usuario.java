@@ -25,7 +25,7 @@ public class Usuario{
         this.dirAs = Paths.get("Usuarios", nombre);
         respuesta = r;
         ind = i;
-        System.out.println(dirAs.toString());
+        
     }
 
     public String getContra(){

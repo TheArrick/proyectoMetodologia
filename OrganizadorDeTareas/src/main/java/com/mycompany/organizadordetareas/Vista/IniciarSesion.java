@@ -177,6 +177,8 @@ public class IniciarSesion extends javax.swing.JFrame {
                 menuUs = new MenuUsuario(user);
                 menuUs.setVisible(true);
                 this.dispose(); 
+                menuUs.meterEventos();
+                menuUs.meterTareas();
             } else {
                 jLabel3.setVisible(true);
             }

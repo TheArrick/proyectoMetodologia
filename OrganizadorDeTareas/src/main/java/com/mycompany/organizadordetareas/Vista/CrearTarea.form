@@ -238,7 +238,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="lblFechaX">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Fecha incorrecta, siga el formato dd-mm-aaaa"/>
+        <Property name="text" type="java.lang.String" value="Fecha incorrecta, siga el formato dd/mm/aaaa"/>
       </Properties>
     </Component>
   </SubComponents>

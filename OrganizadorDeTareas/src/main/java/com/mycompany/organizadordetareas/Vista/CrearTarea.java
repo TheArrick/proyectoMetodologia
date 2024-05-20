@@ -112,7 +112,7 @@ public class CrearTarea extends javax.swing.JFrame {
 
         lblHoraX.setText("Hora incorrecta, siga el formato hh:mm");
 
-        lblFechaX.setText("Fecha incorrecta, siga el formato dd-mm-aaaa");
+        lblFechaX.setText("Fecha incorrecta, siga el formato dd/mm/aaaa");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -221,7 +221,7 @@ public class CrearTarea extends javax.swing.JFrame {
         if(!valid.validarFecha(fecha)){
             lblFechaX.setVisible(true);
         }else{
-            String[] partes = fecha.split("-");
+            String[] partes = fecha.split("/");
             int dd = Integer.parseInt(partes[0]);
             int mm = Integer.parseInt(partes[1]);
             int aaaa = Integer.parseInt(partes[2]);

@@ -17,8 +17,9 @@ public class MenuUsuario extends javax.swing.JFrame {
    private CrearTarea crearTar;
    private EditarEvento editEvento;
    private EditarTarea editTarea;
-   Usuario user;
+    Usuario user;
    GestorGeneral g;
+   
     /**
      * Creates new form MenuUsuario
      * @param u es el usuario que inicio sesion
@@ -353,7 +354,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 if(nombre!=null){
                     Tarea posibleTarea = g.buscarTareaObjeto(nombre);
                     if(posibleTarea!=null){
-                        editTarea = new EditarTarea(posibleTarea);
+                        editTarea = new EditarTarea(posibleTarea, g);
                         editTarea.setVisible(true);
                         this.dispose();
                     }else{
@@ -386,7 +387,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 if(nombre!=null){
                     Evento posibleEvento = g.buscarEventoObjeto(nombre);
                     if(posibleEvento!=null){
-                        editEvento = new EditarEvento(posibleEvento);
+                        editEvento = new EditarEvento(posibleEvento, g);
                         editEvento.setVisible(true);
                         this.dispose();
                     }else{

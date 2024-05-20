@@ -93,7 +93,9 @@ public class GestorGeneral {
             }
         }
     }
-
+    public Usuario getUsuario(){
+        return user;
+    }
     /**
      * Obtiene el árbol de tareas.
      * @return El árbol de tareas.
@@ -110,6 +112,24 @@ public class GestorGeneral {
         return pqEvento;
     }
 
+    public boolean modificarLugar(String l, String titulo){
+        //solo para eventos
+        boolean res = false;
+        Evento e = buscarEventoObjeto(titulo);
+        if(e!=null){
+            String eAntiguo = e.toString();
+            e.setLugar(l);
+            String eNuevo = e.toString();
+            escritorEvento.eliminar(eAntiguo);
+            escritorEvento.escribir(eNuevo);
+            ArrayList<String[]> datosEv = escritorEvento.leerTodo();
+            reiniciarArbolEv();
+            registrarBaseEv(datosEv);
+            res = true;
+        }
+        return res;
+    }
+    
     public boolean modificarDescripcion(String d, String titulo){
         //solo para eventos
         boolean res = false;
@@ -255,18 +275,6 @@ public class GestorGeneral {
             }
         }
         return res;
-    }
-    //modificado en void
-    public void modificarTitulo(String nuevoTitulo, String titulo){
-        Evento ev =  buscarEventoObjeto(titulo);
-                String eAntiguo = ev.toString();
-                ev.setTitulo(nuevoTitulo);
-                String eNuevo = ev.toString();
-                escritorEvento.eliminar(eAntiguo);
-                escritorEvento.escribir(eNuevo);
-                ArrayList<String[]> datosEv = escritorEvento.leerTodo();
-                reiniciarArbolEv();
-                registrarBaseEv(datosEv);    
     }
 
     public boolean modificarPrioridad(int p, String titulo, int tipo){
@@ -436,7 +444,7 @@ public class GestorGeneral {
     public String imprimirOrdenadoTarea(){
         ListaSE<Tarea> lisTarea = pqTarea.inOrder();
         String str = "";
-        System.out.println("Tareas Pendientes: ");
+       
         for(int i = 0; i < lisTarea.length(); i++){ 
             str = str + lisTarea.get(i).mostrar() + "\n";
         }

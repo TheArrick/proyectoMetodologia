@@ -5,37 +5,40 @@
 package com.mycompany.organizadordetareas.Vista;
 
 import com.mycompany.organizadordetareas.Controlador.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  *
  * @author Arrick
  */
 public class EditarTarea extends javax.swing.JFrame {
+     private Tarea tarea;
+    private GestorGeneral g;
+    private MenuUsuario menuUs;
+
     /**
      * Creates new form EditarTarea
      */
-     static Tarea tareita; //pq static ridiculo
-    Tarea tar;
-    public EditarTarea(Tarea tarea) { // ey esto es Tarea no evento
-        tar = tarea;
-        tareita = tarea;
+    public EditarTarea(Tarea tarea, GestorGeneral g) {
+        this.tarea = tarea;
+        this.g = g;
         initComponents();
         setSize(1000,600);
         setLocation(400,500);
-        titulo.setText(tarea.getTitulo());
-        hora.setText(tarea.getHora().toString());
-        
-       
         setResizable(false);
+        
+        modificar_titulo.setText(tarea.getTitulo());
+       
+        modificar_hora.setText(tarea.getHora().toString());
+        modificar_fecha.setText(tarea.getFecha().toString());
+        
+        modificar_prioridad.setSelectedItem(Integer.toString(tarea.getPrioridad()));
+        horaNoValida.setVisible(false);
+        fechaNoValida.setVisible(false);
+
+        
+        
     }
-    private  boolean validarHora(String cad) {
-        String patron = "^([01]?[0-9]|2[0-3]):[0-5][0-9]$";
-        Pattern pattern = Pattern.compile(patron);
-        Matcher matcher = pattern.matcher(cad);
-        return matcher.matches();
-    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -45,189 +48,155 @@ public class EditarTarea extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        titEvento = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        titulo = new javax.swing.JTextField();
-        descripcion = new javax.swing.JTextField();
-        lugar = new javax.swing.JTextField();
-        hora = new javax.swing.JTextField();
-        cancel = new javax.swing.JButton();
-        save = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel7 = new javax.swing.JLabel();
-        fecha = new javax.swing.JTextField();
+        modificar_prioridad = new javax.swing.JComboBox<>();
+        modificar_titulo = new javax.swing.JTextField();
+        modificar_hora = new javax.swing.JTextField();
+        modificar_fecha = new javax.swing.JTextField();
+        cancelar = new javax.swing.JButton();
+        aceptar = new javax.swing.JButton();
+        horaNoValida = new javax.swing.JLabel();
+        fechaNoValida = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        titEvento.setText("Titulo evento");
+        jLabel1.setText("Titulo:");
 
-        jLabel1.setText("Ingrese lo que desee editar");
+        jLabel2.setText("Hora (hh:mm): ");
 
-        jLabel2.setText("Titulo:");
+        jLabel3.setText("Fecha (dd/mm/aaaa): ");
 
-        jLabel3.setText("Descripción:");
+        jLabel4.setText("Prioridad: ");
 
-        jLabel4.setText("Lugar:");
+        modificar_prioridad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
 
-        jLabel5.setText("Hora (hh:mm)");
+        cancelar.setText("Cancelar");
 
-        titulo.setText("jTextField1");
-        titulo.addActionListener(new java.awt.event.ActionListener() {
+        aceptar.setText("Aceptar");
+        aceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tituloActionPerformed(evt);
+                aceptarActionPerformed(evt);
             }
         });
 
-        descripcion.setText("jTextField2");
-        descripcion.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                descripcionActionPerformed(evt);
-            }
-        });
+        horaNoValida.setText("Hora no valida");
 
-        lugar.setText("jTextField3");
-        lugar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lugarActionPerformed(evt);
-            }
-        });
-
-        hora.setText("jTextField4");
-
-        cancel.setText("Cancelar");
-        cancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancelActionPerformed(evt);
-            }
-        });
-
-        save.setText("Guardar");
-        save.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                saveActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setText("Prioridad");
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-
-        jLabel7.setText("Fecha(dd-mm-aaaa)");
-
-        fecha.setText("jTextField1");
+        fechaNoValida.setText("Fecha no valida");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(68, 68, 68)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(titEvento))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(40, 40, 40)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lugar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addGap(81, 81, 81)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(modificar_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(modificar_hora, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                        .addComponent(jLabel3)
+                        .addGap(50, 50, 50)
+                        .addComponent(modificar_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(211, 211, 211))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(cancelar)
+                        .addGap(139, 139, 139)
+                        .addComponent(aceptar)
+                        .addGap(143, 143, 143))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(horaNoValida)
+                            .addComponent(jLabel4))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(hora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(75, 75, 75)
-                                .addComponent(jLabel7)
-                                .addGap(37, 37, 37)
-                                .addComponent(fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 119, Short.MAX_VALUE)
-                .addComponent(cancel)
-                .addGap(71, 71, 71)
-                .addComponent(save))
+                                .addGap(93, 93, 93)
+                                .addComponent(modificar_prioridad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(350, 350, 350)
+                                .addComponent(fechaNoValida)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(hora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel7)
-                        .addComponent(fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(titEvento)
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel1)
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(53, 53, 53)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(51, 51, 51)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(lugar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(82, 82, 82)
-                        .addComponent(jLabel5)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 86, Short.MAX_VALUE)
+                .addGap(105, 105, 105)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(modificar_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(68, 68, 68)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3)
+                    .addComponent(modificar_hora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(modificar_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(cancel)
-                            .addComponent(save))
-                        .addGap(57, 57, 57))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(70, 70, 70))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(horaNoValida))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(fechaNoValida)))
+                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(modificar_prioridad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 203, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cancelar)
+                    .addComponent(aceptar))
+                .addGap(37, 37, 37))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lugarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lugarActionPerformed
-
-    private void descripcionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_descripcionActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_descripcionActionPerformed
-
-    private void cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelActionPerformed
-        
-    }//GEN-LAST:event_cancelActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void tituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tituloActionPerformed
+    private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
+       Validadores validar = new Validadores();
+        horaNoValida.setVisible(false);
+        fechaNoValida.setVisible(false);
+        String titulo = modificar_titulo.getText();
+        String hora = modificar_hora.getText();
+        String fecha = modificar_fecha.getText();
        
-    }//GEN-LAST:event_tituloActionPerformed
-
-    private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
-        titulo.getText();
-    }//GEN-LAST:event_saveActionPerformed
+        
+        int prioridad = Integer.parseInt((String)modificar_prioridad.getSelectedItem());
+        if(!validar.validarHora(hora)){
+            horaNoValida.setVisible(true);
+        }else{
+            String[] partes = hora.split(":");
+            int h = Integer.parseInt(partes[0]);
+            int m = Integer.parseInt(partes[1]);
+            Hora horaVal = new Hora(h,m);
+            if(!validar.validarFecha(fecha)){
+            fechaNoValida.setVisible(true);
+            }else{
+                String[] partesf = fecha.split("/");
+            int dd = Integer.parseInt(partesf[0]);
+            int mm = Integer.parseInt(partesf[1]);
+            int aaaa = Integer.parseInt(partesf[2]);
+            Fecha fechaVal = new Fecha(dd,mm,aaaa);
+                g.modificarTitulo(titulo, tarea.getTitulo(), 1);
+                
+   
+                g.modificarPrioridad(prioridad, tarea.getTitulo(),2);
+                g.modificarHora(horaVal, tarea.getTitulo(), 2);
+                g.modificarFecha(fechaVal, tarea.getTitulo(), 2);
+ 
+                menuUs = new MenuUsuario(g.getUsuario());
+                menuUs.setVisible(true);
+                this.dispose();
+            }
+        }
+    }//GEN-LAST:event_aceptarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -255,32 +224,27 @@ public class EditarTarea extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(EditarTarea.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-       
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                EditarTarea editar = new EditarTarea(tareita);
-                editar.setVisible(true);
+             
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton cancel;
-    private javax.swing.JTextField descripcion;
-    private javax.swing.JTextField fecha;
-    private javax.swing.JTextField hora;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton aceptar;
+    private javax.swing.JButton cancelar;
+    private javax.swing.JLabel fechaNoValida;
+    private javax.swing.JLabel horaNoValida;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JTextField lugar;
-    private javax.swing.JButton save;
-    private javax.swing.JLabel titEvento;
-    private javax.swing.JTextField titulo;
+    private javax.swing.JTextField modificar_fecha;
+    private javax.swing.JTextField modificar_hora;
+    private javax.swing.JComboBox<String> modificar_prioridad;
+    private javax.swing.JTextField modificar_titulo;
     // End of variables declaration//GEN-END:variables
 }

@@ -118,8 +118,13 @@ public class CrearEvento extends javax.swing.JFrame {
 
         txtFecha.setForeground(new java.awt.Color(51, 51, 51));
         txtFecha.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtFecha.setText("dd-mm-aaaa");
+        txtFecha.setText("dd/mm/aaaa");
         txtFecha.setToolTipText("");
+        txtFecha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFechaActionPerformed(evt);
+            }
+        });
 
         lblEvento5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblEvento5.setText("Ingrese la Fecha:");
@@ -290,7 +295,7 @@ public class CrearEvento extends javax.swing.JFrame {
         if(!valid.validarFecha(fecha)){
             lblFechaX.setVisible(true);
         }else{
-            String[] partes = fecha.split("-");
+            String[] partes = fecha.split("/");
             int dd = Integer.parseInt(partes[0]);
             int mm = Integer.parseInt(partes[1]);
             int aaaa = Integer.parseInt(partes[2]);
@@ -301,6 +306,10 @@ public class CrearEvento extends javax.swing.JFrame {
         this.setVisible(false);
         menuUs.meterEventos();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtFechaActionPerformed
 
     public void setMenuUs(MenuUsuario menuUs){
         this.menuUs = menuUs;

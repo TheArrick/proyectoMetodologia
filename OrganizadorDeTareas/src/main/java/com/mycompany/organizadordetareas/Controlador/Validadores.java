@@ -20,7 +20,7 @@ public class Validadores {
     }
 
     public boolean validarFecha(String cad) {
-        String patron = "^([0-2][0-9]|3[0-1])-(0[1-9]|1[0-2])-(\\d{4})$";
+        String patron = "^([0-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/(\\d{4})$";
         Pattern pattern = Pattern.compile(patron);
         Matcher matcher = pattern.matcher(cad);
         return matcher.matches();

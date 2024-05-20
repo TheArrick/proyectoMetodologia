@@ -13,17 +13,17 @@ import java.util.regex.Pattern;
  * @author Arrick
  */
 public class EditarEvento extends javax.swing.JFrame {
-    Evento evento;
-    
-    
+    private Evento evento;
     private GestorGeneral g;
+    private MenuUsuario menuUs;
     /**
      * Creates new form EditarEvento
      */
-    public EditarEvento(Evento evento) {
+    public EditarEvento(Evento evento, GestorGeneral g) {
         this.evento = evento;
+        this.g = g;
         initComponents();
-        setSize(1000,800);
+        setSize(1000,600);
         setLocation(400,500);
         setResizable(false);
         
@@ -36,19 +36,6 @@ public class EditarEvento extends javax.swing.JFrame {
         horaNoValida.setVisible(false);
         fechaNoValida.setVisible(false);
     }
-    private boolean validarHora(String cad) {
-        String patron = "^([01]?[0-9]|2[0-3]):[0-5][0-9]$";
-        Pattern pattern = Pattern.compile(patron);
-        Matcher matcher = pattern.matcher(cad);
-        return matcher.matches();
-    }
-    
-    private boolean validarFecha(String cad) {
-        String patron = "^([0-2][0-9]|3[0-1])-(0[1-9]|1[0-2])-(\\d{4})$";
-        Pattern pattern = Pattern.compile(patron);
-        Matcher matcher = pattern.matcher(cad);
-        return matcher.matches();
-    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -58,7 +45,6 @@ public class EditarEvento extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        titulo_evento = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         modificar_titulo = new javax.swing.JTextField();
@@ -78,8 +64,6 @@ public class EditarEvento extends javax.swing.JFrame {
         fechaNoValida = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        titulo_evento.setText("Titulo Evento");
 
         jLabel1.setText("Reescriba lo que desee editar:");
 
@@ -116,7 +100,7 @@ public class EditarEvento extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setText("Fecha (dd-mm-aa)");
+        jLabel6.setText("Fecha (dd/mm/aaaa)");
         jLabel6.setToolTipText("");
 
         jLabel7.setText("Prioridad:");
@@ -144,9 +128,7 @@ public class EditarEvento extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(65, 65, 65)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(titulo_evento)))
+                        .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(131, 131, 131)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,9 +141,6 @@ public class EditarEvento extends javax.swing.JFrame {
                                 .addComponent(jLabel7)))
                         .addGap(155, 155, 155)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(modificar_descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(modificar_lugar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(modificar_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(modificar_prioridad, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(modificar_hora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -171,27 +150,29 @@ public class EditarEvento extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(jLabel6)
                                         .addGap(56, 56, 56)
-                                        .addComponent(modificar_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addContainerGap(207, Short.MAX_VALUE))
+                                        .addComponent(modificar_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(modificar_lugar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
+                                .addComponent(modificar_descripcion, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(modificar_titulo, javax.swing.GroupLayout.Alignment.LEADING)))))
+                .addContainerGap(195, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(cancelar)
-                .addGap(97, 97, 97)
+                .addGap(96, 96, 96)
                 .addComponent(guardar)
                 .addGap(112, 112, 112))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(76, 76, 76)
-                .addComponent(titulo_evento)
-                .addGap(36, 36, 36)
+                .addGap(42, 42, 42)
                 .addComponent(jLabel1)
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(modificar_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(90, 90, 90)
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(modificar_descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -213,7 +194,7 @@ public class EditarEvento extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(modificar_prioridad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cancelar)
                     .addComponent(guardar))
@@ -240,22 +221,46 @@ public class EditarEvento extends javax.swing.JFrame {
     }//GEN-LAST:event_modificar_fechaActionPerformed
 
     private void guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarActionPerformed
+          Validadores validar = new Validadores();
         horaNoValida.setVisible(false);
         fechaNoValida.setVisible(false);
         String titulo = modificar_titulo.getText();
         String descripcion = modificar_descripcion.getText();
         String lugar = modificar_lugar.getText();
         String hora = modificar_hora.getText();
+        
+        
+        
         String fecha = modificar_fecha.getText();
+        
+        
+        
         int prioridad = Integer.parseInt((String)modificar_prioridad.getSelectedItem());
-        if(!validarHora(hora)){
+        if(!validar.validarHora(hora)){
             horaNoValida.setVisible(true);
         }else{
-            if(!validarFecha(fecha)){
+            String[] partes = hora.split(":");
+            int h = Integer.parseInt(partes[0]);
+            int m = Integer.parseInt(partes[1]);
+            Hora horaVal = new Hora(h,m);
+            if(!validar.validarFecha(fecha)){
             fechaNoValida.setVisible(true);
             }else{
-                g.modificarTitulo(titulo, evento.getTitulo());
-                evento.getTitulo();
+                String[] partesf = fecha.split("/");
+            int dd = Integer.parseInt(partesf[0]);
+            int mm = Integer.parseInt(partesf[1]);
+            int aaaa = Integer.parseInt(partesf[2]);
+            Fecha fechaVal = new Fecha(dd,mm,aaaa);
+                g.modificarTitulo(titulo, evento.getTitulo(), 2);
+                g.modificarDescripcion(descripcion, evento.getTitulo());
+                g.modificarLugar(lugar, evento.getTitulo());
+                g.modificarPrioridad(prioridad, evento.getTitulo(),2);
+                g.modificarHora(horaVal, evento.getTitulo(), 2);
+                g.modificarFecha(fechaVal, evento.getTitulo(), 2);
+ 
+                menuUs = new MenuUsuario(g.getUsuario());
+                menuUs.setVisible(true);
+                this.dispose();
             }
         }        
     }//GEN-LAST:event_guardarActionPerformed
@@ -286,13 +291,12 @@ public class EditarEvento extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(EditarEvento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        Evento evento = new Evento("montymontya", "esto tes un ejemplo", new Hora(13, 30), new Fecha(20, 5, 2024), 3, "Umss");
+        
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                EditarEvento editar_evento = new EditarEvento(evento);
-                editar_evento.setVisible(true);
+    
             }
             
         });
@@ -316,6 +320,5 @@ public class EditarEvento extends javax.swing.JFrame {
     private javax.swing.JTextField modificar_lugar;
     private javax.swing.JComboBox<String> modificar_prioridad;
     private javax.swing.JTextField modificar_titulo;
-    private javax.swing.JLabel titulo_evento;
     // End of variables declaration//GEN-END:variables
 }

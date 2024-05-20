@@ -256,9 +256,12 @@
           <Color blue="33" green="33" red="33" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="2"/>
-        <Property name="text" type="java.lang.String" value="dd-mm-aaaa"/>
+        <Property name="text" type="java.lang.String" value="dd/mm/aaaa"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtFechaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lblEvento5">
       <Properties>
