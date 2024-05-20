@@ -27,17 +27,19 @@
               <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="lblBienvenida" pref="230" max="32767" attributes="0"/>
-                      <EmptySpace min="-2" pref="435" max="-2" attributes="0"/>
+                      <Component id="lblBienvenida" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="441" max="-2" attributes="0"/>
                               <Component id="txtBuscarTarea" min="-2" pref="154" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="lblLogo" min="-2" pref="160" max="-2" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="557" max="-2" attributes="0"/>
+                                  <Component id="lblLogo" min="-2" pref="160" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="441" max="-2" attributes="0"/>
                                   <Component id="txtBuscarEvento" max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -57,9 +59,9 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="scrollEvento" pref="209" max="32767" attributes="0"/>
+                              <Component id="scrollEvento" max="32767" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
-                              <Component id="scrollTarea" pref="200" max="32767" attributes="0"/>
+                              <Component id="scrollTarea" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -76,7 +78,9 @@
                               <Component id="bttnEditarTarea" max="32767" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="531" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" pref="298" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="188" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -106,35 +110,37 @@
                       <Component id="lblLogo" min="-2" pref="160" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Component id="txtBuscarEvento" min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                      <Component id="txtBuscarTarea" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                              <Component id="scrollTarea" pref="200" max="32767" attributes="0"/>
+                              <Component id="scrollTarea" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="scrollEvento" pref="204" max="32767" attributes="0"/>
+                          <Component id="scrollEvento" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="bttnEliminarTarea" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="bttnEditarTarea" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="bttnEliminarEvento" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                          <Component id="bttnEditarEvento" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                      <Component id="bttnCerrarSesion" min="-2" pref="25" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="txtBuscarTarea" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="133" max="32767" attributes="0"/>
                   </Group>
               </Group>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="bttnEliminarTarea" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="bttnEditarTarea" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="bttnEliminarEvento" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                  <Component id="bttnEditarEvento" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-              <Component id="bttnCerrarSesion" min="-2" pref="25" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -269,6 +275,13 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtBuscarTareaActionPerformed"/>
       </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/com/mycompany/organizadordetareas/Vista/diavlo_oficial_peque.png"/>
+        </Property>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>

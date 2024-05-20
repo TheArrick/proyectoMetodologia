@@ -22,8 +22,8 @@ public class EditarTarea extends javax.swing.JFrame {
         this.tarea = tarea;
         this.g = g;
         initComponents();
+        setLocationRelativeTo(null);
         setSize(1000,600);
-        setLocation(400,500);
         setResizable(false);
         
         modificar_titulo.setText(tarea.getTitulo());

@@ -24,8 +24,8 @@ public class CrearEvento extends javax.swing.JFrame {
      * Creates new form CrearEvento
      */
     public CrearEvento() {
-        setLocationRelativeTo(null);
         initComponents();
+        setLocationRelativeTo(null);
         lblHoraX.setVisible(false);
         lblFechaX.setVisible(false);
     }

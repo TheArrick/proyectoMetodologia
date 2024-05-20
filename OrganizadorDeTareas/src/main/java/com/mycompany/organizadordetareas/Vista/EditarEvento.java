@@ -24,9 +24,8 @@ public class EditarEvento extends javax.swing.JFrame {
         this.g = g;
         initComponents();
         setSize(1000,600);
-        setLocation(400,500);
         setResizable(false);
-        
+        setLocationRelativeTo(null);
         modificar_titulo.setText(evento.getTitulo());
         modificar_descripcion.setText(evento.getDescripcion());
         modificar_hora.setText(evento.getHora().toString());

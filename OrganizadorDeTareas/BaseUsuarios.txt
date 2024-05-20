@@ -5,3 +5,4 @@ Sebas|Miguel@123|Lima peru|2
 Pol2|Pol@1234|ardidas|3
 PolOficial|Polsito@1|Star wars 8|4
 MateoChupapichi|Miguel@123|Culiacan|2
+Anahi|Arrick1234@|Redragon|3

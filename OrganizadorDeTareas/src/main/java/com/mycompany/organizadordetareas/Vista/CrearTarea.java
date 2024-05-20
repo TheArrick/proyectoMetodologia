@@ -24,8 +24,8 @@ public class CrearTarea extends javax.swing.JFrame {
      * Creates new form CrearEvento
      */
     public CrearTarea() {
-        setLocationRelativeTo(null);
         initComponents();
+        setLocationRelativeTo(null);
         lblHoraX.setVisible(false);
         lblFechaX.setVisible(false);
     }
