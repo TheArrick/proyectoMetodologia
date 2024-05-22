@@ -4,7 +4,6 @@
  */
 package com.mycompany.organizadordetareas.Vista;
 import com.mycompany.organizadordetareas.Controlador.*;
-
 /**
  *
  * @author Arrick
@@ -23,8 +22,7 @@ public class VentanaInicio extends javax.swing.JFrame {
         setResizable(false);
         setSize(1000,800);
         gesUs = new GestorUser();
-        setLocationRelativeTo(null);
-        
+        setLocationRelativeTo(null);  
     }
 
     /**
