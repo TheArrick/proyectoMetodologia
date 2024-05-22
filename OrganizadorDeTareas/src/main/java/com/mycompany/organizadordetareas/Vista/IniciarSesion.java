@@ -5,6 +5,7 @@
 package com.mycompany.organizadordetareas.Vista;
 
 import com.mycompany.organizadordetareas.Controlador.*;
+import java.awt.Color;
 
 
 /**
@@ -29,6 +30,7 @@ public class IniciarSesion extends javax.swing.JFrame {
         jLabel3.setVisible(false);
         bienvenido.setVisible(false);
         setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(55, 57, 63));
         
     }
 
@@ -43,45 +45,61 @@ public class IniciarSesion extends javax.swing.JFrame {
 
         jButton1 = new javax.swing.JButton();
         nomUsuario = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         bienvenido = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         campoContras = new javax.swing.JPasswordField();
+        jLabel4 = new javax.swing.JLabel();
+        textoPregunta = new javax.swing.JLabel();
+        textoPregunta1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jButton1.setBackground(new java.awt.Color(32, 34, 37));
+        jButton1.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(28, 185, 85));
         jButton1.setText("Volver");
+        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        jButton1.setFocusPainted(false);
+        jButton1.setOpaque(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
+        nomUsuario.setBackground(new java.awt.Color(55, 57, 63));
+        nomUsuario.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        nomUsuario.setForeground(new java.awt.Color(234, 234, 235));
+        nomUsuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(234, 234, 235)));
         nomUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomUsuarioActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Usuario:");
-
-        jLabel2.setText("Contraseña");
-
+        jButton2.setBackground(new java.awt.Color(32, 34, 37));
+        jButton2.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(28, 185, 85));
         jButton2.setText("Entrar");
+        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(24, 185, 85), 1, true));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(234, 234, 235));
         jLabel3.setText("Credenciales incorrectos");
 
-        bienvenido.setFont(new java.awt.Font("Helvetica Neue", 0, 36)); // NOI18N
-        bienvenido.setText("Bienvenido Papu");
+        bienvenido.setFont(new java.awt.Font("STXihei", 1, 36)); // NOI18N
+        bienvenido.setForeground(new java.awt.Color(234, 234, 235));
+        bienvenido.setText("Bienvenido!");
 
+        jButton3.setBackground(new java.awt.Color(32, 34, 37));
+        jButton3.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
         jButton3.setForeground(new java.awt.Color(51, 102, 255));
         jButton3.setText("¿Olvidaste u contraseña?");
         jButton3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -91,60 +109,82 @@ public class IniciarSesion extends javax.swing.JFrame {
             }
         });
 
+        campoContras.setBackground(new java.awt.Color(55, 57, 63));
+        campoContras.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        campoContras.setForeground(new java.awt.Color(234, 234, 235));
+        campoContras.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(234, 234, 235)));
         campoContras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoContrasActionPerformed(evt);
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("STXihei", 1, 48)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel4.setText("Lorem Ipsum");
+        jLabel4.setMaximumSize(new java.awt.Dimension(1000, 1000));
+        jLabel4.setName(""); // NOI18N
+        jLabel4.setPreferredSize(new java.awt.Dimension(700, 100));
+
+        textoPregunta.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        textoPregunta.setForeground(new java.awt.Color(234, 234, 235));
+        textoPregunta.setText("Usuario");
+
+        textoPregunta1.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        textoPregunta1.setForeground(new java.awt.Color(234, 234, 235));
+        textoPregunta1.setText("Contraseña");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(375, Short.MAX_VALUE)
+                .addContainerGap(371, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(bienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(340, 340, 340))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(nomUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel1)
-                                .addComponent(jLabel2)
-                                .addComponent(jLabel3)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(36, 36, 36)
-                                    .addComponent(jButton2)))
-                            .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(campoContras, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(422, 422, 422))))
+                    .addComponent(bienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textoPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(textoPregunta1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(campoContras)
+                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(nomUsuario)
+                        .addComponent(jLabel3)))
+                .addGap(345, 345, 345))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(jButton1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(420, 420, 420)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(190, 190, 190)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(nomUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(jLabel2)
-                .addGap(18, 18, 18)
-                .addComponent(campoContras, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jButton3)
-                .addGap(24, 24, 24)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
                 .addGap(63, 63, 63)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(textoPregunta)
+                .addGap(32, 32, 32)
+                .addComponent(nomUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addComponent(textoPregunta1)
+                .addGap(18, 18, 18)
+                .addComponent(campoContras, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addGap(41, 41, 41)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
                 .addComponent(bienvenido)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
+                .addGap(34, 34, 34)
                 .addComponent(jButton1)
                 .addGap(49, 49, 49))
         );
@@ -242,9 +282,10 @@ public class IniciarSesion extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField nomUsuario;
+    private javax.swing.JLabel textoPregunta;
+    private javax.swing.JLabel textoPregunta1;
     // End of variables declaration//GEN-END:variables
 }

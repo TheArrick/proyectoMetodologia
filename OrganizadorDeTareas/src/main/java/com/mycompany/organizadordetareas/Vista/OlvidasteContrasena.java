@@ -4,6 +4,7 @@
  */
 package com.mycompany.organizadordetareas.Vista;
 import com.mycompany.organizadordetareas.Controlador.*;
+import java.awt.Color;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,10 +34,39 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         verificarPreg.setVisible(false);
         // Establecer el tamaño deseado (por ejemplo, 600x400 píxeles)
         jDialog1.setSize(600, 400);
-
+        jDialog2.setSize(350,250);
+        jDialog3.setSize(500,250 );
+        jDialog3.getContentPane().setBackground(new Color(55, 57, 63));
+        jDialog3.setLocationRelativeTo(null);
+        jDialog3.setVisible(false);
+        jDialog1.getContentPane().setBackground(new Color(55, 57, 63));
+        jDialog2.getContentPane().setBackground(new Color(55, 57, 63));
+        
         jDialog1.setLocationRelativeTo(null);
+        jDialog2.setLocationRelativeTo(null);
+        
 
         jDialog1.setVisible(false);
+        jDialog2.setVisible(false);
+         jDialog4.setSize(500,250 );
+        jDialog4.getContentPane().setBackground(new Color(55, 57, 63));
+        jDialog4.setLocationRelativeTo(null);
+        jDialog4.setVisible(false);
+        
+         jDialog5.setSize(500,250 );
+        jDialog5.getContentPane().setBackground(new Color(55, 57, 63));
+        jDialog5.setLocationRelativeTo(null);
+        jDialog5.setVisible(false);
+        
+         jDialog6.setSize(500,250 );
+        jDialog6.getContentPane().setBackground(new Color(55, 57, 63));
+        jDialog6.setLocationRelativeTo(null);
+        jDialog6.setVisible(false);
+        
+        
+        getContentPane().setBackground(new Color(55, 57, 63));
+        
+        
         
     }
 
@@ -61,6 +91,21 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         noCoinciden = new javax.swing.JLabel();
         bt = new javax.swing.JButton();
         btExito = new javax.swing.JLabel();
+        jDialog2 = new javax.swing.JDialog();
+        jLabel6 = new javax.swing.JLabel();
+        BotonCerrarU = new javax.swing.JButton();
+        jDialog3 = new javax.swing.JDialog();
+        jLabel7 = new javax.swing.JLabel();
+        BotonAceptarIncorrecta = new javax.swing.JButton();
+        jDialog4 = new javax.swing.JDialog();
+        jLabel8 = new javax.swing.JLabel();
+        BotonAceptarIncorrecta1 = new javax.swing.JButton();
+        jDialog5 = new javax.swing.JDialog();
+        jLabel9 = new javax.swing.JLabel();
+        BotonAceptarIncorrecta2 = new javax.swing.JButton();
+        jDialog6 = new javax.swing.JDialog();
+        jLabel10 = new javax.swing.JLabel();
+        BotonAceptarIncorrecta3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
@@ -73,27 +118,43 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         verificarPreg = new javax.swing.JButton();
         resIncor = new javax.swing.JLabel();
 
-        jDialog1.setPreferredSize(new java.awt.Dimension(700, 200));
-
+        jLabel2.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(234, 234, 235));
         jLabel2.setText("Nueva contraseña");
 
+        campoContN.setBackground(new java.awt.Color(55, 57, 63));
+        campoContN.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        campoContN.setForeground(new java.awt.Color(234, 234, 235));
+        campoContN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(234, 234, 235)));
         campoContN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoContNActionPerformed(evt);
             }
         });
 
+        campoContNDeNuevo.setBackground(new java.awt.Color(55, 57, 63));
+        campoContNDeNuevo.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        campoContNDeNuevo.setForeground(new java.awt.Color(234, 234, 235));
+        campoContNDeNuevo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(234, 234, 235)));
         campoContNDeNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 campoContNDeNuevoActionPerformed(evt);
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(234, 234, 235));
         jLabel4.setText("Ingresa nuevamente");
 
+        jLabel5.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(234, 234, 235));
         jLabel5.setText("Recuperar contraseña");
 
+        recuperarBto.setBackground(new java.awt.Color(32, 34, 37));
+        recuperarBto.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        recuperarBto.setForeground(new java.awt.Color(28, 185, 85));
         recuperarBto.setText("Recuperar");
+        recuperarBto.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
         recuperarBto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 recuperarBtoActionPerformed(evt);
@@ -106,13 +167,19 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
 
         noCoinciden.setText("Las contraseñas no coinciden");
 
+        bt.setBackground(new java.awt.Color(32, 34, 37));
+        bt.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        bt.setForeground(new java.awt.Color(28, 185, 85));
         bt.setText("Atrás");
+        bt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
         bt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btActionPerformed(evt);
             }
         });
 
+        btExito.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        btExito.setForeground(new java.awt.Color(234, 234, 235));
         btExito.setText("¡Éxito! Recuperaste tu contraseña");
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
@@ -129,23 +196,29 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
                                 .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(campoContN, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(campoContNDeNuevo)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(recuperarBto)
-                                .addGap(12, 12, 12)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(campVacios, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(noCoinciden, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(contNoSegura, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addGroup(jDialog1Layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(recuperarBto, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(29, 29, 29)
+                                        .addComponent(noCoinciden, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jDialog1Layout.createSequentialGroup()
+                                        .addGap(150, 150, 150)
+                                        .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(contNoSegura, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(jDialog1Layout.createSequentialGroup()
+                                                .addGap(6, 6, 6)
+                                                .addComponent(campVacios, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
                     .addGroup(jDialog1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bt)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bt, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jDialog1Layout.createSequentialGroup()
-                        .addGap(184, 184, 184)
-                        .addComponent(btExito, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(200, Short.MAX_VALUE))
+                        .addGap(168, 168, 168)
+                        .addComponent(btExito, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(556, Short.MAX_VALUE))
         );
         jDialog1Layout.setVerticalGroup(
             jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,144 +228,370 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(campoContN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
-                .addComponent(contNoSegura)
+                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(campoContN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(contNoSegura))
                 .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jDialog1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(23, 23, 23)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(campoContNDeNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(recuperarBto)))
+                            .addComponent(recuperarBto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jDialog1Layout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addComponent(campVacios)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(campVacios)
+                        .addGap(24, 24, 24)
                         .addComponent(noCoinciden)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(btExito)
-                .addGap(13, 13, 13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(bt)
                 .addGap(28, 28, 28))
         );
 
+        jLabel6.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel6.setText("Usuario no encontrado");
+        jLabel6.setAlignmentY(0.0F);
+        jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        BotonCerrarU.setBackground(new java.awt.Color(32, 34, 37));
+        BotonCerrarU.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        BotonCerrarU.setForeground(new java.awt.Color(28, 185, 85));
+        BotonCerrarU.setText("Aceptar");
+        BotonCerrarU.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonCerrarU.setFocusPainted(false);
+        BotonCerrarU.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonCerrarUActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialog2Layout = new javax.swing.GroupLayout(jDialog2.getContentPane());
+        jDialog2.getContentPane().setLayout(jDialog2Layout);
+        jDialog2Layout.setHorizontalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog2Layout.createSequentialGroup()
+                .addGroup(jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialog2Layout.createSequentialGroup()
+                        .addGap(84, 84, 84)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jDialog2Layout.createSequentialGroup()
+                        .addGap(110, 110, 110)
+                        .addComponent(BotonCerrarU, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(132, Short.MAX_VALUE))
+        );
+        jDialog2Layout.setVerticalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog2Layout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BotonCerrarU)
+                .addContainerGap(162, Short.MAX_VALUE))
+        );
+
+        jLabel7.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel7.setText("La respuesta no es correcta, intente de nuevo");
+
+        BotonAceptarIncorrecta.setBackground(new java.awt.Color(32, 34, 37));
+        BotonAceptarIncorrecta.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        BotonAceptarIncorrecta.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta.setText("Aceptar");
+        BotonAceptarIncorrecta.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAceptarIncorrectaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialog3Layout = new javax.swing.GroupLayout(jDialog3.getContentPane());
+        jDialog3.getContentPane().setLayout(jDialog3Layout);
+        jDialog3Layout.setHorizontalGroup(
+            jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog3Layout.createSequentialGroup()
+                .addContainerGap(47, Short.MAX_VALUE)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(46, 46, 46))
+            .addGroup(jDialog3Layout.createSequentialGroup()
+                .addGap(184, 184, 184)
+                .addComponent(BotonAceptarIncorrecta, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jDialog3Layout.setVerticalGroup(
+            jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog3Layout.createSequentialGroup()
+                .addGap(59, 59, 59)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43)
+                .addComponent(BotonAceptarIncorrecta)
+                .addContainerGap(149, Short.MAX_VALUE))
+        );
+
+        jLabel8.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel8.setText("La contraseña no es segura");
+
+        BotonAceptarIncorrecta1.setBackground(new java.awt.Color(32, 34, 37));
+        BotonAceptarIncorrecta1.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        BotonAceptarIncorrecta1.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta1.setText("Aceptar");
+        BotonAceptarIncorrecta1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAceptarIncorrecta1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialog4Layout = new javax.swing.GroupLayout(jDialog4.getContentPane());
+        jDialog4.getContentPane().setLayout(jDialog4Layout);
+        jDialog4Layout.setHorizontalGroup(
+            jDialog4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog4Layout.createSequentialGroup()
+                .addGap(184, 184, 184)
+                .addComponent(BotonAceptarIncorrecta1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog4Layout.createSequentialGroup()
+                .addContainerGap(121, Short.MAX_VALUE)
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(110, 110, 110))
+        );
+        jDialog4Layout.setVerticalGroup(
+            jDialog4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog4Layout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(jLabel8)
+                .addGap(28, 28, 28)
+                .addComponent(BotonAceptarIncorrecta1)
+                .addContainerGap(149, Short.MAX_VALUE))
+        );
+
+        jLabel9.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel9.setText("Llene los campos");
+
+        BotonAceptarIncorrecta2.setBackground(new java.awt.Color(32, 34, 37));
+        BotonAceptarIncorrecta2.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        BotonAceptarIncorrecta2.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta2.setText("Aceptar");
+        BotonAceptarIncorrecta2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAceptarIncorrecta2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialog5Layout = new javax.swing.GroupLayout(jDialog5.getContentPane());
+        jDialog5.getContentPane().setLayout(jDialog5Layout);
+        jDialog5Layout.setHorizontalGroup(
+            jDialog5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog5Layout.createSequentialGroup()
+                .addGroup(jDialog5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialog5Layout.createSequentialGroup()
+                        .addGap(184, 184, 184)
+                        .addComponent(BotonAceptarIncorrecta2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jDialog5Layout.createSequentialGroup()
+                        .addGap(163, 163, 163)
+                        .addComponent(jLabel9)))
+                .addContainerGap(168, Short.MAX_VALUE))
+        );
+        jDialog5Layout.setVerticalGroup(
+            jDialog5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog5Layout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BotonAceptarIncorrecta2)
+                .addContainerGap(149, Short.MAX_VALUE))
+        );
+
+        jLabel10.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel10.setText("Las contraseñas no coinciden");
+
+        BotonAceptarIncorrecta3.setBackground(new java.awt.Color(32, 34, 37));
+        BotonAceptarIncorrecta3.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        BotonAceptarIncorrecta3.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta3.setText("Aceptar");
+        BotonAceptarIncorrecta3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAceptarIncorrecta3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialog6Layout = new javax.swing.GroupLayout(jDialog6.getContentPane());
+        jDialog6.getContentPane().setLayout(jDialog6Layout);
+        jDialog6Layout.setHorizontalGroup(
+            jDialog6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog6Layout.createSequentialGroup()
+                .addGap(184, 184, 184)
+                .addComponent(BotonAceptarIncorrecta3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(184, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog6Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(106, 106, 106))
+        );
+        jDialog6Layout.setVerticalGroup(
+            jDialog6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog6Layout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BotonAceptarIncorrecta3)
+                .addContainerGap(149, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1000, 600));
-        setPreferredSize(new java.awt.Dimension(1000, 600));
 
+        jButton1.setBackground(new java.awt.Color(32, 34, 37));
+        jButton1.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(28, 185, 85));
         jButton1.setText("Atrás");
+        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(32, 34, 37));
+        jButton2.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(28, 185, 85));
         jButton2.setText("Aceptar");
+        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        jButton2.setFocusPainted(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("STXihei", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(234, 234, 235));
         jLabel1.setText("Lorem Ipsum");
         jLabel1.setMaximumSize(new java.awt.Dimension(1000, 1000));
         jLabel1.setName(""); // NOI18N
         jLabel1.setPreferredSize(new java.awt.Dimension(700, 100));
 
+        textoPregunta.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        textoPregunta.setForeground(new java.awt.Color(234, 234, 235));
         textoPregunta.setText("Pregunta de seguridad");
 
+        PreguntaSeguridad.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        PreguntaSeguridad.setForeground(new java.awt.Color(234, 234, 235));
         PreguntaSeguridad.setText("jLabel3");
 
+        textoNombreUs.setBackground(new java.awt.Color(55, 57, 63));
+        textoNombreUs.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        textoNombreUs.setForeground(new java.awt.Color(234, 234, 235));
+        textoNombreUs.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(234, 234, 235)));
         textoNombreUs.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textoNombreUsActionPerformed(evt);
             }
         });
 
+        jLabel3.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(234, 234, 235));
         jLabel3.setText("Ingresa el nombre de usuario");
 
+        cajitaRespuesta.setBackground(new java.awt.Color(55, 57, 63));
+        cajitaRespuesta.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        cajitaRespuesta.setForeground(new java.awt.Color(234, 234, 235));
+        cajitaRespuesta.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(234, 234, 235)));
         cajitaRespuesta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cajitaRespuestaActionPerformed(evt);
             }
         });
 
+        nomUsNoEncontrado.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
         nomUsNoEncontrado.setText("Nombre de usuario no encontrado");
 
+        verificarPreg.setBackground(new java.awt.Color(32, 34, 37));
+        verificarPreg.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        verificarPreg.setForeground(new java.awt.Color(28, 185, 85));
         verificarPreg.setText("Verificar");
+        verificarPreg.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        verificarPreg.setFocusPainted(false);
         verificarPreg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 verificarPregActionPerformed(evt);
             }
         });
 
+        resIncor.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        resIncor.setForeground(new java.awt.Color(234, 234, 235));
         resIncor.setText("La respuesta no es correcta, intente de nuevo");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(115, 115, 115)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(resIncor, javax.swing.GroupLayout.PREFERRED_SIZE, 388, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(181, 181, 181))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(38, 38, 38))))
+                        .addGap(203, 203, 203)
+                        .addComponent(nomUsNoEncontrado))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(110, 110, 110)
+                        .addGap(342, 342, 342)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(PreguntaSeguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textoPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(cajitaRespuesta)
-                                    .addComponent(textoPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(textoNombreUs)
-                                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE))
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(26, 26, 26)
-                                        .addComponent(jButton2))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(nomUsNoEncontrado))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGap(32, 32, 32)
-                                        .addComponent(verificarPreg))))
-                            .addComponent(resIncor, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(167, 167, 167)))
-                .addContainerGap(306, Short.MAX_VALUE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel3)
+                                        .addComponent(textoNombreUs, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(cajitaRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(35, 35, 35)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(verificarPreg, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
+                                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(PreguntaSeguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(nomUsNoEncontrado))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textoNombreUs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(48, 48, 48)
                 .addComponent(textoPregunta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(PreguntaSeguridad)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cajitaRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(verificarPreg))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(resIncor)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(40, 40, 40))
+                    .addComponent(verificarPreg, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(175, 175, 175)
+                .addComponent(nomUsNoEncontrado)
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(resIncor)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         pack();
@@ -307,14 +606,17 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         String nomUs = textoNombreUs.getText();
         Usuario us = gestorUs.buscarUsuarioNom(nomUs);
         if(us != null){
+            
             textoPregunta.setVisible(true);
             PreguntaSeguridad.setVisible(true);
             cajitaRespuesta.setVisible(true);
-            nomUsNoEncontrado.setVisible(false);
+            
             PreguntaSeguridad.setText(gestorUs.getPreguntaEnPos(us.getIndicePregunta()));
+            jDialog2.setVisible(false);
             verificarPreg.setVisible(true);
         }else{
-            nomUsNoEncontrado.setVisible(true);
+            jDialog2.setVisible(true);
+            //nomUsNoEncontrado.setVisible(true);
         }
         
         
@@ -337,10 +639,10 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         Usuario us = gestorUs.buscarUsuarioNom(nomUs);
         String res = cajitaRespuesta.getText();
         if(us.getRespuesta().equals(res)){
+            jDialog3.setVisible(false);
             jDialog1.setVisible(true);
-            resIncor.setVisible(false);
         }else{
-            resIncor.setVisible(true);
+            jDialog3.setVisible(true);
         }
         
     }//GEN-LAST:event_verificarPregActionPerformed
@@ -356,26 +658,26 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         if(!cont.isEmpty() && !cont2.isEmpty()){
             if(cont.equals(cont2)){
                 if(validarContraSegura(cont)){
-                    contNoSegura.setVisible(false);
-                    noCoinciden.setVisible(false);
-                    campVacios.setVisible(false);
+                    jDialog4.setVisible(false);
+                    jDialog6.setVisible(false);
+                    jDialog5.setVisible(false);
                     btExito.setVisible(true);
                     gestorUs.modificarContraseña(nomUs, cont2);
                     
                 }else{
-                    contNoSegura.setVisible(true);
-                    campVacios.setVisible(false);
-                    noCoinciden.setVisible(false);
+                    jDialog4.setVisible(true);
+                    jDialog5.setVisible(false);
+                    jDialog6.setVisible(false);
                 }
             }else{
-                noCoinciden.setVisible(true);
-                campVacios.setVisible(false);
-                contNoSegura.setVisible(false);
+               jDialog6.setVisible(true);
+                jDialog5.setVisible(false);
+                jDialog4.setVisible(false);
             }
         }else{
-            campVacios.setVisible(true);
-            contNoSegura.setVisible(false);
-            noCoinciden.setVisible(false);
+            jDialog5.setVisible(true);
+            jDialog4.setVisible(false);
+            jDialog6.setVisible(false);
         }
         
     }//GEN-LAST:event_recuperarBtoActionPerformed
@@ -403,6 +705,31 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
     private void campoContNDeNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoContNDeNuevoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoContNDeNuevoActionPerformed
+
+    private void BotonCerrarUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCerrarUActionPerformed
+        // TODO add your handling code here:
+        jDialog2.dispose();
+    }//GEN-LAST:event_BotonCerrarUActionPerformed
+
+    private void BotonAceptarIncorrectaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarIncorrectaActionPerformed
+        // TODO add your handling code here:
+        jDialog3.dispose();
+    }//GEN-LAST:event_BotonAceptarIncorrectaActionPerformed
+
+    private void BotonAceptarIncorrecta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarIncorrecta1ActionPerformed
+        // TODO add your handling code here:
+        jDialog4.dispose();
+    }//GEN-LAST:event_BotonAceptarIncorrecta1ActionPerformed
+
+    private void BotonAceptarIncorrecta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarIncorrecta2ActionPerformed
+        // TODO add your handling code here:
+        jDialog5.dispose();
+    }//GEN-LAST:event_BotonAceptarIncorrecta2ActionPerformed
+
+    private void BotonAceptarIncorrecta3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarIncorrecta3ActionPerformed
+        // TODO add your handling code here:
+        jDialog6.dispose();
+    }//GEN-LAST:event_BotonAceptarIncorrecta3ActionPerformed
 
     public  boolean validarContraSegura(String contrasena) {
         // Al menos 8 caracteres, una mayúscula, una minúscula, un número y un carácter
@@ -454,6 +781,11 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotonAceptarIncorrecta;
+    private javax.swing.JButton BotonAceptarIncorrecta1;
+    private javax.swing.JButton BotonAceptarIncorrecta2;
+    private javax.swing.JButton BotonAceptarIncorrecta3;
+    private javax.swing.JButton BotonCerrarU;
     private javax.swing.JLabel PreguntaSeguridad;
     private javax.swing.JButton bt;
     private javax.swing.JLabel btExito;
@@ -465,11 +797,21 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JDialog jDialog1;
+    private javax.swing.JDialog jDialog2;
+    private javax.swing.JDialog jDialog3;
+    private javax.swing.JDialog jDialog4;
+    private javax.swing.JDialog jDialog5;
+    private javax.swing.JDialog jDialog6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel noCoinciden;
     private javax.swing.JLabel nomUsNoEncontrado;
     private javax.swing.JButton recuperarBto;
