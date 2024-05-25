@@ -436,7 +436,7 @@ public class GestorGeneral {
         ListaSE<Evento> lisEvento = pqEvento.inOrder();
         String str = "";
         for(int i = 0; i < lisEvento.length(); i++){
-            str = str + lisEvento.get(i).mostrar() + "\n";
+            str = str + lisEvento.get(i).getTitulo() + "\n";
         }
         return str;
     }
@@ -446,7 +446,7 @@ public class GestorGeneral {
         String str = "";
        
         for(int i = 0; i < lisTarea.length(); i++){ 
-            str = str + lisTarea.get(i).mostrar() + "\n";
+            str = str + lisTarea.get(i).getTitulo() + "\n";
         }
         return str;
     }
@@ -459,6 +459,7 @@ public class GestorGeneral {
         ListaSE<Tarea> listaT = pqTarea.inOrder();
         Tarea tarea = null;
         ArrayList<Tarea> listaCoin = new ArrayList<>();
+        s = s.toLowerCase();
         for(int i = 0; i < listaT.length(); i++){
             // Obtiene el título de la tarea y lo convierte a minúsculas
             String titulo = listaT.get(i).getTitulo();
@@ -513,6 +514,7 @@ public class GestorGeneral {
         ListaSE<Evento> listaE = pqEvento.inOrder(); // Obtiene la lista de eventos ordenados
         Evento evento = null;
         ArrayList<Evento> listaCoin = new ArrayList<>();
+        s = s.toLowerCase();
         for(int i = 0; i < listaE.length(); i++){
             // Obtiene el título del evento y lo convierte a minúsculas
             String titulo = listaE.get(i).getTitulo();

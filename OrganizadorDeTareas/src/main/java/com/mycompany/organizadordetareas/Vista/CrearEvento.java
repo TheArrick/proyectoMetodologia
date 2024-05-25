@@ -10,6 +10,8 @@ import com.mycompany.organizadordetareas.Controlador.Fecha;
 import com.mycompany.organizadordetareas.Controlador.Hora;
 //import com.mycompany.organizadordetareas.Controlador.Usuario;
 import com.mycompany.organizadordetareas.Controlador.Validadores;
+import java.awt.Color;
+import java.awt.Dimension;
 // ._. (flag internacional pluggin)
 /**
  *
@@ -28,6 +30,13 @@ public class CrearEvento extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         lblHoraX.setVisible(false);
         lblFechaX.setVisible(false);
+        setLocation(400,500);
+        setSize(1000,650);
+        setMaximumSize(new Dimension(1000,650));
+        setMinimumSize(new Dimension(1000,650));
+        setResizable(false);
+        setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(55, 57, 63));
     }
 
     /**
@@ -42,31 +51,39 @@ public class CrearEvento extends javax.swing.JFrame {
         lblBienvenida = new javax.swing.JLabel();
         lblEvento = new javax.swing.JLabel();
         txtTitulo = new javax.swing.JTextField();
-        lblEvento1 = new javax.swing.JLabel();
         txtDescripcion = new javax.swing.JTextField();
+        lblEvento1 = new javax.swing.JLabel();
         lblEvento2 = new javax.swing.JLabel();
         txtLugar = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         lblEvento3 = new javax.swing.JLabel();
         txtHora = new javax.swing.JTextField();
         lblEvento4 = new javax.swing.JLabel();
-        txtFecha = new javax.swing.JTextField();
         lblEvento5 = new javax.swing.JLabel();
         listPrio = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
         lblHoraX = new javax.swing.JLabel();
+        txtMin = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtDD = new javax.swing.JTextField();
+        txtMM = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txtAAAA = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
         lblFechaX = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lorem Ipsum - App");
         setBackground(new java.awt.Color(2, 46, 89));
 
-        lblBienvenida.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        lblBienvenida.setFont(new java.awt.Font("Segoe UI Black", 3, 36)); // NOI18N
+        lblBienvenida.setForeground(new java.awt.Color(234, 234, 235));
         lblBienvenida.setText("Nuevo Evento");
         lblBienvenida.setToolTipText("");
 
-        lblEvento.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblEvento.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        lblEvento.setForeground(new java.awt.Color(234, 234, 235));
         lblEvento.setText("Nuevo Titulo:");
 
         txtTitulo.setForeground(new java.awt.Color(51, 51, 51));
@@ -78,11 +95,8 @@ public class CrearEvento extends javax.swing.JFrame {
             }
         });
 
-        lblEvento1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblEvento1.setText("Ingrese su Descripción:");
-
         txtDescripcion.setForeground(new java.awt.Color(51, 51, 51));
-        txtDescripcion.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+        txtDescripcion.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtDescripcion.setToolTipText("");
         txtDescripcion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +104,12 @@ public class CrearEvento extends javax.swing.JFrame {
             }
         });
 
-        lblEvento2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblEvento1.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        lblEvento1.setForeground(new java.awt.Color(234, 234, 235));
+        lblEvento1.setText("Ingrese su Descripción:");
+
+        lblEvento2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        lblEvento2.setForeground(new java.awt.Color(234, 234, 235));
         lblEvento2.setText("Ingrese el Lugar del Evento:");
 
         txtLugar.setForeground(new java.awt.Color(51, 51, 51));
@@ -100,12 +119,13 @@ public class CrearEvento extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setText("LOGO");
 
-        lblEvento3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblEvento3.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        lblEvento3.setForeground(new java.awt.Color(234, 234, 235));
         lblEvento3.setText("Ingrese la Hora:");
 
+        txtHora.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         txtHora.setForeground(new java.awt.Color(51, 51, 51));
         txtHora.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtHora.setText("hh:mm");
         txtHora.setToolTipText("");
         txtHora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,22 +133,15 @@ public class CrearEvento extends javax.swing.JFrame {
             }
         });
 
-        lblEvento4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblEvento4.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        lblEvento4.setForeground(new java.awt.Color(234, 234, 235));
         lblEvento4.setText("Prioridad:");
 
-        txtFecha.setForeground(new java.awt.Color(51, 51, 51));
-        txtFecha.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtFecha.setText("dd/mm/aaaa");
-        txtFecha.setToolTipText("");
-        txtFecha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtFechaActionPerformed(evt);
-            }
-        });
-
-        lblEvento5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblEvento5.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        lblEvento5.setForeground(new java.awt.Color(234, 234, 235));
         lblEvento5.setText("Ingrese la Fecha:");
 
+        listPrio.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         listPrio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
         listPrio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,44 +149,122 @@ public class CrearEvento extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("CANCELAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnCancelar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnCancelar.setText("CANCELAR");
+        btnCancelar.setFocusPainted(false);
+        //btnCancelar.setContentAreaFilled(false);
+        btnCancelar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnCancelar.setOpaque(false);
+        btnCancelar.setBorder(null);
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnCancelarActionPerformed(evt);
             }
         });
 
-        jButton2.setText("GUARDAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnGuardar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnGuardar.setText("GUARDAR");
+        btnGuardar.setBorder(null);
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnGuardarActionPerformed(evt);
             }
         });
 
-        lblHoraX.setText("Hora incorrecta, siga el formato hh:mm");
+        lblHoraX.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
+        lblHoraX.setForeground(new java.awt.Color(234, 234, 235));
+        lblHoraX.setText("Hora Invalida (hh:mm)");
+        lblHoraX.setToolTipText("");
 
-        lblFechaX.setText("Fecha incorrecta, siga el formato dd-mm-aaaa");
+        txtMin.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtMin.setForeground(new java.awt.Color(51, 51, 51));
+        txtMin.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtMin.setToolTipText("");
+        txtMin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMinActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel2.setText(":");
+
+        txtDD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtDD.setForeground(new java.awt.Color(51, 51, 51));
+        txtDD.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtDD.setToolTipText("");
+        txtDD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDDActionPerformed(evt);
+            }
+        });
+
+        txtMM.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtMM.setForeground(new java.awt.Color(51, 51, 51));
+        txtMM.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtMM.setToolTipText("");
+        txtMM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtMMActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel3.setText("/");
+
+        txtAAAA.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtAAAA.setForeground(new java.awt.Color(51, 51, 51));
+        txtAAAA.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        txtAAAA.setToolTipText("");
+        txtAAAA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAAAAActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel4.setText("/");
+
+        lblFechaX.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
+        lblFechaX.setForeground(new java.awt.Color(234, 234, 235));
+        lblFechaX.setText("Fecha Invalida (hh/mm/aaaa)");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(75, 75, 75)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addGap(61, 61, 61)
-                        .addComponent(jButton2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1)))
-                .addGap(116, 116, 116))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(155, 155, 155)
+                .addGap(120, 120, 120)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblEvento3)
+                        .addGap(52, 52, 52)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(txtMin, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(124, 124, 124)
+                                .addComponent(lblEvento5)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtDD, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblHoraX)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblFechaX)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMM, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtAAAA, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(lblEvento)
                         .addGap(97, 97, 97)
@@ -183,68 +274,74 @@ public class CrearEvento extends javax.swing.JFrame {
                         .addGap(42, 42, 42)
                         .addComponent(listPrio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblEvento3)
-                        .addGap(60, 60, 60)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblHoraX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(txtHora))
-                        .addGap(64, 64, 64)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblEvento5)
-                                .addGap(60, 60, 60)
-                                .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lblFechaX)))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblEvento1)
                             .addComponent(lblEvento2))
                         .addGap(55, 55, 55)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(24, 24, 24)
-                                .addComponent(txtLugar, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(92, Short.MAX_VALUE))
+                            .addComponent(txtLugar, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(61, 61, 61)
+                        .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lblBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(424, 424, 424)
+                        .addComponent(jLabel1)))
+                .addGap(100, 100, 100))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblEvento)
                     .addComponent(txtTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblEvento1)
                     .addComponent(txtDescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblEvento2)
                     .addComponent(txtLugar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblEvento3)
-                    .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtFecha, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblEvento5))
-                .addGap(8, 8, 8)
+                .addGap(40, 40, 40)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2)
+                        .addComponent(txtMin, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel4)
+                            .addComponent(txtDD, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(txtMM, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(txtAAAA, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(lblEvento5)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblEvento3)))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHoraX)
                     .addComponent(lblFechaX))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblEvento4)
                     .addComponent(listPrio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(114, 114, 114))
+                    .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45))
         );
 
         txtTitulo.getAccessibleContext().setAccessibleName("");
@@ -260,10 +357,11 @@ public class CrearEvento extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_listPrioActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         menuUs.setVisible(true);
+        menuUs.releerEvento();
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void txtTituloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTituloActionPerformed
         // TODO add your handling code here:
@@ -273,43 +371,62 @@ public class CrearEvento extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtHoraActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        lblHoraX.setVisible(false);
+        lblFechaX.setVisible(false);
         Validadores valid = new Validadores();
         String titulo = txtTitulo.getText();
         String descripcion = txtDescripcion.getText();
-        String hora = txtHora.getText();
-        String fecha = txtFecha.getText();
+        
+        String hora = txtHora.getText() + ":" + txtMin.getText();
+        
+        String fecha = txtDD.getText() + "/" + txtMM.getText() + "/" + txtAAAA.getText();
+        
         String lugar = txtLugar.getText();
         int prioridad = Integer.parseInt(listPrio.getSelectedItem().toString());
+        
         Hora horaVal = new Hora(0,0);
         Fecha fechaVal = new Fecha(0,0,0);
+        
         if(!valid.validarHora(hora)){
             lblHoraX.setVisible(true);
         }else{
-            String[] partes = hora.split(":");
-            int h = Integer.parseInt(partes[0]);
-            int m = Integer.parseInt(partes[1]);
-            horaVal = new Hora(h,m);
+            String[] partesH = hora.split(":");
+            int hh = Integer.parseInt(partesH[0]);
+            int mm = Integer.parseInt(partesH[1]);
+            horaVal = new Hora(hh,mm);   
         }
+        
         if(!valid.validarFecha(fecha)){
             lblFechaX.setVisible(true);
         }else{
-            String[] partes = fecha.split("/");
-            int dd = Integer.parseInt(partes[0]);
-            int mm = Integer.parseInt(partes[1]);
-            int aaaa = Integer.parseInt(partes[2]);
-            fechaVal = new Fecha(dd,mm,aaaa);
+            String[] partesFV = fecha.split("/");
+            int d = Integer.parseInt(partesFV[0]);
+            int m = Integer.parseInt(partesFV[1]);
+            int y = Integer.parseInt(partesFV[2]);
+            fechaVal = new Fecha(d,m,y);
+            menuUs.g.registrarEvento(new Evento(titulo,descripcion,horaVal,fechaVal,prioridad,lugar));
+            menuUs.setVisible(true);
+            this.dispose();
+            menuUs.releerEvento();
         }
-        menuUs.g.registrarEvento(new Evento(titulo,descripcion,horaVal,fechaVal,prioridad,lugar));
-        menuUs.setVisible(true);
-        this.setVisible(false);
-        menuUs.meterEventos();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
-    private void txtFechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFechaActionPerformed
+    private void txtMinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMinActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtFechaActionPerformed
+    }//GEN-LAST:event_txtMinActionPerformed
+
+    private void txtDDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDDActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDDActionPerformed
+
+    private void txtMMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtMMActionPerformed
+
+    private void txtAAAAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAAAAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAAAAActionPerformed
 
     public void setMenuUs(MenuUsuario menuUs){
         this.menuUs = menuUs;
@@ -352,9 +469,12 @@ public class CrearEvento extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnCancelar;
+    private javax.swing.JButton btnGuardar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblBienvenida;
     private javax.swing.JLabel lblEvento;
     private javax.swing.JLabel lblEvento1;
@@ -365,10 +485,13 @@ public class CrearEvento extends javax.swing.JFrame {
     private javax.swing.JLabel lblFechaX;
     private javax.swing.JLabel lblHoraX;
     private javax.swing.JComboBox<String> listPrio;
+    private javax.swing.JTextField txtAAAA;
+    private javax.swing.JTextField txtDD;
     private javax.swing.JTextField txtDescripcion;
-    private javax.swing.JTextField txtFecha;
     private javax.swing.JTextField txtHora;
     private javax.swing.JTextField txtLugar;
+    private javax.swing.JTextField txtMM;
+    private javax.swing.JTextField txtMin;
     private javax.swing.JTextField txtTitulo;
     // End of variables declaration//GEN-END:variables
 }
