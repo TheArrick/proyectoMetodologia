@@ -25,7 +25,7 @@ public class IniciarSesion extends javax.swing.JFrame {
         gestorUsuarios = new GestorUser();
         initComponents();
         setLocation(400,500);
-        setSize(1000,800);
+        setSize(1000,700);
         setResizable(false);
         jLabel3.setVisible(false);
         bienvenido.setVisible(false);
@@ -55,6 +55,7 @@ public class IniciarSesion extends javax.swing.JFrame {
         textoPregunta1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jButton1.setBackground(new java.awt.Color(32, 34, 37));
         jButton1.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
@@ -62,7 +63,6 @@ public class IniciarSesion extends javax.swing.JFrame {
         jButton1.setText("Volver");
         jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
         jButton1.setFocusPainted(false);
-        jButton1.setOpaque(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -72,6 +72,7 @@ public class IniciarSesion extends javax.swing.JFrame {
         nomUsuario.setBackground(new java.awt.Color(55, 57, 63));
         nomUsuario.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
         nomUsuario.setForeground(new java.awt.Color(234, 234, 235));
+        nomUsuario.setToolTipText("");
         nomUsuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(234, 234, 235)));
         nomUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +102,7 @@ public class IniciarSesion extends javax.swing.JFrame {
         jButton3.setBackground(new java.awt.Color(32, 34, 37));
         jButton3.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
         jButton3.setForeground(new java.awt.Color(51, 102, 255));
-        jButton3.setText("¿Olvidaste u contraseña?");
+        jButton3.setText("¿Olvidaste tu contraseña?");
         jButton3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,21 +140,21 @@ public class IniciarSesion extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(371, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bienvenido, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(textoPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(textoPregunta1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(campoContras)
                         .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(nomUsuario)
-                        .addComponent(jLabel3)))
-                .addGap(345, 345, 345))
+                        .addComponent(jLabel3))
+                    .addComponent(bienvenido))
+                .addGap(432, 432, 432))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
+                        .addGap(100, 100, 100)
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(89, 89, 89)
@@ -161,32 +162,32 @@ public class IniciarSesion extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(420, 420, 420)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(436, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(63, 63, 63)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGap(25, 25, 25)
                 .addComponent(textoPregunta)
-                .addGap(32, 32, 32)
+                .addGap(25, 25, 25)
                 .addComponent(nomUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(36, 36, 36)
+                .addGap(25, 25, 25)
                 .addComponent(textoPregunta1)
-                .addGap(18, 18, 18)
+                .addGap(25, 25, 25)
                 .addComponent(campoContras, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(25, 25, 25)
                 .addComponent(jButton3)
-                .addGap(18, 18, 18)
+                .addGap(25, 25, 25)
                 .addComponent(jLabel3)
-                .addGap(41, 41, 41)
+                .addGap(35, 35, 35)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bienvenido)
-                .addGap(34, 34, 34)
+                .addGap(21, 21, 21)
                 .addComponent(jButton1)
-                .addGap(49, 49, 49))
+                .addGap(40, 40, 40))
         );
 
         pack();
@@ -217,8 +218,6 @@ public class IniciarSesion extends javax.swing.JFrame {
                 menuUs = new MenuUsuario(user);
                 menuUs.setVisible(true);
                 this.dispose(); 
-                menuUs.meterEventos();
-                menuUs.meterTareas();
             } else {
                 jLabel3.setVisible(true);
             }

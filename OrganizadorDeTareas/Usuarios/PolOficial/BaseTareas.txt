@@ -1,4 +1,1 @@
-a|1245|06062024|2|true
-Cocinar|1200|05062024|2|true
-Comer|1300|12062024|2|true
-pepito|1500|06072024|3|true
+TareaPrueba|1545|06062024|2|true
