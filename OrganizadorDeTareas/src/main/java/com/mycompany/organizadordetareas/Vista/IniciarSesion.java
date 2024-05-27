@@ -43,9 +43,7 @@ public class IniciarSesion extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
         nomUsuario = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         bienvenido = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
@@ -53,21 +51,11 @@ public class IniciarSesion extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         textoPregunta = new javax.swing.JLabel();
         textoPregunta1 = new javax.swing.JLabel();
+        cancelar = new javax.swing.JButton();
+        cancelar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        jButton1.setBackground(new java.awt.Color(32, 34, 37));
-        jButton1.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(28, 185, 85));
-        jButton1.setText("Volver");
-        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
-        jButton1.setFocusPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         nomUsuario.setBackground(new java.awt.Color(55, 57, 63));
         nomUsuario.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
@@ -77,17 +65,6 @@ public class IniciarSesion extends javax.swing.JFrame {
         nomUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nomUsuarioActionPerformed(evt);
-            }
-        });
-
-        jButton2.setBackground(new java.awt.Color(32, 34, 37));
-        jButton2.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(28, 185, 85));
-        jButton2.setText("Entrar");
-        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(24, 185, 85), 1, true));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
             }
         });
 
@@ -135,34 +112,56 @@ public class IniciarSesion extends javax.swing.JFrame {
         textoPregunta1.setForeground(new java.awt.Color(234, 234, 235));
         textoPregunta1.setText("Contraseña");
 
+        cancelar.setBackground(new java.awt.Color(10, 135, 55));
+        cancelar.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        cancelar.setForeground(new java.awt.Color(234, 234, 235));
+        cancelar.setText("Entrar");
+        cancelar.setFocusPainted(false);
+        cancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelarActionPerformed(evt);
+            }
+        });
+
+        cancelar1.setBackground(new java.awt.Color(10, 135, 55));
+        cancelar1.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        cancelar1.setForeground(new java.awt.Color(234, 234, 235));
+        cancelar1.setText("Cancelar");
+        cancelar1.setFocusPainted(false);
+        cancelar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelar1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(textoPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addContainerGap(368, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(textoPregunta, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(textoPregunta1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(campoContras)
-                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(nomUsuario)
-                        .addComponent(jLabel3))
-                    .addComponent(bienvenido))
+                        .addComponent(jLabel3)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addComponent(cancelar)
+                            .addGap(43, 43, 43)))
+                    .addComponent(bienvenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(432, 432, 432))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(89, 89, 89)
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(420, 420, 420)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(436, Short.MAX_VALUE))
+                        .addGap(109, 109, 109)
+                        .addComponent(cancelar1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,31 +177,38 @@ public class IniciarSesion extends javax.swing.JFrame {
                 .addGap(25, 25, 25)
                 .addComponent(campoContras, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25)
-                .addComponent(jButton3)
-                .addGap(25, 25, 25)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel3)
-                .addGap(35, 35, 35)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(cancelar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bienvenido)
-                .addGap(21, 21, 21)
-                .addComponent(jButton1)
-                .addGap(40, 40, 40))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cancelar1)
+                .addGap(37, 37, 37))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        v1.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     private void nomUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomUsuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nomUsuarioActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // boton olvidaste 
+            olvCont = new OlvidasteContrasena();
+            olvCont.setV1(this);
+            olvCont.setVisible(true);
+            this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void campoContrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoContrasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_campoContrasActionPerformed
+
+    private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
         String usuario = nomUsuario.getText();
         char[] con = campoContras.getPassword();
         String contra = new String(con);
@@ -223,20 +229,12 @@ public class IniciarSesion extends javax.swing.JFrame {
             }
         
         }
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_cancelarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // boton olvidaste 
-            olvCont = new OlvidasteContrasena();
-            olvCont.setV1(this);
-            olvCont.setVisible(true);
-            this.setVisible(false);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void campoContrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoContrasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_campoContrasActionPerformed
+    private void cancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelar1ActionPerformed
+        v1.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_cancelar1ActionPerformed
     public void setV1(VentanaInicio v1){
         this.v1 = v1;
     }
@@ -278,8 +276,8 @@ public class IniciarSesion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bienvenido;
     private javax.swing.JPasswordField campoContras;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton cancelar;
+    private javax.swing.JButton cancelar1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

@@ -551,7 +551,6 @@ public class GestorGeneral {
      * @param titulo, evento con titulo a buscar.
      */
     public String buscarEvento(String s){
-
         Evento v = buscarEventoObjeto(s); // Busca el evento por título
         String res = "No se encontró su Evento"; // Mensaje predeterminado si no se encuentra el evento
         if(v != null){

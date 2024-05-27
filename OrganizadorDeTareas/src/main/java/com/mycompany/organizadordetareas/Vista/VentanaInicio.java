@@ -3,13 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.organizadordetareas.Vista;
+
 import com.mycompany.organizadordetareas.Controlador.*;
+import java.awt.Color;
+
 /**
  *
  * @author Arrick
  */
 public class VentanaInicio extends javax.swing.JFrame {
-    private IniciarSesion in; 
+
+    private IniciarSesion in;
     private Registrarse re;
     private GestorUser gesUs;
 
@@ -18,11 +22,13 @@ public class VentanaInicio extends javax.swing.JFrame {
      */
     public VentanaInicio() {
         initComponents();
-        setLocation(400,500);
+        setLocation(400, 500);
         setResizable(false);
-        setSize(1000,800);
+        setSize(800, 600);
         gesUs = new GestorUser();
-        setLocationRelativeTo(null);  
+        setResizable(false);
+        setLocationRelativeTo(null);
+        getContentPane().setBackground(new Color(55, 57, 63));
     }
 
     /**
@@ -34,23 +40,36 @@ public class VentanaInicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        cancelar = new javax.swing.JButton();
+        cancelar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1000, 1000));
 
-        jButton1.setText("Iniciar Sesión");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel1.setText("¡Bienvenido a LOREM IPSUM!");
+
+        cancelar.setBackground(new java.awt.Color(10, 135, 55));
+        cancelar.setFont(new java.awt.Font("Trebuchet MS", 0, 36)); // NOI18N
+        cancelar.setForeground(new java.awt.Color(234, 234, 235));
+        cancelar.setText("Registrarse");
+        cancelar.setFocusPainted(false);
+        cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                cancelarActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Regirstrarse");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        cancelar1.setBackground(new java.awt.Color(10, 135, 55));
+        cancelar1.setFont(new java.awt.Font("Trebuchet MS", 0, 36)); // NOI18N
+        cancelar1.setForeground(new java.awt.Color(234, 234, 235));
+        cancelar1.setText("Iniciar Sesion");
+        cancelar1.setFocusPainted(false);
+        cancelar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                cancelar1ActionPerformed(evt);
             }
         });
 
@@ -58,40 +77,49 @@ public class VentanaInicio extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(270, 270, 270)
+                        .addComponent(cancelar1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(285, 285, 285)
+                        .addComponent(cancelar)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(562, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(542, 542, 542))
+                .addGap(0, 165, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(159, 159, 159))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(238, 238, 238)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(397, Short.MAX_VALUE))
+                .addGap(87, 87, 87)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(107, 107, 107)
+                .addComponent(cancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(55, 55, 55)
+                .addComponent(cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(182, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
-    
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-            in = new IniciarSesion();
-            in.setV1(this);
-            in.setVisible(true);
-            this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-            re = new Registrarse();
-            re.setV1(this);
-            re.setVisible(true);
-            this.setVisible(false);
-    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
+        re = new Registrarse();
+        re.setV1(this);
+        re.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_cancelarActionPerformed
+
+    private void cancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelar1ActionPerformed
+        in = new IniciarSesion();
+        in.setV1(this);
+        in.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_cancelar1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,7 +157,8 @@ public class VentanaInicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton cancelar;
+    private javax.swing.JButton cancelar1;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

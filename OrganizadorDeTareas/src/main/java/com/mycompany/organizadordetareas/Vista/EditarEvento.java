@@ -5,6 +5,7 @@
 package com.mycompany.organizadordetareas.Vista;
 
 import com.mycompany.organizadordetareas.Controlador.*;
+import java.awt.Color;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,12 +25,16 @@ public class EditarEvento extends javax.swing.JFrame {
         this.g = g;
         initComponents();
         setSize(1000,600);
+        getContentPane().setBackground(new Color(55, 57, 63));
         setResizable(false);
         setLocationRelativeTo(null);
         modificar_titulo.setText(evento.getTitulo());
         modificar_descripcion.setText(evento.getDescripcion());
-        modificar_hora.setText(evento.getHora().toString());
-        modificar_fecha.setText(evento.getFecha().toString());
+        modificar_hora.setText(Integer.toString(evento.getHora().getHora()));
+        modificar_min.setText(Integer.toString(evento.getHora().getMin()));
+        modificar_dia.setText(Integer.toString(evento.getFecha().getD()));
+        modificar_mes.setText(Integer.toString(evento.getFecha().getM()));
+        modificar_anio.setText(Integer.toString(evento.getFecha().getA()));
         modificar_lugar.setText(evento.getLugar());
         modificar_prioridad.setSelectedItem(Integer.toString(evento.getPrioridad()));
         horaNoValida.setVisible(false);
@@ -53,7 +58,7 @@ public class EditarEvento extends javax.swing.JFrame {
         modificar_lugar = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         modificar_hora = new javax.swing.JTextField();
-        modificar_fecha = new javax.swing.JTextField();
+        modificar_dia = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         modificar_prioridad = new javax.swing.JComboBox<>();
@@ -61,111 +66,193 @@ public class EditarEvento extends javax.swing.JFrame {
         guardar = new javax.swing.JButton();
         horaNoValida = new javax.swing.JLabel();
         fechaNoValida = new javax.swing.JLabel();
+        modificar_min = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        modificar_mes = new javax.swing.JTextField();
+        modificar_anio = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(55, 57, 63));
+        setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
 
-        jLabel1.setText("Reescriba lo que desee editar:");
+        jLabel1.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel1.setText("Editar Evento");
 
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(234, 234, 235));
         jLabel2.setText("Titulo:");
 
+        modificar_titulo.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        modificar_titulo.setToolTipText("Usa Tab para moverte mas rapido");
         modificar_titulo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modificar_tituloActionPerformed(evt);
             }
         });
 
-        jLabel3.setText("Descripción");
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel3.setText("Descripción:");
 
-        modificar_descripcion.setToolTipText("");
+        modificar_descripcion.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        modificar_descripcion.setToolTipText("Usa Tab para moverte mas rapido");
         modificar_descripcion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modificar_descripcionActionPerformed(evt);
             }
         });
 
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(234, 234, 235));
         jLabel4.setText("Lugar:");
 
+        modificar_lugar.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        modificar_lugar.setToolTipText("Usa Tab para moverte mas rapido");
         modificar_lugar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 modificar_lugarActionPerformed(evt);
             }
         });
 
-        jLabel5.setText("Hora (hh:mm) :");
+        jLabel5.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel5.setText("Hora :");
 
-        modificar_fecha.addActionListener(new java.awt.event.ActionListener() {
+        modificar_hora.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        modificar_hora.setToolTipText("Usa Tab para moverte mas rapido");
+
+        modificar_dia.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        modificar_dia.setToolTipText("Usa Tab para moverte mas rapido");
+        modificar_dia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modificar_fechaActionPerformed(evt);
+                modificar_diaActionPerformed(evt);
             }
         });
 
-        jLabel6.setText("Fecha (dd/mm/aaaa)");
+        jLabel6.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel6.setText("Fecha:");
         jLabel6.setToolTipText("");
 
+        jLabel7.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(234, 234, 235));
         jLabel7.setText("Prioridad:");
 
+        modificar_prioridad.setFont(new java.awt.Font("Trebuchet MS", 0, 14)); // NOI18N
+        modificar_prioridad.setForeground(new java.awt.Color(234, 234, 235));
         modificar_prioridad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
 
+        cancelar.setBackground(new java.awt.Color(10, 135, 55));
+        cancelar.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        cancelar.setForeground(new java.awt.Color(234, 234, 235));
         cancelar.setText("Cancelar");
+        cancelar.setFocusPainted(false);
         cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelarActionPerformed(evt);
             }
         });
 
+        guardar.setBackground(new java.awt.Color(10, 135, 55));
+        guardar.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        guardar.setForeground(new java.awt.Color(234, 234, 235));
         guardar.setText("Guardar");
+        guardar.setFocusPainted(false);
         guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 guardarActionPerformed(evt);
             }
         });
 
+        horaNoValida.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
+        horaNoValida.setForeground(new java.awt.Color(234, 234, 235));
         horaNoValida.setText("Hora no valida");
 
+        fechaNoValida.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
+        fechaNoValida.setForeground(new java.awt.Color(234, 234, 235));
         fechaNoValida.setText("Fecha no valida");
+
+        modificar_min.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        modificar_min.setToolTipText("Usa Tab para moverte mas rapido");
+
+        jLabel8.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel8.setText(":");
+
+        modificar_mes.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        modificar_mes.setToolTipText("Usa Tab para moverte mas rapido");
+
+        modificar_anio.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        modificar_anio.setToolTipText("Usa Tab para moverte mas rapido");
+
+        jLabel9.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel9.setText("/");
+
+        jLabel10.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel10.setText("/");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(119, 119, 119)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel7))
+                .addGap(64, 64, 64)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jLabel1))
+                        .addComponent(modificar_hora, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 5, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(modificar_min, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 278, Short.MAX_VALUE)
+                        .addComponent(jLabel6)
+                        .addGap(56, 56, 56)
+                        .addComponent(modificar_dia, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(5, 5, 5)
+                        .addComponent(jLabel9)
+                        .addGap(7, 7, 7)
+                        .addComponent(modificar_mes, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(modificar_anio, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(69, 69, 69))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel5)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(horaNoValida)
-                                .addComponent(jLabel7)))
-                        .addGap(155, 155, 155)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(modificar_titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(modificar_prioridad, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(modificar_hora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(131, 131, 131)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(fechaNoValida)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
-                                        .addGap(56, 56, 56)
-                                        .addComponent(modificar_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(modificar_lugar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 203, Short.MAX_VALUE)
-                                .addComponent(modificar_descripcion, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(modificar_titulo, javax.swing.GroupLayout.Alignment.LEADING)))))
-                .addContainerGap(195, Short.MAX_VALUE))
+                            .addComponent(modificar_lugar, javax.swing.GroupLayout.PREFERRED_SIZE, 203, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(modificar_descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel1)
+                .addGap(97, 97, 97))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(cancelar)
-                .addGap(96, 96, 96)
-                .addComponent(guardar)
-                .addGap(112, 112, 112))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(cancelar)
+                        .addGap(96, 96, 96)
+                        .addComponent(guardar)
+                        .addGap(69, 69, 69))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(horaNoValida)
+                        .addGap(466, 466, 466)
+                        .addComponent(fechaNoValida)
+                        .addGap(113, 113, 113))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,29 +267,35 @@ public class EditarEvento extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(modificar_descripcion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(105, 105, 105)
+                .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(modificar_lugar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
+                .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(modificar_hora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(modificar_fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(modificar_hora, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(modificar_dia, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(modificar_min, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8)
+                    .addComponent(modificar_mes, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(modificar_anio, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel10))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(horaNoValida)
                     .addComponent(fechaNoValida))
-                .addGap(66, 66, 66)
+                .addGap(25, 25, 25)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(modificar_prioridad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cancelar)
                     .addComponent(guardar))
-                .addGap(70, 70, 70))
+                .addGap(50, 50, 50))
         );
 
         pack();
@@ -220,9 +313,9 @@ public class EditarEvento extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_modificar_lugarActionPerformed
 
-    private void modificar_fechaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificar_fechaActionPerformed
+    private void modificar_diaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificar_diaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_modificar_fechaActionPerformed
+    }//GEN-LAST:event_modificar_diaActionPerformed
 
     private void guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarActionPerformed
           Validadores validar = new Validadores();
@@ -231,11 +324,11 @@ public class EditarEvento extends javax.swing.JFrame {
         String titulo = modificar_titulo.getText();
         String descripcion = modificar_descripcion.getText();
         String lugar = modificar_lugar.getText();
-        String hora = modificar_hora.getText();
+        String hora = modificar_hora.getText() + ":" + modificar_min.getText();
         
         
         
-        String fecha = modificar_fecha.getText();
+        String fecha = modificar_dia.getText() + "/" + modificar_mes.getText() + "/" + modificar_anio.getText();
         
         
         
@@ -270,6 +363,7 @@ public class EditarEvento extends javax.swing.JFrame {
     }//GEN-LAST:event_guardarActionPerformed
 
     private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
+        menuUs = new MenuUsuario(g.getUsuario());
         menuUs.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_cancelarActionPerformed
@@ -317,16 +411,22 @@ public class EditarEvento extends javax.swing.JFrame {
     private javax.swing.JButton guardar;
     private javax.swing.JLabel horaNoValida;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JTextField modificar_anio;
     private javax.swing.JTextField modificar_descripcion;
-    private javax.swing.JTextField modificar_fecha;
+    private javax.swing.JTextField modificar_dia;
     private javax.swing.JTextField modificar_hora;
     private javax.swing.JTextField modificar_lugar;
+    private javax.swing.JTextField modificar_mes;
+    private javax.swing.JTextField modificar_min;
     private javax.swing.JComboBox<String> modificar_prioridad;
     private javax.swing.JTextField modificar_titulo;
     // End of variables declaration//GEN-END:variables

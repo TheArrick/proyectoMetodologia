@@ -66,40 +66,40 @@ public class CrearTarea extends javax.swing.JFrame {
         txtMM = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         txtAAAA = new javax.swing.JTextField();
-        btnGuardar = new javax.swing.JButton();
-        btnCancelar = new javax.swing.JButton();
+        cancelar = new javax.swing.JButton();
+        aceptar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lorem Ipsum - App");
         setBackground(new java.awt.Color(2, 46, 89));
 
-        lblBienvenida.setFont(new java.awt.Font("Segoe UI Black", 3, 36)); // NOI18N
+        lblBienvenida.setFont(new java.awt.Font("Trebuchet MS", 0, 36)); // NOI18N
         lblBienvenida.setForeground(new java.awt.Color(234, 234, 235));
         lblBienvenida.setText("Nueva Tarea");
         lblBienvenida.setToolTipText("");
 
-        lblEvento.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        lblEvento.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         lblEvento.setForeground(new java.awt.Color(234, 234, 235));
         lblEvento.setText("Nuevo Titulo:");
 
-        txtTitulo.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        txtTitulo.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         txtTitulo.setForeground(new java.awt.Color(51, 51, 51));
         txtTitulo.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtTitulo.setToolTipText("");
+        txtTitulo.setToolTipText("Usa Tab para moverte mas rapido");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(234, 234, 235));
         jLabel1.setText("LOGO");
 
-        lblEvento3.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        lblEvento3.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         lblEvento3.setForeground(new java.awt.Color(234, 234, 235));
         lblEvento3.setText("Ingrese la Hora:");
 
-        lblEvento4.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        lblEvento4.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         lblEvento4.setForeground(new java.awt.Color(234, 234, 235));
         lblEvento4.setText("Prioridad:");
 
-        lblEvento5.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        lblEvento5.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         lblEvento5.setForeground(new java.awt.Color(234, 234, 235));
         lblEvento5.setText("Ingrese la Fecha:");
 
@@ -112,18 +112,18 @@ public class CrearTarea extends javax.swing.JFrame {
             }
         });
 
-        lblHoraX.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
+        lblHoraX.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         lblHoraX.setForeground(new java.awt.Color(234, 234, 235));
         lblHoraX.setText("Hora Invalida");
 
-        lblFechaX.setFont(new java.awt.Font("Segoe UI Semilight", 0, 14)); // NOI18N
+        lblFechaX.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         lblFechaX.setForeground(new java.awt.Color(234, 234, 235));
         lblFechaX.setText("Fecha Invalida");
 
-        txtHora.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtHora.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         txtHora.setForeground(new java.awt.Color(51, 51, 51));
         txtHora.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtHora.setToolTipText("");
+        txtHora.setToolTipText("Usa Tab para moverte mas rapido");
         txtHora.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtHoraActionPerformed(evt);
@@ -134,20 +134,20 @@ public class CrearTarea extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(234, 234, 235));
         jLabel2.setText(":");
 
-        txtMin.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtMin.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         txtMin.setForeground(new java.awt.Color(51, 51, 51));
         txtMin.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtMin.setToolTipText("");
+        txtMin.setToolTipText("Usa Tab para moverte mas rapido");
         txtMin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMinActionPerformed(evt);
             }
         });
 
-        txtDD.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtDD.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         txtDD.setForeground(new java.awt.Color(51, 51, 51));
         txtDD.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtDD.setToolTipText("");
+        txtDD.setToolTipText("Usa Tab para moverte mas rapido");
         txtDD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtDDActionPerformed(evt);
@@ -158,10 +158,10 @@ public class CrearTarea extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(234, 234, 235));
         jLabel3.setText("/");
 
-        txtMM.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtMM.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         txtMM.setForeground(new java.awt.Color(51, 51, 51));
         txtMM.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtMM.setToolTipText("");
+        txtMM.setToolTipText("Usa Tab para moverte mas rapido");
         txtMM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtMMActionPerformed(evt);
@@ -172,31 +172,33 @@ public class CrearTarea extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(234, 234, 235));
         jLabel4.setText("/");
 
-        txtAAAA.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        txtAAAA.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         txtAAAA.setForeground(new java.awt.Color(51, 51, 51));
         txtAAAA.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        txtAAAA.setToolTipText("");
+        txtAAAA.setToolTipText("Usa Tab para moverte mas rapido");
         txtAAAA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAAAAActionPerformed(evt);
             }
         });
 
-        btnGuardar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnGuardar.setText("GUARDAR");
-        btnGuardar.setBorder(null);
-        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+        cancelar.setBackground(new java.awt.Color(10, 135, 55));
+        cancelar.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        cancelar.setForeground(new java.awt.Color(234, 234, 235));
+        cancelar.setText("Cancelar");
+        cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarActionPerformed(evt);
+                cancelarActionPerformed(evt);
             }
         });
 
-        btnCancelar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        btnCancelar.setText("CANCELAR");
-        btnCancelar.setBorder(null);
-        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+        aceptar1.setBackground(new java.awt.Color(10, 135, 55));
+        aceptar1.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        aceptar1.setForeground(new java.awt.Color(234, 234, 235));
+        aceptar1.setText("Aceptar");
+        aceptar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelarActionPerformed(evt);
+                aceptar1ActionPerformed(evt);
             }
         });
 
@@ -215,10 +217,6 @@ public class CrearTarea extends javax.swing.JFrame {
                                     .addComponent(lblEvento3))
                                 .addGap(175, 175, 175)
                                 .addComponent(lblHoraX))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblEvento4)
-                                .addGap(42, 42, 42)
-                                .addComponent(listPrio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblEvento)
                                 .addGap(55, 55, 55)
@@ -244,15 +242,20 @@ public class CrearTarea extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblFechaX)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(47, 47, 47)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel1)
-                                            .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                        .addGap(197, 197, 197)
+                                        .addComponent(jLabel1))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblEvento4)
+                                .addGap(42, 42, 42)
+                                .addComponent(listPrio, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(cancelar)
+                                .addGap(18, 18, 18)
+                                .addComponent(aceptar1))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(75, 75, 75)
                         .addComponent(lblBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addGap(110, 110, 110))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -272,24 +275,28 @@ public class CrearTarea extends javax.swing.JFrame {
                     .addComponent(txtHora, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtMin, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblEvento5)
-                    .addComponent(txtDD, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMM, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(txtAAAA, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(lblFechaX))
-                .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblEvento4)
-                    .addComponent(listPrio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(32, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblEvento5)
+                            .addComponent(txtDD, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtMM, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)
+                            .addComponent(txtAAAA, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4)
+                            .addComponent(lblFechaX))
+                        .addGap(52, 52, 52)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblEvento4)
+                            .addComponent(listPrio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(96, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(cancelar)
+                            .addComponent(aceptar1))
+                        .addGap(54, 54, 54))))
         );
 
         txtTitulo.getAccessibleContext().setAccessibleName("");
@@ -321,7 +328,13 @@ public class CrearTarea extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAAAAActionPerformed
 
-    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+    private void cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelarActionPerformed
+        menuUs.setVisible(true);
+        menuUs.releerEvento();
+        this.dispose();
+    }//GEN-LAST:event_cancelarActionPerformed
+
+    private void aceptar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptar1ActionPerformed
         lblHoraX.setVisible(false);
         lblFechaX.setVisible(false);
         Validadores valid = new Validadores();
@@ -358,13 +371,7 @@ public class CrearTarea extends javax.swing.JFrame {
             this.dispose();
             menuUs.releerTarea();
         }
-    }//GEN-LAST:event_btnGuardarActionPerformed
-
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        menuUs.setVisible(true);
-        menuUs.releerEvento();
-        this.setVisible(false);
-    }//GEN-LAST:event_btnCancelarActionPerformed
+    }//GEN-LAST:event_aceptar1ActionPerformed
 
     public void setMenuUs(MenuUsuario menuUs){
         this.menuUs = menuUs;
@@ -407,8 +414,8 @@ public class CrearTarea extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton aceptar1;
+    private javax.swing.JButton cancelar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

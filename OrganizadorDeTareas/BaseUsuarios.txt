@@ -6,3 +6,4 @@ PolOficial|Polsito@1|Star wars 8|4
 MateoChupapichi|Miguel@123|Culiacan|2
 Anahi|Arrick1234@|Redragon|3
 Miguel|Perrito123?|negro|1
+PruebaOficial|Polsito@1|Pantera|3
