@@ -10,25 +10,28 @@ import com.mycompany.organizadordetareas.Controlador.estDatos.estDatNoLin.*;
 import com.mycompany.organizadordetareas.Controlador.estDatos.estDatLin.*;
 
 /**
- * La clase GestorGeneral es responsable de gestionar eventos y tareas utilizando árboles binarios de búsqueda de tal forma que
- * ambos son ordenados por el atributo prioridad.
+ * La clase GestorGeneral es responsable de gestionar eventos y tareas
+ * utilizando árboles binarios de búsqueda de tal forma que ambos son ordenados
+ * por el atributo prioridad.
  */
 public class GestorGeneral {
+
     private ArbolBB<Evento> pqEvento; // �?rbol binario de búsqueda para eventos
     private ArbolBB<Tarea> pqTarea;   // �?rbol binario de búsqueda para tareas
     private Escritor escritorTarea;// Objeto para escribir en archivos
     private Escritor escritorEvento;// Objeto para escribir en archivos
     private boolean flag = true; // Bandera para controlar escritura en archivos
     private Usuario user;
+
     /**
-     * Constructor de la clase GestorGeneral.
-     * Inicializa los árboles binarios de búsqueda para eventos y tareas.
+     * Constructor de la clase GestorGeneral. Inicializa los árboles binarios de
+     * búsqueda para eventos y tareas.
      */
     public GestorGeneral(Usuario u) {
         pqEvento = new ArbolBB<>(); // Inicializa el árbol para eventos
         pqTarea = new ArbolBB<>(); // Inicializa el árbol para tareas
 
-        escritorTarea = new Escritor(u.toStringDirAs() +"\\BaseTareas.txt");
+        escritorTarea = new Escritor(u.toStringDirAs() + "\\BaseTareas.txt");
         escritorEvento = new Escritor(u.toStringDirAs() + "\\BaseEventos.txt"); // Inicializa el escritor de archivos
 
         // Carga datos de archivos
@@ -43,25 +46,26 @@ public class GestorGeneral {
 
     /**
      * Registra eventos desde datos proporcionados.
+     *
      * @param datosEv Lista de arrays de strings con datos de eventos.
      */
-    private void registrarBaseEv(ArrayList<String[]> datosEv){
-        if(!datosEv.isEmpty()){
-            for(int i = 0; i<datosEv.size();i++){
+    private void registrarBaseEv(ArrayList<String[]> datosEv) {
+        if (!datosEv.isEmpty()) {
+            for (int i = 0; i < datosEv.size(); i++) {
                 // Extrae datos de la lista
                 String titulo = datosEv.get(i)[0];
                 String desc = datosEv.get(i)[1];
                 int h = Integer.parseInt(datosEv.get(i)[2]);
-                int hor = h/100;
-                int min = h%100;
-                int dia = (Integer.parseInt(datosEv.get(i)[3]))/1000000;
-                int mes = ((Integer.parseInt(datosEv.get(i)[3]))/10000)%100;
-                int anho = (Integer.parseInt(datosEv.get(i)[3]))%10000;
+                int hor = h / 100;
+                int min = h % 100;
+                int dia = (Integer.parseInt(datosEv.get(i)[3])) / 1000000;
+                int mes = ((Integer.parseInt(datosEv.get(i)[3])) / 10000) % 100;
+                int anho = (Integer.parseInt(datosEv.get(i)[3])) % 10000;
                 String lugar = datosEv.get(i)[4];
                 int prio = Integer.parseInt(datosEv.get(i)[5]);
 
                 // Crea un nuevo evento y lo registra
-                Evento e = new Evento(titulo,desc,new Hora(hor,min), new Fecha(dia,mes,anho), prio,lugar);
+                Evento e = new Evento(titulo, desc, new Hora(hor, min), new Fecha(dia, mes, anho), prio, lugar);
                 flag = false; // Desactiva la bandera para evitar escritura en archivos temporales
                 registrarEvento(e);
                 flag = true; // Reactiva la bandera para permitir escritura posterior
@@ -71,78 +75,138 @@ public class GestorGeneral {
 
     /**
      * Registra tareas desde datos proporcionados.
+     *
      * @param datosTar Lista de arrays de strings con datos de tareas.
      */
-    private void registrarBaseTar(ArrayList<String[]> datosTar){
-        if(!datosTar.isEmpty()){
-            for(int i = 0; i<datosTar.size();i++){
+    private void registrarBaseTar(ArrayList<String[]> datosTar) {
+        if (!datosTar.isEmpty()) {
+            for (int i = 0; i < datosTar.size(); i++) {
                 // Extrae datos de la lista
                 String titulo = datosTar.get(i)[0];
                 int h = Integer.parseInt(datosTar.get(i)[1]);
-                int hor = h/100;
-                int min = h%100;
-                int dia = (Integer.parseInt(datosTar.get(i)[2]))/1000000;
-                int mes = ((Integer.parseInt(datosTar.get(i)[2]))/10000)%100;
-                int anho = (Integer.parseInt(datosTar.get(i)[2]))%10000;
+                int hor = h / 100;
+                int min = h % 100;
+                int dia = (Integer.parseInt(datosTar.get(i)[2])) / 1000000;
+                int mes = ((Integer.parseInt(datosTar.get(i)[2])) / 10000) % 100;
+                int anho = (Integer.parseInt(datosTar.get(i)[2])) % 10000;
                 int prioridad = Integer.parseInt(datosTar.get(i)[3]);
+                String subTarArr[];
+                String subTars = "";
+                if (datosTar.get(i).length == 6) {
+                    subTars = datosTar.get(i)[5];
+                }
                 flag = false; // Desactiva la bandera para evitar escritura en archivos temporales
                 // Crea una nueva tarea y la registra
-                Tarea t = new Tarea(titulo,new Hora(hor,min), new Fecha(dia,mes,anho), prioridad);
+                Tarea t = new Tarea(titulo, new Hora(hor, min), new Fecha(dia, mes, anho), prioridad);
+                if (subTars.length() != 0) {
+                    subTarArr = subTars.split("\\*");
+                    for (int j = 0; j < subTarArr.length; j++) {
+                        t.addSubTarea(subTarArr[j]);
+                    }
+                }
+
                 registrarTarea(t);
                 flag = true; // Reactiva la bandera para permitir escritura posterior
             }
         }
     }
-    public Usuario getUsuario(){
+    /*
+    * @param subTarea es la subtarea a agregar
+    * @param titulo es el titulo de la tarea que contendra a la subtarea
+    */
+    public boolean anadirSubTar(String subTarea, String titulo) {
+        Tarea tarea = buscarTareaObjeto(titulo);
+        boolean bandera = false;
+        if (tarea != null) {
+            String tAntiguo = tarea.toString();
+            tarea.addSubTarea(subTarea);
+            String tNuevo = tarea.toString();
+            actualizarT(tNuevo, tAntiguo);
+            bandera = true;
+        }
+        return bandera;
+    }
+
+    //metodo para eliminar una subTarea 
+    //parametros el titulo de la tarea que contiene a la subtarea
+    // y la posicion de la subTarea en el ArrayList de subtareas
+    public boolean eliminarSubTar(String titulo, int index) {
+        boolean res = false;
+        Tarea t = buscarTareaObjeto(titulo);
+        if (index != -1 && t != null) {
+            String tAntiguo = t.toString();
+            boolean eliminado = t.eliminarSubT(index);
+            if (eliminado) {
+                String tNuevo = t.toString();
+                actualizarT(tNuevo, tAntiguo);
+                res = true;
+            }
+        }
+        return res;
+    }
+
+    //metodo para actualizar la base de tareas, no tocar ni usar >:(
+    private void actualizarT(String tNuevo, String tAntiguo) {
+        escritorTarea.eliminar(tAntiguo);
+        escritorTarea.escribir(tNuevo);
+        ArrayList<String[]> datosTar = escritorTarea.leerTodo();
+        reiniciarArbolTar();
+        registrarBaseTar(datosTar);
+    }
+
+    private void actualizarE(String eNuevo, String eAntiguo) {
+        escritorEvento.eliminar(eAntiguo);
+        escritorEvento.escribir(eNuevo);
+        ArrayList<String[]> datosEv = escritorEvento.leerTodo();
+        reiniciarArbolEv();
+        registrarBaseEv(datosEv);
+    }
+
+    public Usuario getUsuario() {
         return user;
     }
+
     /**
      * Obtiene el árbol de tareas.
+     *
      * @return El árbol de tareas.
      */
-    public ArbolBB getTareas(){
+    public ArbolBB getTareas() {
         return pqTarea;
     }
 
     /**
      * Obtiene el árbol de eventos.
+     *
      * @return El árbol de eventos.
      */
-    public ArbolBB getEventos(){
+    public ArbolBB getEventos() {
         return pqEvento;
     }
 
-    public boolean modificarLugar(String l, String titulo){
+    public boolean modificarLugar(String l, String titulo) {
         //solo para eventos
         boolean res = false;
         Evento e = buscarEventoObjeto(titulo);
-        if(e!=null){
+        if (e != null) {
             String eAntiguo = e.toString();
             e.setLugar(l);
             String eNuevo = e.toString();
-            escritorEvento.eliminar(eAntiguo);
-            escritorEvento.escribir(eNuevo);
-            ArrayList<String[]> datosEv = escritorEvento.leerTodo();
-            reiniciarArbolEv();
-            registrarBaseEv(datosEv);
+            actualizarE(eNuevo, eAntiguo);
             res = true;
         }
         return res;
     }
-    
-    public boolean modificarDescripcion(String d, String titulo){
+
+    public boolean modificarDescripcion(String d, String titulo) {
         //solo para eventos
         boolean res = false;
         Evento e = buscarEventoObjeto(titulo);
-        if(e!=null){
+        if (e != null) {
             String eAntiguo = e.toString();
             e.setDescripcion(d);
             String eNuevo = e.toString();
-            escritorEvento.eliminar(eAntiguo);
-            escritorEvento.escribir(eNuevo);
-            ArrayList<String[]> datosEv = escritorEvento.leerTodo();
-            reiniciarArbolEv();
-            registrarBaseEv(datosEv);
+            actualizarE(eNuevo, eAntiguo);
             res = true;
         }
         return res;
@@ -154,45 +218,37 @@ public class GestorGeneral {
     2. No encontré el pendiente
     3. Encontrado y modificado
      */
-    public int modificarFecha(Fecha f, String titulo, int tipo){
+    public int modificarFecha(Fecha f, String titulo, int tipo) {
         int res = 3;
 
-        if(tipo == 1){
+        if (tipo == 1) {
             Tarea tar = buscarTareaObjeto(titulo);
-            if(tar == null){
+            if (tar == null) {
                 res = 2;
-            }else{
-                if(validarTiempo(tar.getHora(), f, "tarea")){
+            } else {
+                if (validarTiempo(tar.getHora(), f, "tarea")) {
                     String tAntiguo = tar.toString();
                     tar.setFecha(f);
                     String tNuevo = tar.toString();
-                    escritorTarea.eliminar(tAntiguo);
-                    escritorTarea.escribir(tNuevo);
-                    ArrayList<String[]> datosTar = escritorTarea.leerTodo();
-                    reiniciarArbolTar();
-                    registrarBaseTar(datosTar);
-                }else{
+                    actualizarT(tNuevo, tAntiguo);
+                } else {
                     res = 1;
                 }
             }
-        }else{
+        } else {
             Evento ev = buscarEventoObjeto(titulo);
-            if(ev == null){
+            if (ev == null) {
                 res = 2;
-            }else{
-                if(validarTiempo(ev.getHora(), f, "evento")){
+            } else {
+                if (validarTiempo(ev.getHora(), f, "evento")) {
                     String eAntiguo = ev.toString();
                     ev.setFecha(f);
                     String eNuevo = ev.toString();
-                    escritorEvento.eliminar(eAntiguo);
-                    escritorEvento.escribir(eNuevo);
-                    ArrayList<String[]> datosEv = escritorEvento.leerTodo();
-                    reiniciarArbolEv();
-                    registrarBaseEv(datosEv);
-                }else{
+                    actualizarE(eNuevo, eAntiguo);
+                } else {
                     res = 1;
                 }
-            }            
+            }
         }
         return res;
     }
@@ -203,106 +259,82 @@ public class GestorGeneral {
     2. No encontré el pendiente
     3. Encontrado y modificado
      */
-    public int modificarHora(Hora h, String titulo, int tipo){
+    public int modificarHora(Hora h, String titulo, int tipo) {
         int res = 3;
-        if(tipo == 1){
+        if (tipo == 1) {
             Tarea tar = buscarTareaObjeto(titulo);
-            if(tar == null){
+            if (tar == null) {
                 res = 2;
-            }else{
-                if(validarTiempo(h, tar.getFecha(), "tarea")){
+            } else {
+                if (validarTiempo(h, tar.getFecha(), "tarea")) {
                     String tAntiguo = tar.toString();
                     tar.setHora(h);
                     String tNuevo = tar.toString();
-                    escritorTarea.eliminar(tAntiguo);
-                    escritorTarea.escribir(tNuevo);
-                    ArrayList<String[]> datosTar = escritorTarea.leerTodo();
-                    reiniciarArbolTar();
-                    registrarBaseTar(datosTar);
-                }else{
+                    actualizarT(tNuevo, tAntiguo);
+                } else {
                     res = 1;
                 }
             }
-        }else{
+        } else {
             Evento ev = buscarEventoObjeto(titulo);
-            if(ev == null){
+            if (ev == null) {
                 res = 2;
-            }else{
-                if(validarTiempo(h, ev.getFecha(), "evento")){
+            } else {
+                if (validarTiempo(h, ev.getFecha(), "evento")) {
                     String eAntiguo = ev.toString();
                     ev.setHora(h);
                     String eNuevo = ev.toString();
-                    escritorEvento.eliminar(eAntiguo);
-                    escritorEvento.escribir(eNuevo);
-                    ArrayList<String[]> datosEv = escritorEvento.leerTodo();
-                    reiniciarArbolEv();
-                    registrarBaseEv(datosEv);
-                }else{
+                    actualizarE(eNuevo, eAntiguo);
+                } else {
                     res = 1;
                 }
-            }            
+            }
         }
         return res;
     }
 
-    public boolean modificarTitulo(String t, String titulo, int tipo){
+    public boolean modificarTitulo(String t, String titulo, int tipo) {
         boolean res = false;
-        if(tipo == 1){
-            Tarea tar =  buscarTareaObjeto(titulo);
-            if(tar != null){
+        if (tipo == 1) {
+            Tarea tar = buscarTareaObjeto(titulo);
+            if (tar != null) {
                 String tAntiguo = tar.toString();
                 tar.setTitulo(t);
                 String tNuevo = tar.toString();
-                escritorTarea.eliminar(tAntiguo);
-                escritorTarea.escribir(tNuevo);
-                ArrayList<String[]> datosTar = escritorTarea.leerTodo();
-                reiniciarArbolTar();
-                registrarBaseTar(datosTar);
+                actualizarT(tNuevo, tAntiguo);
                 res = true;
             }
-        }else{
-            Evento ev =  buscarEventoObjeto(titulo);
-            if(ev != null){
+        } else {
+            Evento ev = buscarEventoObjeto(titulo);
+            if (ev != null) {
                 String eAntiguo = ev.toString();
                 ev.setTitulo(t);
                 String eNuevo = ev.toString();
-                escritorEvento.eliminar(eAntiguo);
-                escritorEvento.escribir(eNuevo);
-                ArrayList<String[]> datosEv = escritorEvento.leerTodo();
-                reiniciarArbolEv();
-                registrarBaseEv(datosEv);
+                actualizarE(eNuevo, eAntiguo);
                 res = true;
             }
         }
         return res;
     }
 
-    public boolean modificarPrioridad(int p, String titulo, int tipo){
+    public boolean modificarPrioridad(int p, String titulo, int tipo) {
         boolean res = false;
-        if(tipo == 1){
-            Tarea tar =  buscarTareaObjeto(titulo);
-            if(tar != null){
+        if (tipo == 1) {
+            Tarea tar = buscarTareaObjeto(titulo);
+            if (tar != null) {
                 String tAntiguo = tar.toString();
                 tar.setPrioridad(p);
                 String tNuevo = tar.toString();
-                escritorTarea.eliminar(tAntiguo);
-                escritorTarea.escribir(tNuevo);
-                ArrayList<String[]> datosTar = escritorTarea.leerTodo();
-                reiniciarArbolTar();
-                registrarBaseTar(datosTar);
+                actualizarT(tNuevo, tAntiguo);
                 res = true;
             }
-        }else{
-            Evento ev =  buscarEventoObjeto(titulo);
-            if(ev != null){
+        } else {
+            Evento ev = buscarEventoObjeto(titulo);
+            if (ev != null) {
                 String eAntiguo = ev.toString();
                 ev.setPrioridad(p);
                 String eNuevo = ev.toString();
-                escritorEvento.eliminar(eAntiguo);
-                escritorEvento.escribir(eNuevo);
-                ArrayList<String[]> datosEv = escritorEvento.leerTodo();
-                reiniciarArbolEv();
-                registrarBaseEv(datosEv);
+                actualizarE(eNuevo, eAntiguo);
                 res = true;
             }
         }
@@ -311,51 +343,50 @@ public class GestorGeneral {
 
     /**
      * Método para registrar una nueva tarea en el gestor.
+     *
      * @param tarea La tarea a registrar.
      */
-
     public void registrarTarea(Tarea tarea) {
         pqTarea.insertData(tarea); // Inserta la tarea en el árbol de tareas
-        if(flag){
+        if (flag) {
             escritorTarea.escribir(tarea.toString()); // Escribe la tarea en archivo si la bandera lo permite
         }
     }
-    
 
-    public boolean validarTiempo(Hora hora, Fecha fecha, String tipo){
+    public boolean validarTiempo(Hora hora, Fecha fecha, String tipo) {
         boolean res;
-        if(tipo.equals("tarea")){
+        if (tipo.equals("tarea")) {
             res = validarTarea(hora, fecha);
-        }else{
+        } else {
             res = validarEvento(hora, fecha);
         }
         return res;
     }
 
-    private boolean validarTarea(Hora h, Fecha f){
+    private boolean validarTarea(Hora h, Fecha f) {
         boolean valida = true;
         ListaSE<Tarea> lista = pqTarea.inOrder();
 
-        for(int i = 0; i < lista.length(); i++){
+        for (int i = 0; i < lista.length(); i++) {
             Tarea t = lista.get(i);
-            if(t.getHora().equals(h)){
-                if(t.getFecha().equals(f)){
+            if (t.getHora().equals(h)) {
+                if (t.getFecha().equals(f)) {
                     valida = false;
-                } 
+                }
             }
         }
         return valida;
     }
 
-    private boolean validarEvento(Hora h, Fecha f){
+    private boolean validarEvento(Hora h, Fecha f) {
         boolean valida = true;
-        ListaSE<Evento> lista =  pqEvento.inOrder();
-        for(int i = 0; i < lista.length(); i++){
+        ListaSE<Evento> lista = pqEvento.inOrder();
+        for (int i = 0; i < lista.length(); i++) {
             Evento e = lista.get(i);
-            if(e.getHora().equals(h)){
-                if(e.getFecha().equals(f)){
+            if (e.getHora().equals(h)) {
+                if (e.getFecha().equals(f)) {
                     valida = false;
-                } 
+                }
             }
         }
         return valida;
@@ -363,17 +394,19 @@ public class GestorGeneral {
 
     /**
      * Método para registrar un nuevo evento en el gestor.
+     *
      * @param evento El evento a registrar.
      */
     public void registrarEvento(Evento evento) {
         pqEvento.insertData(evento); // Inserta el evento en el árbol de eventos
-        if(flag){
+        if (flag) {
             escritorEvento.escribir(evento.toString()); // Escribe el evento en archivo si la bandera lo permite
         }
     }
 
     /**
      * Método para eliminar una tarea del gestor.
+     *
      * @param tarea La tarea a eliminar.
      */
     private void eliminarTarea(Tarea tarea) {
@@ -383,6 +416,7 @@ public class GestorGeneral {
 
     /**
      * Método para eliminar un evento del gestor.
+     *
      * @param evento El evento a eliminar.
      */
     private void eliminarEvento(Evento evento) {
@@ -391,98 +425,100 @@ public class GestorGeneral {
     }
 
     /**
-     * Elimina todas las tareas y eventos del gestor y limpia los archivos de datos.
+     * Elimina todas las tareas y eventos del gestor y limpia los archivos de
+     * datos.
      */
-    public void eliminarTodo(){
+    public void eliminarTodo() {
         escritorTarea.limpiar(); // Limpia el archivo de eventos
         escritorEvento.limpiar(); // Limpia el archivo de tareas
         pqEvento.deleteAll(); // Elimina todos los eventos del árbol de eventos
         pqTarea.deleteAll(); // Elimina todas las tareas del árbol de tareas
     }
 
-    private void reiniciarArbolTar(){
+    private void reiniciarArbolTar() {
         // Elimina todos los eventos del árbol de eventos
         pqTarea.deleteAll();
     }
 
-    private void reiniciarArbolEv(){
+    private void reiniciarArbolEv() {
         // Elimina todos los eventos del árbol de eventos
         pqEvento.deleteAll();
     }
 
     /**
-     * Método de prueba para imprimir los eventos y tareas ordenados.
-     * Utiliza el recorrido inOrder de los árboles binarios de búsqueda.
+     * Método de prueba para imprimir los eventos y tareas ordenados. Utiliza el
+     * recorrido inOrder de los árboles binarios de búsqueda.
      */
-    public void imprimirOrdenado(){
+    public void imprimirOrdenado() {
         System.out.println("---------------------------------------------");
         System.out.println("Eventos Pendientes: ");
         ListaSE<Evento> lisEvento = pqEvento.inOrder();
-        for(int i = 0; i < lisEvento.length(); i++){
+        for (int i = 0; i < lisEvento.length(); i++) {
             System.out.println(lisEvento.get(i).mostrar());
             System.out.println("---------------------------------------------");
         }
         // Imprime los eventos ordenados
         ListaSE<Tarea> lisTarea = pqTarea.inOrder();
         System.out.println("Tareas Pendientes: ");
-        for(int i = 0; i < lisTarea.length(); i++){ 
+        for (int i = 0; i < lisTarea.length(); i++) {
             System.out.println(lisTarea.get(i).mostrar());
             System.out.println("---------------------------------------------");
         }
         // Imprime las tareas ordenadas
     }
-    
-    public String imprimirOrdenadoEvento(){
+
+    public String imprimirOrdenadoEvento() {
         ListaSE<Evento> lisEvento = pqEvento.inOrder();
         String str = "";
-        for(int i = 0; i < lisEvento.length(); i++){
+        for (int i = 0; i < lisEvento.length(); i++) {
             str = str + lisEvento.get(i).getTitulo() + "\n";
         }
         return str;
     }
-    
-    public String imprimirOrdenadoTarea(){
+
+    public String imprimirOrdenadoTarea() {
         ListaSE<Tarea> lisTarea = pqTarea.inOrder();
         String str = "";
-       
-        for(int i = 0; i < lisTarea.length(); i++){ 
+
+        for (int i = 0; i < lisTarea.length(); i++) {
             str = str + lisTarea.get(i).getTitulo() + "\n";
         }
         return str;
     }
-    
+
     /**
      * Metodo para buscar un objeto Tarea
+     *
      * @param titulo, listaTareas.
      */
-    public Tarea buscarTareaObjeto(String s){
+    public Tarea buscarTareaObjeto(String s) {
         ListaSE<Tarea> listaT = pqTarea.inOrder();
         Tarea tarea = null;
         ArrayList<Tarea> listaCoin = new ArrayList<>();
         s = s.toLowerCase();
-        for(int i = 0; i < listaT.length(); i++){
+        for (int i = 0; i < listaT.length(); i++) {
             // Obtiene el título de la tarea y lo convierte a minúsculas
             String titulo = listaT.get(i).getTitulo();
             titulo = titulo.toLowerCase();
             int contador = 0;
             // Compara caracteres de los títulos con la cadena de búsqueda
-            for(int j = 0, h = 0; j < titulo.length() && h < s.length(); j++,h++){
-                if(titulo.charAt(j) == s.charAt(h)){
+            for (int j = 0, h = 0; j < titulo.length() && h < s.length(); j++, h++) {
+                if (titulo.charAt(j) == s.charAt(h)) {
                     contador++;
                 }
             }
             // Si el título coincide parcial o completamente con la cadena de búsqueda, se agrega a la lista de coincidencias
-            if(contador >= 3 || contador == titulo.length() || contador == s.length()){
-                tarea = listaT.get(i); 
+            if (contador >= 3 || contador == titulo.length() || contador == s.length()) {
+                tarea = listaT.get(i);
                 listaCoin.add(listaT.get(i));
             }
         }
 
         // Si hay más de una coincidencia y una de ellas es exactamente igual a la cadena de búsqueda, se selecciona esa tarea
-        if(listaCoin.size() > 1){
-            for(int i = 0; i < listaCoin.size(); i++){
+        if (listaCoin.size() > 1) {
+            for (int i = 0; i < listaCoin.size(); i++) {
                 String candidato = listaCoin.get(i).getTitulo();
-                if(candidato.equals(s)){
+                if (candidato.equals(s)) {
                     tarea = listaCoin.get(i);
                     break;
                 }
@@ -492,14 +528,15 @@ public class GestorGeneral {
     }
 
     /**
-     *Método público para buscar una tarea por título
+     * Método público para buscar una tarea por título
+     *
      * @param titulo, tarea con titulo a buscar.
      */
-    public String buscarTarea(String s){
+    public String buscarTarea(String s) {
 
         Tarea t = buscarTareaObjeto(s); // Busca la tarea por título
         String res = "No se encontró su Tarea"; // Mensaje predeterminado si no se encuentra la tarea
-        if(t != null){
+        if (t != null) {
             res = t.mostrar(); // Si se encuentra la tarea, se devuelve su representación en cadena
         }
         return res; // Retorna el resultado de la búsqueda
@@ -508,36 +545,37 @@ public class GestorGeneral {
     // Método privado para buscar un evento por título
     /**
      * Metodo para buscar un objeto Evento
+     *
      * @param titulo, listaTareas.
      */
-    public Evento buscarEventoObjeto(String s){
+    public Evento buscarEventoObjeto(String s) {
         ListaSE<Evento> listaE = pqEvento.inOrder(); // Obtiene la lista de eventos ordenados
         Evento evento = null;
         ArrayList<Evento> listaCoin = new ArrayList<>();
         s = s.toLowerCase();
-        for(int i = 0; i < listaE.length(); i++){
+        for (int i = 0; i < listaE.length(); i++) {
             // Obtiene el título del evento y lo convierte a minúsculas
             String titulo = listaE.get(i).getTitulo();
             titulo = titulo.toLowerCase();
             int contador = 0;
             // Compara caracteres de los títulos con la cadena de búsqueda
-            for(int j = 0, h = 0; j < titulo.length() && h < s.length(); j++,h++){
-                if(titulo.charAt(j) == s.charAt(h)){
+            for (int j = 0, h = 0; j < titulo.length() && h < s.length(); j++, h++) {
+                if (titulo.charAt(j) == s.charAt(h)) {
                     contador++;
                 }
             }
             // Si el título coincide parcial o completamente con la cadena de búsqueda, se agrega a la lista de coincidencias
-            if(contador >= 3 || contador == titulo.length() || contador == s.length()){
-                evento = listaE.get(i); 
+            if (contador >= 3 || contador == titulo.length() || contador == s.length()) {
+                evento = listaE.get(i);
                 listaCoin.add(listaE.get(i));
             }
         }
 
         // Si hay más de una coincidencia y una de ellas es exactamente igual a la cadena de búsqueda, se selecciona ese evento
-        if(listaCoin.size() > 1){
-            for(int i = 0; i < listaCoin.size(); i++){
+        if (listaCoin.size() > 1) {
+            for (int i = 0; i < listaCoin.size(); i++) {
                 String candidato = listaCoin.get(i).getTitulo();
-                if(candidato.equals(s)){
+                if (candidato.equals(s)) {
                     evento = listaCoin.get(i);
                     break;
                 }
@@ -547,13 +585,14 @@ public class GestorGeneral {
     }
 
     /**
-     *  Método público para buscar un Evento por título
+     * Método público para buscar un Evento por título
+     *
      * @param titulo, evento con titulo a buscar.
      */
-    public String buscarEvento(String s){
+    public String buscarEvento(String s) {
         Evento v = buscarEventoObjeto(s); // Busca el evento por título
         String res = "No se encontró su Evento"; // Mensaje predeterminado si no se encuentra el evento
-        if(v != null){
+        if (v != null) {
             res = v.mostrar(); // Si se encuentra el evento, se devuelve su representación en cadena
         }
         return res; // Retorna el resultado de la búsqueda
@@ -561,13 +600,14 @@ public class GestorGeneral {
 
     // Método público para eliminar un evento por título
     /**
-     *  Método público para eliminar un Evento
+     * Método público para eliminar un Evento
+     *
      * @param titulo, Evento con titulo a eliminar.
      */
-    public boolean eliminarEvento(String titulo){
+    public boolean eliminarEvento(String titulo) {
         boolean res = false;
         Evento v = buscarEventoObjeto(titulo); // Busca el evento por título
-        if(v != null){
+        if (v != null) {
             eliminarEvento(v); // Si se encuentra el evento, se elimina
             res = true;
         }
@@ -576,21 +616,21 @@ public class GestorGeneral {
 
     // Método público para eliminar una tarea por título
     /**
-     *  Método público para eliminar una Tarea
+     * Método público para eliminar una Tarea
+     *
      * @param titulo, Tarea con titulo a eliminar.
      */
-    public boolean eliminarTarea(String titulo){
+    public boolean eliminarTarea(String titulo) {
         boolean res = false;
         Tarea t = buscarTareaObjeto(titulo); // Busca la tarea por título
-        if(t != null){
+        if (t != null) {
             eliminarTarea(t); // Si se encuentra la tarea, se elimina
             res = true;
         }
         return res;
     }
 
-    public String getNomUs(){
+    public String getNomUs() {
         return user.getNombre();
     }
 }
-

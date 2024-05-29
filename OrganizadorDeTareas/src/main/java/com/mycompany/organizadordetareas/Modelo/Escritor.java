@@ -4,22 +4,24 @@
  */
 package com.mycompany.organizadordetareas.Modelo;
 
-
 import java.io.*;
 import java.util.ArrayList;
 
 /**
- * La clase Escritor proporciona mÃ©todos para escribir en un archivo, leer desde un archivo,
- * limpiar un archivo, leer la Ãºltima lÃ­nea de un archivo, buscar por un valor especÃ­fico en un archivo,
- * actualizar valores en un archivo y eliminar lÃ­neas que contienen un valor especÃ­fico en un archivo.
+ * La clase Escritor proporciona mÃ©todos para escribir en un archivo, leer
+ * desde un archivo, limpiar un archivo, leer la Ãºltima lÃ­nea de un archivo,
+ * buscar por un valor especÃ­fico en un archivo, actualizar valores en un
+ * archivo y eliminar lÃ­neas que contienen un valor especÃ­fico en un archivo.
  */
 public class Escritor {
+
     private String archivo;
 
     /**
      * Constructor de la clase Escritor.
      *
-     * @param archivo Nombre del archivo en el que se realizarÃ¡n las operaciones de escritura y lectura.
+     * @param archivo Nombre del archivo en el que se realizarÃ¡n las
+     * operaciones de escritura y lectura.
      */
     public Escritor(String archivo) {
         this.archivo = archivo;
@@ -49,9 +51,11 @@ public class Escritor {
     }
 
     /**
-     * Lee todo el contenido del archivo y lo devuelve como una lista de matrices de cadenas.
+     * Lee todo el contenido del archivo y lo devuelve como una lista de
+     * matrices de cadenas.
      *
-     * @return ArrayList que contiene todas las lÃ­neas del archivo, donde cada lÃ­nea estÃ¡ representada como un arreglo de cadenas.
+     * @return ArrayList que contiene todas las lÃ­neas del archivo, donde cada
+     * lÃ­nea estÃ¡ representada como un arreglo de cadenas.
      */
     public ArrayList<String[]> leerTodo() {
         ArrayList<String[]> contenido = new ArrayList<String[]>();
@@ -82,7 +86,7 @@ public class Escritor {
      *
      * @return La Ãºltima lÃ­nea del archivo como una cadena.
      */
-    public String leerUltimaLinea(){
+    public String leerUltimaLinea() {
         String ultimaLinea = null;
         try (BufferedReader reader = new BufferedReader(new FileReader(archivo))) {
             String linea;
@@ -99,7 +103,8 @@ public class Escritor {
      * Busca una lÃ­nea que contenga el valor especificado en el archivo.
      *
      * @param valorBuscado Valor que se estÃ¡ buscando en el archivo.
-     * @return La primera lÃ­nea que contiene el valor buscado como una cadena completa.
+     * @return La primera lÃ­nea que contiene el valor buscado como una cadena
+     * completa.
      */
     public String buscarPorValor(String valorBuscado) {
         try (BufferedReader reader = new BufferedReader(new FileReader(archivo))) {
@@ -119,10 +124,12 @@ public class Escritor {
     }
 
     /**
-     * Actualiza todas las lÃ­neas que contienen el valor antiguo con el nuevo valor especificado.
+     * Actualiza todas las lÃ­neas que contienen el valor antiguo con el nuevo
+     * valor especificado.
      *
      * @param valorAntiguo Valor que se desea reemplazar en el archivo.
-     * @param nuevoValor   Nuevo valor que se utilizarÃ¡ para reemplazar el valor antiguo.
+     * @param nuevoValor Nuevo valor que se utilizarÃ¡ para reemplazar el valor
+     * antiguo.
      */
     public void actualizar(String valorAntiguo, String nuevoValor) {
         ArrayList<String> lineasActualizadas = new ArrayList<>();
@@ -151,7 +158,8 @@ public class Escritor {
     }
 
     /**
-     * Elimina todas las lÃ­neas que contienen el valor especificado en el archivo.
+     * Elimina todas las lÃ­neas que contienen el valor especificado en el
+     * archivo.
      *
      * @param valor Valor que se desea eliminar del archivo.
      */
