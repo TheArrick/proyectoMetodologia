@@ -4,16 +4,16 @@
  */
 package com.mycompany.organizadordetareas.Controlador;
 
-
 import java.util.Scanner;
 
 /**
  * La clase Hora representa una hora con horas y minutos.
  */
 public class Hora {
+
     private int hora; // Variable para almacenar las horas
     private int min;  // Variable para almacenar los minutos
-    
+
     /**
      * Constructor de la clase Hora.
      *
@@ -21,10 +21,10 @@ public class Hora {
      * @param m Minutos.
      */
     public Hora(int h, int m) {
-        hora = h; 
+        hora = h;
         min = m;
     }
-    
+
     /**
      * Establece las horas y los minutos mediante la entrada del usuario.
      */
@@ -44,13 +44,13 @@ public class Hora {
             }
         }
         validador = false;
-        while(!validador) {
+        while (!validador) {
             System.out.println("Ingrese los minutos a los que quiere cambiar la actividad: ");
-            int m = sc.nextInt();            
-            if(m >= 0 && m < 60) {
+            int m = sc.nextInt();
+            if (m >= 0 && m < 60) {
                 min = m;
                 validador = true;
-            }else {
+            } else {
                 System.out.println("Minutos inválidos. Ingrese unos minutos validos 0 - 60.");
             }
         }
@@ -58,7 +58,7 @@ public class Hora {
         // Asignación de las nuevas horas
         // Asignación de los nuevos minutos
     }
-    
+
     /**
      * Obtiene las horas.
      *
@@ -67,7 +67,7 @@ public class Hora {
     public int getHora() {
         return hora; // Devuelve las horas
     }
-    
+
     /**
      * Obtiene los minutos.
      *
@@ -76,7 +76,7 @@ public class Hora {
     public int getMin() {
         return min; // Devuelve los minutos
     }
-    
+
     /**
      * Devuelve una representación en cadena de la hora en formato "hh:mm".
      *
@@ -85,30 +85,31 @@ public class Hora {
     @Override
     public String toString() {
         String str = "0";
-        if(min < 10){
+        if (min < 10) {
             str = str + min;
-        }else{
-            str = ""+ min;
+        } else {
+            str = "" + min;
         }
         return hora + ":" + str; // Devuelve la hora y los minutos formateados
     }
-    
+
     /**
-     * Devuelve una representación en cadena de la hora en formato serializado "hhmm".
+     * Devuelve una representación en cadena de la hora en formato serializado
+     * "hhmm".
      *
      * @return La representación serializada de la hora.
      */
     public String toStringSerializado() {
         String str = "0";
-        if(min < 10){
+        if (min < 10) {
             str = str + min;
-        }else{
-            str = ""+ min;
+        } else {
+            str = "" + min;
         }
         return "" + hora + str; // Devuelve la hora y los minutos formateados sin separador
     }
-    
-    public boolean equals(Hora h){
+
+    public boolean equals(Hora h) {
         return this.hora == h.hora && this.min == h.min;
     }
 }

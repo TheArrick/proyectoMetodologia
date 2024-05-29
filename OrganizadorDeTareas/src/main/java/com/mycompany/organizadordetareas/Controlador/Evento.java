@@ -4,7 +4,6 @@
  */
 package com.mycompany.organizadordetareas.Controlador;
 
-
 import java.time.LocalDate;
 
 /**
@@ -13,18 +12,19 @@ import java.time.LocalDate;
  * prioridad.
  */
 public class Evento extends Pendiente implements Comparable<Evento> {
+
     private LocalDate fechaAc; // Fecha actual del sistema
     private String lugar; // Lugar del evento
 
     /**
      * Constructor de la clase Evento.
-     * 
-     * @param titulo      El título del evento.
+     *
+     * @param titulo El título del evento.
      * @param descripcion La descripción del evento.
-     * @param hora        La hora del evento.
-     * @param fecha       La fecha del evento.
-     * @param prioridad   La prioridad del evento.
-     * @param lugar       El lugar del evento.
+     * @param hora La hora del evento.
+     * @param fecha La fecha del evento.
+     * @param prioridad La prioridad del evento.
+     * @param lugar El lugar del evento.
      */
     public Evento(String titulo, String descripcion, Hora hora, Fecha fecha, int prioridad, String lugar) {
         super(titulo, descripcion, hora, fecha, prioridad);
@@ -52,10 +52,9 @@ public class Evento extends Pendiente implements Comparable<Evento> {
     }
 
     // Métodos de la clase Evento
-
     /**
      * Establece el título del evento.
-     * 
+     *
      * @param str El nuevo título del evento.
      */
     public void setTitulo(String str) {
@@ -64,7 +63,7 @@ public class Evento extends Pendiente implements Comparable<Evento> {
 
     /**
      * Obtiene el título del evento.
-     * 
+     *
      * @return El título del evento.
      */
     public String getTitulo() {
@@ -73,7 +72,7 @@ public class Evento extends Pendiente implements Comparable<Evento> {
 
     /**
      * Establece la descripción del evento.
-     * 
+     *
      * @param str La nueva descripción del evento.
      */
     public void setDescripcion(String str) {
@@ -82,7 +81,7 @@ public class Evento extends Pendiente implements Comparable<Evento> {
 
     /**
      * Obtiene la descripción del evento.
-     * 
+     *
      * @return La descripción del evento.
      */
     public String getDescripcion() {
@@ -91,7 +90,7 @@ public class Evento extends Pendiente implements Comparable<Evento> {
 
     /**
      * Establece la prioridad del evento.
-     * 
+     *
      * @param n La nueva prioridad del evento.
      */
     public void setPrioridad(int n) {
@@ -100,28 +99,28 @@ public class Evento extends Pendiente implements Comparable<Evento> {
 
     /**
      * Obtiene la prioridad del evento.
-     * 
+     *
      * @return La prioridad del evento.
      */
     public int getPrioridad() {
         return prioridad;
     }
-    
-    public String getLugar(){
+
+    public String getLugar() {
         return lugar;
     }
-    
-    public void setLugar(String l){
+
+    public void setLugar(String l) {
         lugar = l;
-    }    /**
+    }
+
+    /**
      * Compara este evento con otro evento basado en su prioridad.
-     * 
+     *
      * @param e El evento a comparar.
-     * @return Un entero negativo si este evento tiene mayor prioridad que el evento
-     *         dado,
-     *         cero si tienen la misma prioridad, o un entero positivo si este
-     *         evento tiene
-     *         menor prioridad que el evento dado.
+     * @return Un entero negativo si este evento tiene mayor prioridad que el
+     * evento dado, cero si tienen la misma prioridad, o un entero positivo si
+     * este evento tiene menor prioridad que el evento dado.
      */
     @Override
     public int compareTo(Evento e) {
@@ -136,7 +135,7 @@ public class Evento extends Pendiente implements Comparable<Evento> {
 
     /**
      * Devuelve una representación en cadena del evento.
-     * 
+     *
      * @return La representación en cadena del evento.
      */
     @Override
@@ -147,17 +146,17 @@ public class Evento extends Pendiente implements Comparable<Evento> {
 
     /**
      * Devuelve una cadena que representa la información del evento.
-     * 
+     *
      * @return Una cadena con la información del evento.
      */
     public String mostrar() {
-        return "Evento con título: " + titulo + "\nCon su descripción: " + descripcion + "\nA las: " + hora.toString()
+        return "Título: " + titulo + "\nDescripción: " + descripcion + "\nA las: " + hora.toString()
                 + "\nEn la fecha: " + fecha.toString() + "\nEn: " + lugar + "\nY con prioridad: " + prioridad;
     }
 
     /**
      * Verifica si el evento se repite.
-     * 
+     *
      * @return true si el evento se repite, false en caso contrario.
      */
     public boolean seRepite() {

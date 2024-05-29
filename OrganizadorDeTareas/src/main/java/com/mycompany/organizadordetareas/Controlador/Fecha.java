@@ -8,10 +8,11 @@ package com.mycompany.organizadordetareas.Controlador;
  * La clase Fecha representa una fecha con día, mes y año.
  */
 public class Fecha {
+
     private int d; // Variable para almacenar el día
     private int m; // Variable para almacenar el mes
     private int a; // Variable para almacenar el año
-    
+
     /**
      * Constructor de la clase Fecha.
      *
@@ -24,12 +25,12 @@ public class Fecha {
         this.m = m;
         this.a = a;
     }
-    
+
     //implementacion en clase fecha, implementamos el metodo equals para comparar fechas
-    public boolean equals(Fecha f){
+    public boolean equals(Fecha f) {
         return this.d == f.d && this.m == f.m && this.a == f.a;
     }
-    
+
     /**
      * Obtiene el día.
      *
@@ -38,7 +39,7 @@ public class Fecha {
     public int getD() {
         return d; // Devuelve el día
     }
-    
+
     /**
      * Obtiene el mes.
      *
@@ -47,7 +48,7 @@ public class Fecha {
     public int getM() {
         return m; // Devuelve el mes
     }
-    
+
     /**
      * Obtiene el año.
      *
@@ -56,7 +57,7 @@ public class Fecha {
     public int getA() {
         return a; // Devuelve el año
     }
-    
+
     /**
      * Devuelve una representación en cadena de la fecha en formato "d/m/a".
      *
@@ -66,34 +67,34 @@ public class Fecha {
     public String toString() {
         String strM = "0";
         String strD = "0";
-        if(m < 10){
+        if (m < 10) {
             strM = strM + m;
-        }else{
+        } else {
             strM = "" + m;
         }
-        if(d < 10){
+        if (d < 10) {
             strD = strD + d;
-        }else{
+        } else {
             strD = "" + d;
         }
         return strD + "/" + strM + "/" + a; // Devuelve la fecha formateada
     }
-    
+
     /**
-     * Devuelve una representación en cadena de la fecha en formato serializado "ddmmaa".
-     * Se asume que los valores tienen siempre dos dígitos.
+     * Devuelve una representación en cadena de la fecha en formato serializado
+     * "ddmmaa". Se asume que los valores tienen siempre dos dígitos.
      *
      * @return La representación serializada de la fecha.
      */
     public String toStringSerializado() {
         // Se asegura de que el año tenga solo dos dígitos
-        
+
         // Convierte el día y el mes a cadenas con dos dígitos
         String dS = (d < 10) ? "0" + d : String.valueOf(d);
         String mS = (m < 10) ? "0" + m : String.valueOf(m);
-        
+
         // Devuelve la fecha serializada sin separadores
         return dS + mS + a;
     }
-    
-    }
+
+}

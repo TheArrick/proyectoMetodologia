@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
  * @author Usuario
  */
 public class Validadores {
+
     public boolean validarHora(String cad) {
         String patron = "^([01]?[0-9]|2[0-3]):[0-5][0-9]$";
         Pattern pattern = Pattern.compile(patron);

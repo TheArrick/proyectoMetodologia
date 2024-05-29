@@ -4,58 +4,59 @@ import com.mycompany.organizadordetareas.Controlador.estDatos.estDatLin.*;
 
 /**
  * Write a description of class ArbolBB here.
- * 
- * @author (your name) 
+ *
+ * @author (your name)
  * @version (a version number or a date)
  */
-public class ArbolBB<T extends Comparable<T>>
-{
+public class ArbolBB<T extends Comparable<T>> {
+
     private ArbolBB<T> left;
     private ArbolBB<T> right;
-    T root;
-    public ArbolBB(){
+    private T root;
+
+    public ArbolBB() {
         left = null;
         right = null;
         root = null;
     }
 
-    public ArbolBB(T data){
+    public ArbolBB(T data) {
         left = new ArbolBB();
         right = new ArbolBB();
         this.root = data;
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return root == null;
     }
 
-    public void insertData(T data){
-        if(!isEmpty()){
-            if(data.compareTo(root)<=0){
+    public void insertData(T data) {
+        if (!isEmpty()) {
+            if (data.compareTo(root) <= 0) {
                 left.insertData(data);
-            }else{
+            } else {
                 right.insertData(data);
             }
-        }else{
+        } else {
             root = data;
             left = new ArbolBB();
             right = new ArbolBB();
         }
     }
 
-    public T delete(T data){
+    public T delete(T data) {
         T res = null;
-        if(!isEmpty()){
-            if(root.equals(data)){
-                if(isLeaf()){
+        if (!isEmpty()) {
+            if (root.equals(data)) {
+                if (isLeaf()) {
                     res = root;
                     root = null;
                     left = right = null;
                 }
-            }else{
-                if(root.compareTo(data)<0){
+            } else {
+                if (root.compareTo(data) < 0) {
                     right.delete(data);
-                }else{
+                } else {
                     left.delete(data);
                 }
             }
@@ -63,33 +64,33 @@ public class ArbolBB<T extends Comparable<T>>
         return res;
     }
 
-    private boolean isLeaf(){
+    private boolean isLeaf() {
         return left.isEmpty() && right.isEmpty();
     }
 
-    private ArbolBB<T> descLeft(){
+    private ArbolBB<T> descLeft() {
         ArbolBB<T> res;
-        if(left.isEmpty()){
+        if (left.isEmpty()) {
             res = this;
-        }else{
+        } else {
             res = left.descLeft();
         }
         return res;
     }
 
-    private ArbolBB<T> descRight(){
+    private ArbolBB<T> descRight() {
         ArbolBB<T> res;
-        if(right.isEmpty()){
+        if (right.isEmpty()) {
             res = this;
-        }else{
+        } else {
             res = right.descLeft();
         }
         return res;
     }
-    
-    public ListaSE<T> inOrder(){
+
+    public ListaSE<T> inOrder() {
         ListaSE<T> list = new ListaSE<T>();
-        if(!isEmpty()){
+        if (!isEmpty()) {
             list.insertAll(left.inOrder());
             list.insert(root);
             list.insertAll(right.inOrder());
@@ -137,20 +138,18 @@ public class ArbolBB<T extends Comparable<T>>
     }
     return res;
     }*/
-    public T eliminar(T dato){
+    public T eliminar(T dato) {
         T elDato = null;
         ArbolBB<T> arb;
-        if(isEmpty())
+        if (isEmpty()) {
             elDato = null;
-        else
-        if(dato.compareTo(root)<0)
+        } else if (dato.compareTo(root) < 0) {
             elDato = left.eliminar(dato);
-        else
-        if(dato.compareTo(root) > 0)
+        } else if (dato.compareTo(root) > 0) {
             elDato = right.eliminar(dato);
-        else {
+        } else {
             elDato = root;
-            switch(estadoroot()){
+            switch (estadoroot()) {
                 case 1: // hoja
                     root = null;
                     left = null;
@@ -175,29 +174,35 @@ public class ArbolBB<T extends Comparable<T>>
         return elDato;
     }
 
-    public void deleteAll(){
+    public void deleteAll() {
         root = null;
         left = null;
         right = null;
     }
 
-    private int estadoroot(){
+    private int estadoroot() {
         int estado;
-        if(left.isEmpty())
-            if(right.isEmpty()) estado = 1;
-            else              estado = 3;
-        else
-        if(right.isEmpty()) estado = 2;
-        else              estado = 4;
+        if (left.isEmpty()) {
+            if (right.isEmpty()) {
+                estado = 1;
+            } else {
+                estado = 3;
+            }
+        } else if (right.isEmpty()) {
+            estado = 2;
+        } else {
+            estado = 4;
+        }
         return estado;
     }
 
-    private ArbolBB<T> descIzq(){
+    private ArbolBB<T> descIzq() {
         ArbolBB<T> arb;
-        if(left.isEmpty())
+        if (left.isEmpty()) {
             arb = this;
-        else
+        } else {
             arb = left.descIzq();
+        }
         return arb;
     }
 }
