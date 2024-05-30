@@ -22,6 +22,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private EditarTarea editTarea;
     Usuario user;
     GestorGeneral g;
+    String item2 = "";
 
     /**
      * Creates new form MenuUsuario
@@ -46,6 +47,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         setResizable(false);
         setLocationRelativeTo(null);
         getContentPane().setBackground(new Color(55, 57, 63));
+       
     }
 
     @SuppressWarnings("unchecked")
@@ -90,6 +92,15 @@ public class MenuUsuario extends javax.swing.JFrame {
         lblEvento11 = new javax.swing.JLabel();
         cancelar22 = new javax.swing.JButton();
         showTar = new javax.swing.JLabel();
+        anadirSub = new javax.swing.JButton();
+        setSubtarea = new javax.swing.JDialog();
+        txt_subtarea = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        cancelar21 = new javax.swing.JButton();
+        aceptar_Subtarea = new javax.swing.JButton();
+        excitante = new javax.swing.JDialog();
+        jLabel4 = new javax.swing.JLabel();
+        aceptar_Subtarea1 = new javax.swing.JButton();
         lblBienvenida = new javax.swing.JLabel();
         lblTarea = new javax.swing.JLabel();
         lblEvento = new javax.swing.JLabel();
@@ -428,12 +439,9 @@ public class MenuUsuario extends javax.swing.JFrame {
             .addGroup(jDTarEncontradoLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(jDTarEncontradoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDTarEncontradoLayout.createSequentialGroup()
-                        .addComponent(lblEvento6)
-                        .addContainerGap(176, Short.MAX_VALUE))
-                    .addGroup(jDTarEncontradoLayout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(lblEvento6)
+                    .addComponent(jLabel2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDTarEncontradoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(cancelar17)
@@ -622,6 +630,18 @@ public class MenuUsuario extends javax.swing.JFrame {
         showTar.setForeground(new java.awt.Color(234, 234, 235));
         showTar.setText("");
 
+        anadirSub.setBackground(new java.awt.Color(10, 135, 55));
+        anadirSub.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        anadirSub.setForeground(new java.awt.Color(234, 234, 235));
+        anadirSub.setText("+");
+        anadirSub.setToolTipText("Añadir Subtarea");
+        anadirSub.setFocusPainted(false);
+        anadirSub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                anadirSubActionPerformed(evt);
+            }
+        });
+
         showTarea.setSize(400, 300); // Fija el tamaño del diálogo
         showTarea.setResizable(true); // No permite redimensionar el diálogo
         showTarea.setLocationRelativeTo(null);
@@ -634,27 +654,141 @@ public class MenuUsuario extends javax.swing.JFrame {
             .addGroup(showTareaLayout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(showTareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(showTareaLayout.createSequentialGroup()
-                        .addComponent(showTar)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, showTareaLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(0, 177, Short.MAX_VALUE)
                         .addComponent(cancelar22)
                         .addGap(74, 74, 74))
                     .addGroup(showTareaLayout.createSequentialGroup()
-                        .addComponent(lblEvento11)
-                        .addContainerGap(266, Short.MAX_VALUE))))
+                        .addGroup(showTareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblEvento11)
+                            .addComponent(showTar))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(anadirSub)
+                        .addGap(37, 37, 37))))
         );
         showTareaLayout.setVerticalGroup(
             showTareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(showTareaLayout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addComponent(lblEvento11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(showTar)
+                .addGroup(showTareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(showTareaLayout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addComponent(lblEvento11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(showTar))
+                    .addGroup(showTareaLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(anadirSub)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 151, Short.MAX_VALUE)
                 .addComponent(cancelar22)
                 .addGap(36, 36, 36))
+        );
+
+        setSubtarea.setBackground(new java.awt.Color(55, 57, 63));
+
+        txt_subtarea.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        txt_subtarea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_subtareaActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jLabel3.setText("Añadir Subtarea");
+
+        cancelar21.setBackground(new java.awt.Color(10, 135, 55));
+        cancelar21.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        cancelar21.setForeground(new java.awt.Color(234, 234, 235));
+        cancelar21.setText("Cancelar");
+        cancelar21.setFocusPainted(false);
+        cancelar21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancelar21ActionPerformed(evt);
+            }
+        });
+
+        aceptar_Subtarea.setBackground(new java.awt.Color(10, 135, 55));
+        aceptar_Subtarea.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        aceptar_Subtarea.setForeground(new java.awt.Color(234, 234, 235));
+        aceptar_Subtarea.setText("Aceptar");
+        aceptar_Subtarea.setFocusPainted(false);
+        aceptar_Subtarea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aceptar_SubtareaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout setSubtareaLayout = new javax.swing.GroupLayout(setSubtarea.getContentPane());
+        setSubtarea.getContentPane().setLayout(setSubtareaLayout);
+        setSubtareaLayout.setHorizontalGroup(
+            setSubtareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(setSubtareaLayout.createSequentialGroup()
+                .addGroup(setSubtareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(setSubtareaLayout.createSequentialGroup()
+                        .addGap(16, 16, 16)
+                        .addComponent(jLabel3))
+                    .addGroup(setSubtareaLayout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addGroup(setSubtareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_subtarea, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(setSubtareaLayout.createSequentialGroup()
+                                .addComponent(cancelar21)
+                                .addGap(52, 52, 52)
+                                .addComponent(aceptar_Subtarea)))))
+                .addContainerGap(57, Short.MAX_VALUE))
+        );
+        setSubtareaLayout.setVerticalGroup(
+            setSubtareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, setSubtareaLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, Short.MAX_VALUE)
+                .addComponent(txt_subtarea, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addGroup(setSubtareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cancelar21)
+                    .addComponent(aceptar_Subtarea))
+                .addGap(44, 44, 44))
+        );
+
+        excitante.setBackground(new java.awt.Color(55, 57, 63));
+
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel4.setText("Se añadio correctamente su subtarea");
+        jLabel4.setToolTipText("");
+
+        aceptar_Subtarea1.setBackground(new java.awt.Color(10, 135, 55));
+        aceptar_Subtarea1.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        aceptar_Subtarea1.setForeground(new java.awt.Color(234, 234, 235));
+        aceptar_Subtarea1.setText("Aceptar");
+        aceptar_Subtarea1.setFocusPainted(false);
+        aceptar_Subtarea1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aceptar_Subtarea1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout excitanteLayout = new javax.swing.GroupLayout(excitante.getContentPane());
+        excitante.getContentPane().setLayout(excitanteLayout);
+        excitanteLayout.setHorizontalGroup(
+            excitanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(excitanteLayout.createSequentialGroup()
+                .addGroup(excitanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(excitanteLayout.createSequentialGroup()
+                        .addGap(149, 149, 149)
+                        .addComponent(aceptar_Subtarea1))
+                    .addGroup(excitanteLayout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addComponent(jLabel4)))
+                .addContainerGap(67, Short.MAX_VALUE))
+        );
+        excitanteLayout.setVerticalGroup(
+            excitanteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(excitanteLayout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(122, 122, 122)
+                .addComponent(aceptar_Subtarea1)
+                .addContainerGap(60, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -699,7 +833,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 if (evt.getClickCount() == 2) {
                     int indexT = listTarea.locationToIndex(evt.getPoint());
                     if (indexT >= 0) {
-                        String item2 = listTarea.getModel().getElementAt(indexT);
+                        item2 = listTarea.getModel().getElementAt(indexT);
                         String showStrTar = g.buscarTarea(item2);
                         String htmlTar = "<html>" + showStrTar.replace("\n", "<br>") + "</html>";
                         showTar.setText(htmlTar);
@@ -846,7 +980,7 @@ public class MenuUsuario extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -861,7 +995,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                                 .addComponent(cancelar4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(cancelar2)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
@@ -982,11 +1116,13 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_cancelarActionPerformed
 
     private void cancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelar1ActionPerformed
+
         crearTar = new CrearTarea();
         //Se instancia el MenuUsuario asi que las demas clases pueden usar a libertad el MenuUsuario actualizado automaticamente.
         crearTar.setMenuUs(this);
         crearTar.setVisible(true);
         this.dispose();
+        
     }//GEN-LAST:event_cancelar1ActionPerformed
 
     private void cancelar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelar2ActionPerformed
@@ -1114,9 +1250,34 @@ public class MenuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_cancelar20ActionPerformed
 
     private void cancelar22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelar22ActionPerformed
+
         showTar.setText("");
         showTarea.dispose();
     }//GEN-LAST:event_cancelar22ActionPerformed
+
+    private void anadirSubActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anadirSubActionPerformed
+        showTarea.dispose();
+        setSubtarea.setVisible(true);
+    }//GEN-LAST:event_anadirSubActionPerformed
+
+    private void txt_subtareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_subtareaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_subtareaActionPerformed
+
+    private void cancelar21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cancelar21ActionPerformed
+       setSubtarea.dispose();
+       
+    }//GEN-LAST:event_cancelar21ActionPerformed
+
+    private void aceptar_SubtareaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptar_SubtareaActionPerformed
+        g.anadirSubTar(txt_subtarea.getText(), item2);
+        setSubtarea.dispose();
+    }//GEN-LAST:event_aceptar_SubtareaActionPerformed
+
+    private void aceptar_Subtarea1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptar_Subtarea1ActionPerformed
+        excitante.dispose();
+        
+    }//GEN-LAST:event_aceptar_Subtarea1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1154,6 +1315,9 @@ public class MenuUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton aceptar_Subtarea;
+    private javax.swing.JButton aceptar_Subtarea1;
+    private javax.swing.JButton anadirSub;
     private javax.swing.JButton cancelar;
     private javax.swing.JButton cancelar1;
     private javax.swing.JButton cancelar10;
@@ -1167,6 +1331,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JButton cancelar19;
     private javax.swing.JButton cancelar2;
     private javax.swing.JButton cancelar20;
+    private javax.swing.JButton cancelar21;
     private javax.swing.JButton cancelar22;
     private javax.swing.JButton cancelar3;
     private javax.swing.JButton cancelar4;
@@ -1175,6 +1340,7 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JButton cancelar7;
     private javax.swing.JButton cancelar8;
     private javax.swing.JButton cancelar9;
+    private javax.swing.JDialog excitante;
     private javax.swing.JDialog jDChoose;
     private javax.swing.JDialog jDEvEncontrado;
     private javax.swing.JDialog jDEvento;
@@ -1182,6 +1348,8 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JDialog jDTarea;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JDialog jdNoEvEncontrado;
@@ -1202,11 +1370,13 @@ public class MenuUsuario extends javax.swing.JFrame {
     private javax.swing.JList<String> listEvento;
     private javax.swing.JList<String> listTarea;
     private javax.swing.JLabel logo;
+    private javax.swing.JDialog setSubtarea;
     private javax.swing.JLabel showEv;
     private javax.swing.JDialog showEvento;
     private javax.swing.JLabel showTar;
     private javax.swing.JDialog showTarea;
     private javax.swing.JTextField txtEventoBuscar;
     private javax.swing.JTextField txtTareaBuscar;
+    private javax.swing.JTextField txt_subtarea;
     // End of variables declaration//GEN-END:variables
 }

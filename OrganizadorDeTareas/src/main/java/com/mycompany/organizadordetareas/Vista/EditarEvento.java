@@ -30,10 +30,31 @@ public class EditarEvento extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         modificar_titulo.setText(evento.getTitulo());
         modificar_descripcion.setText(evento.getDescripcion());
-        modificar_hora.setText(Integer.toString(evento.getHora().getHora()));
-        modificar_min.setText(Integer.toString(evento.getHora().getMin()));
-        modificar_dia.setText(Integer.toString(evento.getFecha().getD()));
-        modificar_mes.setText(Integer.toString(evento.getFecha().getM()));
+        
+        if(evento.getHora().getHora() < 10){
+            modificar_hora.setText("0" + Integer.toString(evento.getHora().getHora()));
+        }else{
+            modificar_hora.setText(Integer.toString(evento.getHora().getHora()));
+        }
+        
+        if(evento.getHora().getMin() < 10){
+            modificar_min.setText("0" + Integer.toString(evento.getHora().getMin()));
+        }else{
+            modificar_min.setText(Integer.toString(evento.getHora().getMin()));
+        }
+        
+        if(evento.getFecha().getD() < 10){
+            modificar_dia.setText("0" + Integer.toString(evento.getFecha().getD()));
+        }else{
+            modificar_dia.setText(Integer.toString(evento.getFecha().getD()));
+        }
+        
+        if(evento.getFecha().getM() < 10){
+            modificar_mes.setText("0" + Integer.toString(evento.getFecha().getM()));
+        }else{
+            modificar_mes.setText(Integer.toString(evento.getFecha().getM()));
+        } 
+       
         modificar_anio.setText(Integer.toString(evento.getFecha().getA()));
         modificar_lugar.setText(evento.getLugar());
         modificar_prioridad.setSelectedItem(Integer.toString(evento.getPrioridad()));
