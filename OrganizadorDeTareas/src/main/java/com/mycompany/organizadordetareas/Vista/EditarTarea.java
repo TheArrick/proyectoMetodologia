@@ -4,15 +4,29 @@
  */
 package com.mycompany.organizadordetareas.Vista;
 
+import com.formdev.flatlaf.FlatDarkLaf;
 import com.mycompany.organizadordetareas.Controlador.*;
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
  * @author Arrick
  */
 public class EditarTarea extends javax.swing.JFrame {
-     private Tarea tarea;
+
+    private Tarea tarea;
     private GestorGeneral g;
     private MenuUsuario menuUs;
 
@@ -24,14 +38,13 @@ public class EditarTarea extends javax.swing.JFrame {
         this.g = g;
         initComponents();
         setLocationRelativeTo(null);
-        setSize(850,500);
-        
+        setSize(850, 500);
+
         getContentPane().setBackground(new Color(55, 57, 63));
         setResizable(false);
-        
+
         modificar_titulo.setText(tarea.getTitulo());
-       
-        
+
         modificar_hora.setText(Integer.toString(tarea.getHora().getHora()));
         modificar_min.setText(Integer.toString(tarea.getHora().getMin()));
         modificar_dia.setText(Integer.toString(tarea.getFecha().getD()));
@@ -41,8 +54,6 @@ public class EditarTarea extends javax.swing.JFrame {
         horaNoValida.setVisible(false);
         fechaNoValida.setVisible(false);
 
-        
-        
     }
 
     /**
@@ -54,6 +65,17 @@ public class EditarTarea extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDialogLleneLosCampos = new javax.swing.JDialog();
+        jLabel12 = new javax.swing.JLabel();
+        BotonAceptarIncorrecta2 = new javax.swing.JButton();
+        jDialogFechaIncorrecta = new javax.swing.JDialog();
+        jLabel13 = new javax.swing.JLabel();
+        BotonAceptarIncorrecta3 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jDialogHoraIncorrecta = new javax.swing.JDialog();
+        jLabel14 = new javax.swing.JLabel();
+        BotonAceptarIncorrecta4 = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -74,6 +96,146 @@ public class EditarTarea extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+
+        jLabel12.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel12.setText("Llene los campos");
+
+        BotonAceptarIncorrecta2.setBackground(new java.awt.Color(32, 34, 37));
+        BotonAceptarIncorrecta2.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        BotonAceptarIncorrecta2.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta2.setText("Aceptar");
+        BotonAceptarIncorrecta2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAceptarIncorrecta2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialogLleneLosCamposLayout = new javax.swing.GroupLayout(jDialogLleneLosCampos.getContentPane());
+        jDialogLleneLosCampos.getContentPane().setLayout(jDialogLleneLosCamposLayout);
+        jDialogLleneLosCamposLayout.setHorizontalGroup(
+            jDialogLleneLosCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogLleneLosCamposLayout.createSequentialGroup()
+                .addGroup(jDialogLleneLosCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialogLleneLosCamposLayout.createSequentialGroup()
+                        .addGap(159, 159, 159)
+                        .addComponent(jLabel12))
+                    .addGroup(jDialogLleneLosCamposLayout.createSequentialGroup()
+                        .addGap(171, 171, 171)
+                        .addComponent(BotonAceptarIncorrecta2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(172, Short.MAX_VALUE))
+        );
+        jDialogLleneLosCamposLayout.setVerticalGroup(
+            jDialogLleneLosCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogLleneLosCamposLayout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BotonAceptarIncorrecta2)
+                .addContainerGap(126, Short.MAX_VALUE))
+        );
+
+        jLabel13.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel13.setText("Por favor ingrese la en el formato dd/mm/aaaa");
+
+        BotonAceptarIncorrecta3.setBackground(new java.awt.Color(32, 34, 37));
+        BotonAceptarIncorrecta3.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        BotonAceptarIncorrecta3.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta3.setText("Aceptar");
+        BotonAceptarIncorrecta3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAceptarIncorrecta3ActionPerformed(evt);
+            }
+        });
+
+        jLabel15.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel15.setText("La fecha ingresada no tiene el formato correcto");
+
+        javax.swing.GroupLayout jDialogFechaIncorrectaLayout = new javax.swing.GroupLayout(jDialogFechaIncorrecta.getContentPane());
+        jDialogFechaIncorrecta.getContentPane().setLayout(jDialogFechaIncorrectaLayout);
+        jDialogFechaIncorrectaLayout.setHorizontalGroup(
+            jDialogFechaIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogFechaIncorrectaLayout.createSequentialGroup()
+                .addGap(188, 188, 188)
+                .addComponent(BotonAceptarIncorrecta3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogFechaIncorrectaLayout.createSequentialGroup()
+                .addContainerGap(90, Short.MAX_VALUE)
+                .addComponent(jLabel13)
+                .addGap(76, 76, 76))
+            .addGroup(jDialogFechaIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogFechaIncorrectaLayout.createSequentialGroup()
+                    .addContainerGap(91, Short.MAX_VALUE)
+                    .addComponent(jLabel15)
+                    .addGap(69, 69, 69)))
+        );
+        jDialogFechaIncorrectaLayout.setVerticalGroup(
+            jDialogFechaIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogFechaIncorrectaLayout.createSequentialGroup()
+                .addGap(137, 137, 137)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BotonAceptarIncorrecta3)
+                .addContainerGap(105, Short.MAX_VALUE))
+            .addGroup(jDialogFechaIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jDialogFechaIncorrectaLayout.createSequentialGroup()
+                    .addGap(110, 110, 110)
+                    .addComponent(jLabel15)
+                    .addContainerGap(167, Short.MAX_VALUE)))
+        );
+
+        jLabel14.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel14.setText("La hora ingresada no tiene el formato correcto");
+
+        BotonAceptarIncorrecta4.setBackground(new java.awt.Color(32, 34, 37));
+        BotonAceptarIncorrecta4.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        BotonAceptarIncorrecta4.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta4.setText("Aceptar");
+        BotonAceptarIncorrecta4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAceptarIncorrecta4ActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel16.setText("Por favor ingrese hh-mm");
+
+        javax.swing.GroupLayout jDialogHoraIncorrectaLayout = new javax.swing.GroupLayout(jDialogHoraIncorrecta.getContentPane());
+        jDialogHoraIncorrecta.getContentPane().setLayout(jDialogHoraIncorrectaLayout);
+        jDialogHoraIncorrectaLayout.setHorizontalGroup(
+            jDialogHoraIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogHoraIncorrectaLayout.createSequentialGroup()
+                .addContainerGap(83, Short.MAX_VALUE)
+                .addComponent(jLabel14)
+                .addGap(73, 73, 73))
+            .addGroup(jDialogHoraIncorrectaLayout.createSequentialGroup()
+                .addGroup(jDialogHoraIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialogHoraIncorrectaLayout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(jLabel16))
+                    .addGroup(jDialogHoraIncorrectaLayout.createSequentialGroup()
+                        .addGap(188, 188, 188)
+                        .addComponent(BotonAceptarIncorrecta4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jDialogHoraIncorrectaLayout.setVerticalGroup(
+            jDialogHoraIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogHoraIncorrectaLayout.createSequentialGroup()
+                .addGap(98, 98, 98)
+                .addComponent(jLabel14)
+                .addGap(3, 3, 3)
+                .addComponent(jLabel16)
+                .addGap(18, 18, 18)
+                .addComponent(BotonAceptarIncorrecta4)
+                .addContainerGap(114, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -268,40 +430,58 @@ public class EditarTarea extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aceptarActionPerformed
-       Validadores validar = new Validadores();
+        Validadores validar = new Validadores();
         horaNoValida.setVisible(false);
         fechaNoValida.setVisible(false);
         String titulo = modificar_titulo.getText();
         String hora = modificar_hora.getText() + ":" + modificar_min.getText();
-        
-        
-        
+
         String fecha = modificar_dia.getText() + "/" + modificar_mes.getText() + "/" + modificar_anio.getText();
-       
-        
-        int prioridad = Integer.parseInt((String)modificar_prioridad.getSelectedItem());
-        if(!validar.validarHora(hora)){
-            horaNoValida.setVisible(true);
-        }else{
+        if (titulo.equals("") || hora.equals("") || fecha.equals("")) {
+            jDialogLleneLosCampos.setVisible(true);
+            jDialogLleneLosCampos.setLocationRelativeTo(null);
+            jDialogLleneLosCampos.setSize(453, 298);
+            jDialogLleneLosCampos.getContentPane().setBackground(new Color(60, 63, 65));
+            jDialogLleneLosCampos.setModal(true);
+            return;
+        }
+        int prioridad = Integer.parseInt((String) modificar_prioridad.getSelectedItem());
+        if (!validar.validarHora(hora)) {
+            //Aqui jDialog
+            //horaNoValida.setVisible(true);
+            jDialogHoraIncorrecta.setVisible(true);
+            jDialogHoraIncorrecta.setLocationRelativeTo(null);
+            jDialogHoraIncorrecta.setSize(453, 298);
+            jDialogHoraIncorrecta.getContentPane().setBackground(new Color(60, 63, 65));
+            jDialogHoraIncorrecta.setModal(true);
+            return;
+
+        } else {
             String[] partes = hora.split(":");
             int h = Integer.parseInt(partes[0]);
             int m = Integer.parseInt(partes[1]);
-            Hora horaVal = new Hora(h,m);
-            if(!validar.validarFecha(fecha)){
-            fechaNoValida.setVisible(true);
-            }else{
+            Hora horaVal = new Hora(h, m);
+
+            // Validar la fecha
+            if (!validar.validarFecha(fecha)) {
+                jDialogFechaIncorrecta.setVisible(true);
+                jDialogFechaIncorrecta.setLocationRelativeTo(null);
+                jDialogFechaIncorrecta.setSize(453, 298);
+                jDialogFechaIncorrecta.getContentPane().setBackground(new Color(60, 63, 65));
+                jDialogFechaIncorrecta.setModal(true);
+                return;
+            } else {
                 String[] partesf = fecha.split("/");
-            int dd = Integer.parseInt(partesf[0]);
-            int mm = Integer.parseInt(partesf[1]);
-            int aaaa = Integer.parseInt(partesf[2]);
-            Fecha fechaVal = new Fecha(dd,mm,aaaa);
+                int dd = Integer.parseInt(partesf[0]);
+                int mm = Integer.parseInt(partesf[1]);
+                int aaaa = Integer.parseInt(partesf[2]);
+                Fecha fechaVal = new Fecha(dd, mm, aaaa);
                 g.modificarTitulo(titulo, tarea.getTitulo(), 1);
-                
-   
-                g.modificarPrioridad(prioridad, tarea.getTitulo(),1);
+
+                g.modificarPrioridad(prioridad, tarea.getTitulo(), 1);
                 g.modificarHora(horaVal, tarea.getTitulo(), 1);
                 g.modificarFecha(fechaVal, tarea.getTitulo(), 1);
- 
+
                 menuUs = new MenuUsuario(g.getUsuario());
                 menuUs.setVisible(true);
                 this.dispose();
@@ -318,6 +498,21 @@ public class EditarTarea extends javax.swing.JFrame {
     private void modificar_diaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificar_diaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_modificar_diaActionPerformed
+
+    private void BotonAceptarIncorrecta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarIncorrecta2ActionPerformed
+        // TODO add your handling code here:
+        jDialogLleneLosCampos.dispose();
+    }//GEN-LAST:event_BotonAceptarIncorrecta2ActionPerformed
+
+    private void BotonAceptarIncorrecta3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarIncorrecta3ActionPerformed
+        // TODO add your handling code here:
+        jDialogFechaIncorrecta.dispose();
+    }//GEN-LAST:event_BotonAceptarIncorrecta3ActionPerformed
+
+    private void BotonAceptarIncorrecta4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarIncorrecta4ActionPerformed
+        // TODO add your handling code here:
+        jDialogHoraIncorrecta.dispose();
+    }//GEN-LAST:event_BotonAceptarIncorrecta4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -349,19 +544,30 @@ public class EditarTarea extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-             
+
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotonAceptarIncorrecta2;
+    private javax.swing.JButton BotonAceptarIncorrecta3;
+    private javax.swing.JButton BotonAceptarIncorrecta4;
     private javax.swing.JButton aceptar;
     private javax.swing.JButton cancelar;
     private javax.swing.JLabel fechaNoValida;
     private javax.swing.JLabel horaNoValida;
+    public javax.swing.JDialog jDialogFechaIncorrecta;
+    public javax.swing.JDialog jDialogHoraIncorrecta;
+    public javax.swing.JDialog jDialogLleneLosCampos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    public javax.swing.JLabel jLabel12;
+    public javax.swing.JLabel jLabel13;
+    public javax.swing.JLabel jLabel14;
+    public javax.swing.JLabel jLabel15;
+    public javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

@@ -29,34 +29,34 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         contNoSegura.setVisible(false);
         noCoinciden.setVisible(false);
         campVacios.setVisible(false);
-        btExito.setVisible(false);
+        txtExito.setVisible(false);
         resIncor.setVisible(false);
         verificarPreg.setVisible(false);
         // Establecer el tamaño deseado (por ejemplo, 600x400 píxeles)
-        jDialog1.setSize(600, 400);
-        jDialog2.setSize(350,250);
-        jDialog3.setSize(500,250 );
-        jDialog3.getContentPane().setBackground(new Color(55, 57, 63));
-        jDialog3.setLocationRelativeTo(null);
-        jDialog3.setVisible(false);
-        jDialog1.getContentPane().setBackground(new Color(55, 57, 63));
-        jDialog2.getContentPane().setBackground(new Color(55, 57, 63));
+        jDialogRecuperarContrasena.setSize(600, 400);
+        jDialogUsuarioNoEncontrado.setSize(350,250);
+        jDialogRespuestaIncorrecta.setSize(500,250 );
+        jDialogRespuestaIncorrecta.getContentPane().setBackground(new Color(55, 57, 63));
+        jDialogRespuestaIncorrecta.setLocationRelativeTo(null);
+        jDialogRespuestaIncorrecta.setVisible(false);
+        jDialogRecuperarContrasena.getContentPane().setBackground(new Color(55, 57, 63));
+        jDialogUsuarioNoEncontrado.getContentPane().setBackground(new Color(55, 57, 63));
         
-        jDialog1.setLocationRelativeTo(null);
-        jDialog2.setLocationRelativeTo(null);
+        jDialogRecuperarContrasena.setLocationRelativeTo(null);
+        jDialogUsuarioNoEncontrado.setLocationRelativeTo(null);
         
 
-        jDialog1.setVisible(false);
-        jDialog2.setVisible(false);
-         jDialog4.setSize(500,250 );
-        jDialog4.getContentPane().setBackground(new Color(55, 57, 63));
-        jDialog4.setLocationRelativeTo(null);
-        jDialog4.setVisible(false);
+        jDialogRecuperarContrasena.setVisible(false);
+        jDialogUsuarioNoEncontrado.setVisible(false);
+         jDialogLaConstrasenaNoEsSegura.setSize(500,250 );
+        jDialogLaConstrasenaNoEsSegura.getContentPane().setBackground(new Color(55, 57, 63));
+        jDialogLaConstrasenaNoEsSegura.setLocationRelativeTo(null);
+        jDialogLaConstrasenaNoEsSegura.setVisible(false);
         
-         jDialog5.setSize(500,250 );
-        jDialog5.getContentPane().setBackground(new Color(55, 57, 63));
-        jDialog5.setLocationRelativeTo(null);
-        jDialog5.setVisible(false);
+         jDialogLleneLosCampos.setSize(500,250 );
+        jDialogLleneLosCampos.getContentPane().setBackground(new Color(55, 57, 63));
+        jDialogLleneLosCampos.setLocationRelativeTo(null);
+        jDialogLleneLosCampos.setVisible(false);
         
          jDialog6.setSize(500,250 );
         jDialog6.getContentPane().setBackground(new Color(55, 57, 63));
@@ -79,35 +79,35 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDialog1 = new javax.swing.JDialog();
-        jLabel2 = new javax.swing.JLabel();
+        jDialogRecuperarContrasena = new javax.swing.JDialog();
+        txtNuevaContrasena = new javax.swing.JLabel();
         campoContN = new javax.swing.JPasswordField();
         campoContNDeNuevo = new javax.swing.JPasswordField();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        recuperarBto = new javax.swing.JButton();
+        txtIngresaNuevamente = new javax.swing.JLabel();
+        txtTituloRecuperarContrasena = new javax.swing.JLabel();
+        btnRecuperar = new javax.swing.JButton();
         contNoSegura = new javax.swing.JLabel();
         campVacios = new javax.swing.JLabel();
         noCoinciden = new javax.swing.JLabel();
-        bt = new javax.swing.JButton();
-        btExito = new javax.swing.JLabel();
-        jDialog2 = new javax.swing.JDialog();
+        btnAtras = new javax.swing.JButton();
+        txtExito = new javax.swing.JLabel();
+        jDialogUsuarioNoEncontrado = new javax.swing.JDialog();
         jLabel6 = new javax.swing.JLabel();
         BotonCerrarU = new javax.swing.JButton();
-        jDialog3 = new javax.swing.JDialog();
+        jDialogRespuestaIncorrecta = new javax.swing.JDialog();
         jLabel7 = new javax.swing.JLabel();
         BotonAceptarIncorrecta = new javax.swing.JButton();
-        jDialog4 = new javax.swing.JDialog();
+        jDialogLaConstrasenaNoEsSegura = new javax.swing.JDialog();
         jLabel8 = new javax.swing.JLabel();
         BotonAceptarIncorrecta1 = new javax.swing.JButton();
-        jDialog5 = new javax.swing.JDialog();
+        jDialogLleneLosCampos = new javax.swing.JDialog();
         jLabel9 = new javax.swing.JLabel();
         BotonAceptarIncorrecta2 = new javax.swing.JButton();
         jDialog6 = new javax.swing.JDialog();
         jLabel10 = new javax.swing.JLabel();
         BotonAceptarIncorrecta3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnBuscarUsuario = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         textoPregunta = new javax.swing.JLabel();
         PreguntaSeguridad = new javax.swing.JLabel();
@@ -118,9 +118,9 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         verificarPreg = new javax.swing.JButton();
         resIncor = new javax.swing.JLabel();
 
-        jLabel2.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(234, 234, 235));
-        jLabel2.setText("Nueva contraseña");
+        txtNuevaContrasena.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        txtNuevaContrasena.setForeground(new java.awt.Color(234, 234, 235));
+        txtNuevaContrasena.setText("Nueva contraseña");
 
         campoContN.setBackground(new java.awt.Color(55, 57, 63));
         campoContN.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
@@ -142,22 +142,22 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(234, 234, 235));
-        jLabel4.setText("Ingresa nuevamente");
+        txtIngresaNuevamente.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        txtIngresaNuevamente.setForeground(new java.awt.Color(234, 234, 235));
+        txtIngresaNuevamente.setText("Ingresa nuevamente");
 
-        jLabel5.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(234, 234, 235));
-        jLabel5.setText("Recuperar contraseña");
+        txtTituloRecuperarContrasena.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        txtTituloRecuperarContrasena.setForeground(new java.awt.Color(234, 234, 235));
+        txtTituloRecuperarContrasena.setText("Recuperar contraseña");
 
-        recuperarBto.setBackground(new java.awt.Color(32, 34, 37));
-        recuperarBto.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        recuperarBto.setForeground(new java.awt.Color(28, 185, 85));
-        recuperarBto.setText("Recuperar");
-        recuperarBto.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
-        recuperarBto.addActionListener(new java.awt.event.ActionListener() {
+        btnRecuperar.setBackground(new java.awt.Color(32, 34, 37));
+        btnRecuperar.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        btnRecuperar.setForeground(new java.awt.Color(28, 185, 85));
+        btnRecuperar.setText("Recuperar");
+        btnRecuperar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        btnRecuperar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                recuperarBtoActionPerformed(evt);
+                btnRecuperarActionPerformed(evt);
             }
         });
 
@@ -167,87 +167,87 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
 
         noCoinciden.setText("Las contraseñas no coinciden");
 
-        bt.setBackground(new java.awt.Color(32, 34, 37));
-        bt.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        bt.setForeground(new java.awt.Color(28, 185, 85));
-        bt.setText("Atrás");
-        bt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
-        bt.addActionListener(new java.awt.event.ActionListener() {
+        btnAtras.setBackground(new java.awt.Color(32, 34, 37));
+        btnAtras.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        btnAtras.setForeground(new java.awt.Color(28, 185, 85));
+        btnAtras.setText("Atrás");
+        btnAtras.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btActionPerformed(evt);
+                btnAtrasActionPerformed(evt);
             }
         });
 
-        btExito.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        btExito.setForeground(new java.awt.Color(234, 234, 235));
-        btExito.setText("¡Éxito! Recuperaste tu contraseña");
+        txtExito.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        txtExito.setForeground(new java.awt.Color(234, 234, 235));
+        txtExito.setText("¡Éxito! Recuperaste tu contraseña");
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDialog1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jDialogRecuperarContrasenaLayout = new javax.swing.GroupLayout(jDialogRecuperarContrasena.getContentPane());
+        jDialogRecuperarContrasena.getContentPane().setLayout(jDialogRecuperarContrasenaLayout);
+        jDialogRecuperarContrasenaLayout.setHorizontalGroup(
+            jDialogRecuperarContrasenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogRecuperarContrasenaLayout.createSequentialGroup()
+                .addGroup(jDialogRecuperarContrasenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialogRecuperarContrasenaLayout.createSequentialGroup()
                         .addGap(77, 77, 77)
-                        .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jDialog1Layout.createSequentialGroup()
-                                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jDialogRecuperarContrasenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNuevaContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jDialogRecuperarContrasenaLayout.createSequentialGroup()
+                                .addGroup(jDialogRecuperarContrasenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(campoContN, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(campoContNDeNuevo)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jDialog1Layout.createSequentialGroup()
+                                    .addComponent(txtIngresaNuevamente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(jDialogRecuperarContrasenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jDialogRecuperarContrasenaLayout.createSequentialGroup()
                                         .addGap(18, 18, 18)
-                                        .addComponent(recuperarBto, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(btnRecuperar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(29, 29, 29)
                                         .addComponent(noCoinciden, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jDialog1Layout.createSequentialGroup()
+                                    .addGroup(jDialogRecuperarContrasenaLayout.createSequentialGroup()
                                         .addGap(150, 150, 150)
-                                        .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jDialogRecuperarContrasenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(contNoSegura, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(jDialog1Layout.createSequentialGroup()
+                                            .addGroup(jDialogRecuperarContrasenaLayout.createSequentialGroup()
                                                 .addGap(6, 6, 6)
                                                 .addComponent(campVacios, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
-                    .addGroup(jDialog1Layout.createSequentialGroup()
+                    .addGroup(jDialogRecuperarContrasenaLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bt, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jDialog1Layout.createSequentialGroup()
+                        .addGroup(jDialogRecuperarContrasenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtTituloRecuperarContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jDialogRecuperarContrasenaLayout.createSequentialGroup()
                         .addGap(168, 168, 168)
-                        .addComponent(btExito, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtExito, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(556, Short.MAX_VALUE))
         );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
+        jDialogRecuperarContrasenaLayout.setVerticalGroup(
+            jDialogRecuperarContrasenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogRecuperarContrasenaLayout.createSequentialGroup()
                 .addGap(11, 11, 11)
-                .addComponent(jLabel5)
+                .addComponent(txtTituloRecuperarContrasena)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                .addComponent(txtNuevaContrasena)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jDialogRecuperarContrasenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(campoContN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(contNoSegura))
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDialog1Layout.createSequentialGroup()
+                .addGroup(jDialogRecuperarContrasenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialogRecuperarContrasenaLayout.createSequentialGroup()
                         .addGap(23, 23, 23)
-                        .addComponent(jLabel4)
+                        .addComponent(txtIngresaNuevamente)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(jDialogRecuperarContrasenaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(campoContNDeNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(recuperarBto, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jDialog1Layout.createSequentialGroup()
+                            .addComponent(btnRecuperar, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jDialogRecuperarContrasenaLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(campVacios)
                         .addGap(24, 24, 24)
                         .addComponent(noCoinciden)))
                 .addGap(18, 18, 18)
-                .addComponent(btExito)
+                .addComponent(txtExito)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                .addComponent(bt)
+                .addComponent(btnAtras)
                 .addGap(28, 28, 28))
         );
 
@@ -269,23 +269,23 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jDialog2Layout = new javax.swing.GroupLayout(jDialog2.getContentPane());
-        jDialog2.getContentPane().setLayout(jDialog2Layout);
-        jDialog2Layout.setHorizontalGroup(
-            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog2Layout.createSequentialGroup()
-                .addGroup(jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDialog2Layout.createSequentialGroup()
+        javax.swing.GroupLayout jDialogUsuarioNoEncontradoLayout = new javax.swing.GroupLayout(jDialogUsuarioNoEncontrado.getContentPane());
+        jDialogUsuarioNoEncontrado.getContentPane().setLayout(jDialogUsuarioNoEncontradoLayout);
+        jDialogUsuarioNoEncontradoLayout.setHorizontalGroup(
+            jDialogUsuarioNoEncontradoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogUsuarioNoEncontradoLayout.createSequentialGroup()
+                .addGroup(jDialogUsuarioNoEncontradoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialogUsuarioNoEncontradoLayout.createSequentialGroup()
                         .addGap(84, 84, 84)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jDialog2Layout.createSequentialGroup()
+                    .addGroup(jDialogUsuarioNoEncontradoLayout.createSequentialGroup()
                         .addGap(110, 110, 110)
                         .addComponent(BotonCerrarU, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(132, Short.MAX_VALUE))
         );
-        jDialog2Layout.setVerticalGroup(
-            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog2Layout.createSequentialGroup()
+        jDialogUsuarioNoEncontradoLayout.setVerticalGroup(
+            jDialogUsuarioNoEncontradoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogUsuarioNoEncontradoLayout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -308,27 +308,27 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jDialog3Layout = new javax.swing.GroupLayout(jDialog3.getContentPane());
-        jDialog3.getContentPane().setLayout(jDialog3Layout);
-        jDialog3Layout.setHorizontalGroup(
-            jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog3Layout.createSequentialGroup()
-                .addContainerGap(47, Short.MAX_VALUE)
+        javax.swing.GroupLayout jDialogRespuestaIncorrectaLayout = new javax.swing.GroupLayout(jDialogRespuestaIncorrecta.getContentPane());
+        jDialogRespuestaIncorrecta.getContentPane().setLayout(jDialogRespuestaIncorrectaLayout);
+        jDialogRespuestaIncorrectaLayout.setHorizontalGroup(
+            jDialogRespuestaIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogRespuestaIncorrectaLayout.createSequentialGroup()
+                .addContainerGap(57, Short.MAX_VALUE)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46))
-            .addGroup(jDialog3Layout.createSequentialGroup()
-                .addGap(184, 184, 184)
+                .addGap(36, 36, 36))
+            .addGroup(jDialogRespuestaIncorrectaLayout.createSequentialGroup()
+                .addGap(183, 183, 183)
                 .addComponent(BotonAceptarIncorrecta, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jDialog3Layout.setVerticalGroup(
-            jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog3Layout.createSequentialGroup()
-                .addGap(59, 59, 59)
+        jDialogRespuestaIncorrectaLayout.setVerticalGroup(
+            jDialogRespuestaIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogRespuestaIncorrectaLayout.createSequentialGroup()
+                .addGap(90, 90, 90)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
+                .addGap(33, 33, 33)
                 .addComponent(BotonAceptarIncorrecta)
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         jLabel8.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
@@ -346,22 +346,22 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jDialog4Layout = new javax.swing.GroupLayout(jDialog4.getContentPane());
-        jDialog4.getContentPane().setLayout(jDialog4Layout);
-        jDialog4Layout.setHorizontalGroup(
-            jDialog4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog4Layout.createSequentialGroup()
+        javax.swing.GroupLayout jDialogLaConstrasenaNoEsSeguraLayout = new javax.swing.GroupLayout(jDialogLaConstrasenaNoEsSegura.getContentPane());
+        jDialogLaConstrasenaNoEsSegura.getContentPane().setLayout(jDialogLaConstrasenaNoEsSeguraLayout);
+        jDialogLaConstrasenaNoEsSeguraLayout.setHorizontalGroup(
+            jDialogLaConstrasenaNoEsSeguraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogLaConstrasenaNoEsSeguraLayout.createSequentialGroup()
                 .addGap(184, 184, 184)
                 .addComponent(BotonAceptarIncorrecta1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog4Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogLaConstrasenaNoEsSeguraLayout.createSequentialGroup()
                 .addContainerGap(121, Short.MAX_VALUE)
                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(110, 110, 110))
         );
-        jDialog4Layout.setVerticalGroup(
-            jDialog4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog4Layout.createSequentialGroup()
+        jDialogLaConstrasenaNoEsSeguraLayout.setVerticalGroup(
+            jDialogLaConstrasenaNoEsSeguraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogLaConstrasenaNoEsSeguraLayout.createSequentialGroup()
                 .addGap(75, 75, 75)
                 .addComponent(jLabel8)
                 .addGap(28, 28, 28)
@@ -384,28 +384,28 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jDialog5Layout = new javax.swing.GroupLayout(jDialog5.getContentPane());
-        jDialog5.getContentPane().setLayout(jDialog5Layout);
-        jDialog5Layout.setHorizontalGroup(
-            jDialog5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog5Layout.createSequentialGroup()
-                .addGroup(jDialog5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jDialog5Layout.createSequentialGroup()
-                        .addGap(184, 184, 184)
-                        .addComponent(BotonAceptarIncorrecta2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jDialog5Layout.createSequentialGroup()
-                        .addGap(163, 163, 163)
-                        .addComponent(jLabel9)))
-                .addContainerGap(168, Short.MAX_VALUE))
+        javax.swing.GroupLayout jDialogLleneLosCamposLayout = new javax.swing.GroupLayout(jDialogLleneLosCampos.getContentPane());
+        jDialogLleneLosCampos.getContentPane().setLayout(jDialogLleneLosCamposLayout);
+        jDialogLleneLosCamposLayout.setHorizontalGroup(
+            jDialogLleneLosCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogLleneLosCamposLayout.createSequentialGroup()
+                .addGroup(jDialogLleneLosCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialogLleneLosCamposLayout.createSequentialGroup()
+                        .addGap(159, 159, 159)
+                        .addComponent(jLabel9))
+                    .addGroup(jDialogLleneLosCamposLayout.createSequentialGroup()
+                        .addGap(171, 171, 171)
+                        .addComponent(BotonAceptarIncorrecta2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(172, Short.MAX_VALUE))
         );
-        jDialog5Layout.setVerticalGroup(
-            jDialog5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog5Layout.createSequentialGroup()
-                .addGap(68, 68, 68)
+        jDialogLleneLosCamposLayout.setVerticalGroup(
+            jDialogLleneLosCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogLleneLosCamposLayout.createSequentialGroup()
+                .addGap(91, 91, 91)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(BotonAceptarIncorrecta2)
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addContainerGap(126, Short.MAX_VALUE))
         );
 
         jLabel10.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
@@ -461,15 +461,15 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(32, 34, 37));
-        jButton2.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(28, 185, 85));
-        jButton2.setText("Aceptar");
-        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
-        jButton2.setFocusPainted(false);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnBuscarUsuario.setBackground(new java.awt.Color(32, 34, 37));
+        btnBuscarUsuario.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
+        btnBuscarUsuario.setForeground(new java.awt.Color(28, 185, 85));
+        btnBuscarUsuario.setText("Aceptar");
+        btnBuscarUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        btnBuscarUsuario.setFocusPainted(false);
+        btnBuscarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnBuscarUsuarioActionPerformed(evt);
             }
         });
 
@@ -547,7 +547,7 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
                         .addGap(203, 203, 203)
                         .addComponent(nomUsNoEncontrado))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(342, 342, 342)
+                        .addGap(354, 354, 354)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(textoPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
@@ -559,7 +559,7 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
                                 .addGap(35, 35, 35)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(verificarPreg, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(btnBuscarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addComponent(PreguntaSeguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(68, 68, 68)
@@ -576,7 +576,7 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textoNombreUs, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2))
+                    .addComponent(btnBuscarUsuario))
                 .addGap(48, 48, 48)
                 .addComponent(textoPregunta)
                 .addGap(18, 18, 18)
@@ -601,7 +601,7 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         // texto nombre de usuario
     }//GEN-LAST:event_textoNombreUsActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnBuscarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarUsuarioActionPerformed
         // boton para buscar el usuario
         String nomUs = textoNombreUs.getText();
         Usuario us = gestorUs.buscarUsuarioNom(nomUs);
@@ -612,16 +612,16 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
             cajitaRespuesta.setVisible(true);
             
             PreguntaSeguridad.setText(gestorUs.getPreguntaEnPos(us.getIndicePregunta()));
-            jDialog2.setVisible(false);
+            jDialogUsuarioNoEncontrado.setVisible(false);
             verificarPreg.setVisible(true);
         }else{
-            jDialog2.setVisible(true);
+            jDialogUsuarioNoEncontrado.setVisible(true);
             //nomUsNoEncontrado.setVisible(true);
         }
         
         
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnBuscarUsuarioActionPerformed
 
     private void cajitaRespuestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cajitaRespuestaActionPerformed
         // TODO add your handling code here:
@@ -639,15 +639,15 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         Usuario us = gestorUs.buscarUsuarioNom(nomUs);
         String res = cajitaRespuesta.getText();
         if(us.getRespuesta().equals(res)){
-            jDialog3.setVisible(false);
-            jDialog1.setVisible(true);
+            jDialogRespuestaIncorrecta.setVisible(false);
+            jDialogRecuperarContrasena.setVisible(true);
         }else{
-            jDialog3.setVisible(true);
+            jDialogRespuestaIncorrecta.setVisible(true);
         }
         
     }//GEN-LAST:event_verificarPregActionPerformed
 
-    private void recuperarBtoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_recuperarBtoActionPerformed
+    private void btnRecuperarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRecuperarActionPerformed
         // boton recuperar
         char[] arr = campoContN.getPassword();
         String cont = new String(arr);
@@ -658,37 +658,37 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         if(!cont.isEmpty() && !cont2.isEmpty()){
             if(cont.equals(cont2)){
                 if(validarContraSegura(cont)){
-                    jDialog4.setVisible(false);
+                    jDialogLaConstrasenaNoEsSegura.setVisible(false);
                     jDialog6.setVisible(false);
-                    jDialog5.setVisible(false);
-                    btExito.setVisible(true);
+                    jDialogLleneLosCampos.setVisible(false);
+                    txtExito.setVisible(true);
                     gestorUs.modificarContraseña(nomUs, cont2);
                     
                 }else{
-                    jDialog4.setVisible(true);
-                    jDialog5.setVisible(false);
+                    jDialogLaConstrasenaNoEsSegura.setVisible(true);
+                    jDialogLleneLosCampos.setVisible(false);
                     jDialog6.setVisible(false);
                 }
             }else{
                jDialog6.setVisible(true);
-                jDialog5.setVisible(false);
-                jDialog4.setVisible(false);
+                jDialogLleneLosCampos.setVisible(false);
+                jDialogLaConstrasenaNoEsSegura.setVisible(false);
             }
         }else{
-            jDialog5.setVisible(true);
-            jDialog4.setVisible(false);
+            jDialogLleneLosCampos.setVisible(true);
+            jDialogLaConstrasenaNoEsSegura.setVisible(false);
             jDialog6.setVisible(false);
         }
         
-    }//GEN-LAST:event_recuperarBtoActionPerformed
+    }//GEN-LAST:event_btnRecuperarActionPerformed
 
     private void campoContNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoContNActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoContNActionPerformed
 
-    private void btActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btActionPerformed
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
         // atras
-        jDialog1.dispose();
+        jDialogRecuperarContrasena.dispose();
 
     // Cerrar el JFrame actual
     this.dispose();
@@ -700,7 +700,7 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
     iniciarSesionFrame.setVisible(true);
         
         
-    }//GEN-LAST:event_btActionPerformed
+    }//GEN-LAST:event_btnAtrasActionPerformed
 
     private void campoContNDeNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoContNDeNuevoActionPerformed
         // TODO add your handling code here:
@@ -708,22 +708,22 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
 
     private void BotonCerrarUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCerrarUActionPerformed
         // TODO add your handling code here:
-        jDialog2.dispose();
+        jDialogUsuarioNoEncontrado.dispose();
     }//GEN-LAST:event_BotonCerrarUActionPerformed
 
     private void BotonAceptarIncorrectaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarIncorrectaActionPerformed
         // TODO add your handling code here:
-        jDialog3.dispose();
+        jDialogRespuestaIncorrecta.dispose();
     }//GEN-LAST:event_BotonAceptarIncorrectaActionPerformed
 
     private void BotonAceptarIncorrecta1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarIncorrecta1ActionPerformed
         // TODO add your handling code here:
-        jDialog4.dispose();
+        jDialogLaConstrasenaNoEsSegura.dispose();
     }//GEN-LAST:event_BotonAceptarIncorrecta1ActionPerformed
 
     private void BotonAceptarIncorrecta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarIncorrecta2ActionPerformed
         // TODO add your handling code here:
-        jDialog5.dispose();
+        jDialogLleneLosCampos.dispose();
     }//GEN-LAST:event_BotonAceptarIncorrecta2ActionPerformed
 
     private void BotonAceptarIncorrecta3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarIncorrecta3ActionPerformed
@@ -787,37 +787,37 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
     private javax.swing.JButton BotonAceptarIncorrecta3;
     private javax.swing.JButton BotonCerrarU;
     private javax.swing.JLabel PreguntaSeguridad;
-    private javax.swing.JButton bt;
-    private javax.swing.JLabel btExito;
+    private javax.swing.JButton btnAtras;
+    private javax.swing.JButton btnBuscarUsuario;
+    private javax.swing.JButton btnRecuperar;
     private javax.swing.JTextField cajitaRespuesta;
     private javax.swing.JLabel campVacios;
     private javax.swing.JPasswordField campoContN;
     private javax.swing.JPasswordField campoContNDeNuevo;
     private javax.swing.JLabel contNoSegura;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JDialog jDialog1;
-    private javax.swing.JDialog jDialog2;
-    private javax.swing.JDialog jDialog3;
-    private javax.swing.JDialog jDialog4;
-    private javax.swing.JDialog jDialog5;
     private javax.swing.JDialog jDialog6;
+    private javax.swing.JDialog jDialogLaConstrasenaNoEsSegura;
+    public javax.swing.JDialog jDialogLleneLosCampos;
+    private javax.swing.JDialog jDialogRecuperarContrasena;
+    private javax.swing.JDialog jDialogRespuestaIncorrecta;
+    private javax.swing.JDialog jDialogUsuarioNoEncontrado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    public javax.swing.JLabel jLabel9;
     private javax.swing.JLabel noCoinciden;
     private javax.swing.JLabel nomUsNoEncontrado;
-    private javax.swing.JButton recuperarBto;
     private javax.swing.JLabel resIncor;
     private javax.swing.JTextField textoNombreUs;
     private javax.swing.JLabel textoPregunta;
+    private javax.swing.JLabel txtExito;
+    private javax.swing.JLabel txtIngresaNuevamente;
+    private javax.swing.JLabel txtNuevaContrasena;
+    private javax.swing.JLabel txtTituloRecuperarContrasena;
     private javax.swing.JButton verificarPreg;
     // End of variables declaration//GEN-END:variables
 }
