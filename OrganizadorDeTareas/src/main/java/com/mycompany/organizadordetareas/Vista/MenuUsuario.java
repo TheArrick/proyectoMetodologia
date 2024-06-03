@@ -804,21 +804,21 @@ public class MenuUsuario extends javax.swing.JFrame {
         txtEstaSeguro.setText("Esta seguro de que quiere eliminar este Evento?");
 
         btnCancelarSeguro.setBackground(new java.awt.Color(32, 34, 37));
-        btnCancelarSeguro.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        btnCancelarSeguro.setForeground(new java.awt.Color(28, 185, 85));
+        btnCancelarSeguro.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        btnCancelarSeguro.setForeground(new java.awt.Color(234, 234, 235));
         btnCancelarSeguro.setText("Cancelar");
-        btnCancelarSeguro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        btnCancelarSeguro.setBorder(null);
         btnCancelarSeguro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarSeguroActionPerformed(evt);
             }
         });
 
-        btnAceptarSeguro.setBackground(new java.awt.Color(32, 34, 37));
-        btnAceptarSeguro.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        btnAceptarSeguro.setForeground(new java.awt.Color(28, 185, 85));
+        btnAceptarSeguro.setBackground(new java.awt.Color(10, 135, 55));
+        btnAceptarSeguro.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        btnAceptarSeguro.setForeground(new java.awt.Color(234, 234, 235));
         btnAceptarSeguro.setText("Aceptar");
-        btnAceptarSeguro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        btnAceptarSeguro.setBorder(null);
         btnAceptarSeguro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAceptarSeguroActionPerformed(evt);
@@ -850,7 +850,7 @@ public class MenuUsuario extends javax.swing.JFrame {
                 .addGroup(jDialogEstaSegLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCancelarSeguro)
                     .addComponent(btnAceptarSeguro))
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
         txtEstaSeguro1.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
@@ -858,21 +858,25 @@ public class MenuUsuario extends javax.swing.JFrame {
         txtEstaSeguro1.setText("Esta seguro de que quiere eliminar esta Tarea?");
 
         btnCancelarSeguro1.setBackground(new java.awt.Color(32, 34, 37));
-        btnCancelarSeguro1.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        btnCancelarSeguro1.setForeground(new java.awt.Color(28, 185, 85));
+        btnCancelarSeguro1.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        btnCancelarSeguro1.setForeground(new java.awt.Color(234, 234, 235));
         btnCancelarSeguro1.setText("Cancelar");
-        btnCancelarSeguro1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        btnCancelarSeguro1.setBorder(null);
+        btnCancelarSeguro1.setMaximumSize(new java.awt.Dimension(126, 36));
+        btnCancelarSeguro1.setMinimumSize(new java.awt.Dimension(126, 36));
         btnCancelarSeguro1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCancelarSeguro1ActionPerformed(evt);
             }
         });
 
-        btnAceptarSeguro1.setBackground(new java.awt.Color(32, 34, 37));
-        btnAceptarSeguro1.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        btnAceptarSeguro1.setForeground(new java.awt.Color(28, 185, 85));
+        btnAceptarSeguro1.setBackground(new java.awt.Color(10, 135, 55));
+        btnAceptarSeguro1.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        btnAceptarSeguro1.setForeground(new java.awt.Color(234, 234, 235));
         btnAceptarSeguro1.setText("Aceptar");
-        btnAceptarSeguro1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        btnAceptarSeguro1.setBorder(null);
+        btnAceptarSeguro1.setMaximumSize(new java.awt.Dimension(126, 36));
+        btnAceptarSeguro1.setMinimumSize(new java.awt.Dimension(126, 36));
         btnAceptarSeguro1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAceptarSeguro1ActionPerformed(evt);
@@ -902,9 +906,9 @@ public class MenuUsuario extends javax.swing.JFrame {
                 .addComponent(txtEstaSeguro1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
                 .addGroup(jDialogEstaSegTareaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCancelarSeguro1)
-                    .addComponent(btnAceptarSeguro1))
-                .addContainerGap(92, Short.MAX_VALUE))
+                    .addComponent(btnCancelarSeguro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAceptarSeguro1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(86, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1003,22 +1007,28 @@ public class MenuUsuario extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(listEvento);
 
-        cancelar.setBackground(new java.awt.Color(10, 135, 55));
-        cancelar.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        cancelar.setBackground(new java.awt.Color(0, 128, 128));
+        cancelar.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 24)); // NOI18N
         cancelar.setForeground(new java.awt.Color(234, 234, 235));
         cancelar.setText("+");
+        cancelar.setBorder(null);
         cancelar.setFocusPainted(false);
+        cancelar.setMaximumSize(new java.awt.Dimension(80, 50));
+        cancelar.setMinimumSize(new java.awt.Dimension(80, 50));
         cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelarActionPerformed(evt);
             }
         });
 
-        cancelar1.setBackground(new java.awt.Color(10, 135, 55));
-        cancelar1.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        cancelar1.setBackground(new java.awt.Color(0, 128, 128));
+        cancelar1.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 0, 24)); // NOI18N
         cancelar1.setForeground(new java.awt.Color(234, 234, 235));
         cancelar1.setText("+");
+        cancelar1.setBorder(null);
         cancelar1.setFocusPainted(false);
+        cancelar1.setMaximumSize(new java.awt.Dimension(80, 50));
+        cancelar1.setMinimumSize(new java.awt.Dimension(80, 50));
         cancelar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelar1ActionPerformed(evt);
@@ -1029,29 +1039,38 @@ public class MenuUsuario extends javax.swing.JFrame {
         cancelar2.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         cancelar2.setForeground(new java.awt.Color(234, 234, 235));
         cancelar2.setText("Editar");
+        cancelar2.setBorder(null);
         cancelar2.setFocusPainted(false);
+        cancelar2.setMaximumSize(new java.awt.Dimension(130, 36));
+        cancelar2.setMinimumSize(new java.awt.Dimension(130, 36));
         cancelar2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelar2ActionPerformed(evt);
             }
         });
 
-        btnEliminarTarea.setBackground(new java.awt.Color(10, 135, 55));
+        btnEliminarTarea.setBackground(new java.awt.Color(32, 34, 37));
         btnEliminarTarea.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         btnEliminarTarea.setForeground(new java.awt.Color(234, 234, 235));
         btnEliminarTarea.setText("Eliminar");
+        btnEliminarTarea.setBorder(null);
         btnEliminarTarea.setFocusPainted(false);
+        btnEliminarTarea.setMaximumSize(new java.awt.Dimension(150, 50));
+        btnEliminarTarea.setMinimumSize(new java.awt.Dimension(150, 50));
         btnEliminarTarea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarTareaActionPerformed(evt);
             }
         });
 
-        btnEliminarEvento.setBackground(new java.awt.Color(10, 135, 55));
+        btnEliminarEvento.setBackground(new java.awt.Color(32, 34, 37));
         btnEliminarEvento.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         btnEliminarEvento.setForeground(new java.awt.Color(234, 234, 235));
         btnEliminarEvento.setText("Eliminar");
+        btnEliminarEvento.setBorder(null);
         btnEliminarEvento.setFocusPainted(false);
+        btnEliminarEvento.setMaximumSize(new java.awt.Dimension(150, 50));
+        btnEliminarEvento.setMinimumSize(new java.awt.Dimension(150, 50));
         btnEliminarEvento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarEventoActionPerformed(evt);
@@ -1062,29 +1081,38 @@ public class MenuUsuario extends javax.swing.JFrame {
         cancelar5.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         cancelar5.setForeground(new java.awt.Color(234, 234, 235));
         cancelar5.setText("Editar");
+        cancelar5.setBorder(null);
         cancelar5.setFocusPainted(false);
+        cancelar5.setMaximumSize(new java.awt.Dimension(130, 36));
+        cancelar5.setMinimumSize(new java.awt.Dimension(130, 36));
         cancelar5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelar5ActionPerformed(evt);
             }
         });
 
-        cancelar6.setBackground(new java.awt.Color(10, 135, 55));
-        cancelar6.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        cancelar6.setBackground(new java.awt.Color(128, 0, 0));
+        cancelar6.setFont(new java.awt.Font("Trebuchet MS", 0, 22)); // NOI18N
         cancelar6.setForeground(new java.awt.Color(234, 234, 235));
         cancelar6.setText("Cerrar Sesion");
+        cancelar6.setBorder(null);
         cancelar6.setFocusPainted(false);
+        cancelar6.setMaximumSize(new java.awt.Dimension(150, 50));
+        cancelar6.setMinimumSize(new java.awt.Dimension(150, 50));
         cancelar6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelar6ActionPerformed(evt);
             }
         });
 
-        cancelar7.setBackground(new java.awt.Color(10, 135, 55));
+        cancelar7.setBackground(new java.awt.Color(0, 128, 128));
         cancelar7.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         cancelar7.setForeground(new java.awt.Color(234, 234, 235));
         cancelar7.setText("Buscar");
+        cancelar7.setBorder(null);
         cancelar7.setFocusPainted(false);
+        cancelar7.setMaximumSize(new java.awt.Dimension(100, 36));
+        cancelar7.setMinimumSize(new java.awt.Dimension(100, 36));
         cancelar7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelar7ActionPerformed(evt);
@@ -1100,41 +1128,43 @@ public class MenuUsuario extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(31, 31, 31)
-                                    .addComponent(lblEvento)
-                                    .addGap(96, 96, 96)
-                                    .addComponent(cancelar))
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnEliminarEvento)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addComponent(lblEvento)
+                                .addGap(110, 110, 110)
+                                .addComponent(cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(btnEliminarEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cancelar2)))
+                                .addComponent(cancelar2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(lblTarea)
-                                .addGap(134, 134, 134)
-                                .addComponent(cancelar1)
+                                .addGap(124, 124, 124)
+                                .addComponent(cancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnEliminarTarea)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(btnEliminarTarea, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cancelar5))))
+                                .addComponent(cancelar5, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(lblBienvenida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cancelar7))
-                        .addGap(68, 68, 68))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(95, 95, 95)
+                                .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(78, 78, 78)
+                                .addComponent(cancelar6, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(45, 45, 45))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cancelar6)
-                        .addGap(52, 52, 52))))
+                        .addComponent(cancelar7, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(86, 86, 86))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1143,15 +1173,15 @@ public class MenuUsuario extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
                         .addComponent(lblBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblTarea)
-                                .addComponent(cancelar1))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(lblEvento)
-                                .addComponent(cancelar)))
-                        .addGap(14, 14, 14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblTarea)
+                                    .addComponent(cancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(lblEvento))
+                            .addComponent(cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -1159,15 +1189,15 @@ public class MenuUsuario extends javax.swing.JFrame {
                         .addGap(46, 46, 46)
                         .addComponent(logo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(198, 198, 198)
-                        .addComponent(cancelar7)
-                        .addGap(38, 38, 38)
-                        .addComponent(cancelar6)))
+                        .addComponent(cancelar7, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(cancelar6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cancelar2)
-                    .addComponent(btnEliminarEvento)
-                    .addComponent(btnEliminarTarea)
-                    .addComponent(cancelar5))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnEliminarEvento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEliminarTarea, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(cancelar5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cancelar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(91, 91, 91))
         );
 
