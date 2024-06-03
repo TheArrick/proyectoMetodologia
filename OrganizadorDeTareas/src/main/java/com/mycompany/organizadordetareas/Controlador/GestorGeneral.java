@@ -110,10 +110,11 @@ public class GestorGeneral {
             }
         }
     }
+
     /*
     * @param subTarea es la subtarea a agregar
     * @param titulo es el titulo de la tarea que contendra a la subtarea
-    */
+     */
     public boolean anadirSubTar(String subTarea, String titulo) {
         Tarea tarea = buscarTareaObjeto(titulo);
         boolean bandera = false;
@@ -536,9 +537,13 @@ public class GestorGeneral {
 
         Tarea t = buscarTareaObjeto(s); // Busca la tarea por título
         String res = "No se encontró su Tarea"; // Mensaje predeterminado si no se encuentra la tarea
+        String aux = t.toStringSubs();
         if (t != null) {
             res = t.mostrar(); // Si se encuentra la tarea, se devuelve su representación en cadena
+             
+            res = res + "\n   Subtareas: \n"  + t.toStringSubs();
         }
+
         return res; // Retorna el resultado de la búsqueda
     }
 

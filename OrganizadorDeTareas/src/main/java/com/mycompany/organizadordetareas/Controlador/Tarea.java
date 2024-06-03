@@ -68,6 +68,7 @@ public class Tarea extends Pendiente implements Comparable<Tarea> {
         }
         return res;
     }
+    
 
     /**
      * Devuelve una representación en cadena de la tarea.
@@ -78,7 +79,20 @@ public class Tarea extends Pendiente implements Comparable<Tarea> {
     public String toString() {
         return titulo + "|" + hora.toStringSerializado() + "|" + fecha.toStringSerializado() + "|" + prioridad + "|" + seRepite() + "|" + toStringSubT();
     }
-
+    
+    
+    public ArrayList<String> getSubtareas(){
+        return subTareas;
+    }
+    
+    
+    public String toStringSubs(){
+        String res  = "";
+        for(int i = 0 ; i< subTareas.size(); i++){
+            res = res + subTareas.get(i) + "\n";
+        }
+        return res;
+    }
     //Implementacion de getHORA Y getFecha para la implementacion de no tener tareas con fechas repetidads
     public Hora getHora() {
         return hora;

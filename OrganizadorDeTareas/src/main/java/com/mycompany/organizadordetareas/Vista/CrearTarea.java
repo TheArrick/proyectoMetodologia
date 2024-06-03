@@ -20,6 +20,7 @@ import java.awt.Dimension;
 public class CrearTarea extends javax.swing.JFrame {
 
     private MenuUsuario menuUs;
+
     //private Usuario us;
     //private GestorGeneral g;
     /**
@@ -30,10 +31,10 @@ public class CrearTarea extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         lblHoraX.setVisible(false);
         lblFechaX.setVisible(false);
-        setLocation(400,500);
-        setSize(1000,600);
-        setMaximumSize(new Dimension(1000,600));
-        setMinimumSize(new Dimension(1000,600));
+        setLocation(400, 500);
+        setSize(1000, 600);
+        setMaximumSize(new Dimension(1000, 600));
+        setMinimumSize(new Dimension(1000, 600));
         setResizable(false);
         setLocationRelativeTo(null);
         getContentPane().setBackground(new Color(55, 57, 63));
@@ -48,6 +49,17 @@ public class CrearTarea extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jDialogLleneLosCampos = new javax.swing.JDialog();
+        jLabel9 = new javax.swing.JLabel();
+        BotonAceptarIncorrecta2 = new javax.swing.JButton();
+        jDialogFechaIncorrecta = new javax.swing.JDialog();
+        jLabel13 = new javax.swing.JLabel();
+        BotonAceptarIncorrecta3 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jDialogHoraIncorrecta = new javax.swing.JDialog();
+        jLabel14 = new javax.swing.JLabel();
+        BotonAceptarIncorrecta4 = new javax.swing.JButton();
+        jLabel16 = new javax.swing.JLabel();
         lblBienvenida = new javax.swing.JLabel();
         lblEvento = new javax.swing.JLabel();
         txtTitulo = new javax.swing.JTextField();
@@ -68,6 +80,155 @@ public class CrearTarea extends javax.swing.JFrame {
         txtAAAA = new javax.swing.JTextField();
         cancelar = new javax.swing.JButton();
         aceptar1 = new javax.swing.JButton();
+
+        jLabel9.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel9.setText("Llene los campos");
+
+        BotonAceptarIncorrecta2.setBackground(new java.awt.Color(32, 34, 37));
+        BotonAceptarIncorrecta2.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        BotonAceptarIncorrecta2.setForeground(new java.awt.Color(234, 234, 235));
+        BotonAceptarIncorrecta2.setText("Aceptar");
+        BotonAceptarIncorrecta2.setBorder(null);
+        BotonAceptarIncorrecta2.setMaximumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta2.setMinimumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAceptarIncorrecta2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jDialogLleneLosCamposLayout = new javax.swing.GroupLayout(jDialogLleneLosCampos.getContentPane());
+        jDialogLleneLosCampos.getContentPane().setLayout(jDialogLleneLosCamposLayout);
+        jDialogLleneLosCamposLayout.setHorizontalGroup(
+            jDialogLleneLosCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogLleneLosCamposLayout.createSequentialGroup()
+                .addGroup(jDialogLleneLosCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialogLleneLosCamposLayout.createSequentialGroup()
+                        .addGap(159, 159, 159)
+                        .addComponent(jLabel9))
+                    .addGroup(jDialogLleneLosCamposLayout.createSequentialGroup()
+                        .addGap(171, 171, 171)
+                        .addComponent(BotonAceptarIncorrecta2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(174, Short.MAX_VALUE))
+        );
+        jDialogLleneLosCamposLayout.setVerticalGroup(
+            jDialogLleneLosCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogLleneLosCamposLayout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(BotonAceptarIncorrecta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(120, Short.MAX_VALUE))
+        );
+
+        jLabel13.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel13.setText("Por favor ingrese la en el formato dd/mm/aaaa");
+
+        BotonAceptarIncorrecta3.setBackground(new java.awt.Color(32, 34, 37));
+        BotonAceptarIncorrecta3.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        BotonAceptarIncorrecta3.setForeground(new java.awt.Color(234, 234, 235));
+        BotonAceptarIncorrecta3.setText("Aceptar");
+        BotonAceptarIncorrecta3.setBorder(null);
+        BotonAceptarIncorrecta3.setMaximumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta3.setMinimumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAceptarIncorrecta3ActionPerformed(evt);
+            }
+        });
+
+        jLabel15.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel15.setText("La fecha ingresada no tiene el formato correcto");
+
+        javax.swing.GroupLayout jDialogFechaIncorrectaLayout = new javax.swing.GroupLayout(jDialogFechaIncorrecta.getContentPane());
+        jDialogFechaIncorrecta.getContentPane().setLayout(jDialogFechaIncorrectaLayout);
+        jDialogFechaIncorrectaLayout.setHorizontalGroup(
+            jDialogFechaIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogFechaIncorrectaLayout.createSequentialGroup()
+                .addGap(188, 188, 188)
+                .addComponent(BotonAceptarIncorrecta3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogFechaIncorrectaLayout.createSequentialGroup()
+                .addContainerGap(90, Short.MAX_VALUE)
+                .addComponent(jLabel13)
+                .addGap(76, 76, 76))
+            .addGroup(jDialogFechaIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogFechaIncorrectaLayout.createSequentialGroup()
+                    .addContainerGap(91, Short.MAX_VALUE)
+                    .addComponent(jLabel15)
+                    .addGap(69, 69, 69)))
+        );
+        jDialogFechaIncorrectaLayout.setVerticalGroup(
+            jDialogFechaIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogFechaIncorrectaLayout.createSequentialGroup()
+                .addGap(137, 137, 137)
+                .addComponent(jLabel13)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BotonAceptarIncorrecta3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(99, Short.MAX_VALUE))
+            .addGroup(jDialogFechaIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jDialogFechaIncorrectaLayout.createSequentialGroup()
+                    .addGap(110, 110, 110)
+                    .addComponent(jLabel15)
+                    .addContainerGap(167, Short.MAX_VALUE)))
+        );
+
+        jLabel14.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel14.setText("Por favor ingresela en el formato hh-mm");
+
+        BotonAceptarIncorrecta4.setBackground(new java.awt.Color(32, 34, 37));
+        BotonAceptarIncorrecta4.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        BotonAceptarIncorrecta4.setForeground(new java.awt.Color(234, 234, 235));
+        BotonAceptarIncorrecta4.setText("Aceptar");
+        BotonAceptarIncorrecta4.setBorder(null);
+        BotonAceptarIncorrecta4.setMaximumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta4.setMinimumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonAceptarIncorrecta4ActionPerformed(evt);
+            }
+        });
+
+        jLabel16.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel16.setText("La hora ingresada no tiene el formato correcto");
+
+        javax.swing.GroupLayout jDialogHoraIncorrectaLayout = new javax.swing.GroupLayout(jDialogHoraIncorrecta.getContentPane());
+        jDialogHoraIncorrecta.getContentPane().setLayout(jDialogHoraIncorrectaLayout);
+        jDialogHoraIncorrectaLayout.setHorizontalGroup(
+            jDialogHoraIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogHoraIncorrectaLayout.createSequentialGroup()
+                .addContainerGap(109, Short.MAX_VALUE)
+                .addComponent(jLabel14)
+                .addGap(103, 103, 103))
+            .addGroup(jDialogHoraIncorrectaLayout.createSequentialGroup()
+                .addGap(199, 199, 199)
+                .addComponent(BotonAceptarIncorrecta4, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jDialogHoraIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialogHoraIncorrectaLayout.createSequentialGroup()
+                    .addContainerGap(99, Short.MAX_VALUE)
+                    .addComponent(jLabel16)
+                    .addGap(69, 69, 69)))
+        );
+        jDialogHoraIncorrectaLayout.setVerticalGroup(
+            jDialogHoraIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialogHoraIncorrectaLayout.createSequentialGroup()
+                .addGap(137, 137, 137)
+                .addComponent(jLabel14)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BotonAceptarIncorrecta4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(99, Short.MAX_VALUE))
+            .addGroup(jDialogHoraIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jDialogHoraIncorrectaLayout.createSequentialGroup()
+                    .addGap(110, 110, 110)
+                    .addComponent(jLabel16)
+                    .addContainerGap(167, Short.MAX_VALUE)))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Lorem Ipsum - App");
@@ -182,10 +343,11 @@ public class CrearTarea extends javax.swing.JFrame {
             }
         });
 
-        cancelar.setBackground(new java.awt.Color(10, 135, 55));
+        cancelar.setBackground(new java.awt.Color(32, 34, 37));
         cancelar.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
-        cancelar.setForeground(new java.awt.Color(234, 234, 235));
+        cancelar.setForeground(new java.awt.Color(28, 185, 85));
         cancelar.setText("Cancelar");
+        cancelar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelarActionPerformed(evt);
@@ -196,6 +358,7 @@ public class CrearTarea extends javax.swing.JFrame {
         aceptar1.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         aceptar1.setForeground(new java.awt.Color(234, 234, 235));
         aceptar1.setText("Aceptar");
+        aceptar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         aceptar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aceptar1ActionPerformed(evt);
@@ -339,44 +502,76 @@ public class CrearTarea extends javax.swing.JFrame {
         lblFechaX.setVisible(false);
         Validadores valid = new Validadores();
         String titulo = txtTitulo.getText();
-        
+
         String hora = txtHora.getText() + ":" + txtMin.getText();
-        
+
         String fecha = txtDD.getText() + "/" + txtMM.getText() + "/" + txtAAAA.getText();
-        
+
         int prioridad = Integer.parseInt(listPrio.getSelectedItem().toString());
-        
-        Hora horaVal = new Hora(0,0);
-        Fecha fechaVal = new Fecha(0,0,0);
-        
-        if(!valid.validarHora(hora)){
-            lblHoraX.setVisible(true);
-        }else{
+
+        Hora horaVal = new Hora(0, 0);
+        Fecha fechaVal = new Fecha(0, 0, 0);
+        if (titulo.equals("") || hora.equals("") || fecha.equals("")) {
+            jDialogLleneLosCampos.setVisible(true);
+            jDialogLleneLosCampos.setLocationRelativeTo(null);
+            jDialogLleneLosCampos.setSize(453, 298);
+            jDialogLleneLosCampos.getContentPane().setBackground(new Color(60, 63, 65));
+            jDialogLleneLosCampos.setModal(true);
+            return;
+        }
+        if (!valid.validarHora(hora)) {
+            jDialogHoraIncorrecta.setVisible(true);
+            jDialogHoraIncorrecta.setLocationRelativeTo(null);
+            jDialogHoraIncorrecta.setSize(453, 298);
+            jDialogHoraIncorrecta.getContentPane().setBackground(new Color(60, 63, 65));
+            jDialogHoraIncorrecta.setModal(true);
+            return;
+        } else {
             String[] partesH = hora.split(":");
             int hh = Integer.parseInt(partesH[0]);
             int mm = Integer.parseInt(partesH[1]);
-            horaVal = new Hora(hh,mm);   
+            horaVal = new Hora(hh, mm);
         }
-        
-        if(!valid.validarFecha(fecha)){
-            lblFechaX.setVisible(true);
-        }else{
+
+        if (!valid.validarFecha(fecha)) {
+            jDialogFechaIncorrecta.setVisible(true);
+            jDialogFechaIncorrecta.setLocationRelativeTo(null);
+            jDialogFechaIncorrecta.setSize(453, 298);
+            jDialogFechaIncorrecta.getContentPane().setBackground(new Color(60, 63, 65));
+            jDialogFechaIncorrecta.setModal(true);
+            return;
+        } else {
             String[] partesFV = fecha.split("/");
             int d = Integer.parseInt(partesFV[0]);
             int m = Integer.parseInt(partesFV[1]);
             int y = Integer.parseInt(partesFV[2]);
-            fechaVal = new Fecha(d,m,y);
-            menuUs.g.registrarTarea(new Tarea(titulo,horaVal,fechaVal,prioridad));
+            fechaVal = new Fecha(d, m, y);
+            menuUs.g.registrarTarea(new Tarea(titulo, horaVal, fechaVal, prioridad));
             menuUs.setVisible(true);
             this.dispose();
             menuUs.releerTarea();
         }
     }//GEN-LAST:event_aceptar1ActionPerformed
 
-    public void setMenuUs(MenuUsuario menuUs){
+    private void BotonAceptarIncorrecta2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarIncorrecta2ActionPerformed
+        // TODO add your handling code here:
+        jDialogLleneLosCampos.dispose();
+    }//GEN-LAST:event_BotonAceptarIncorrecta2ActionPerformed
+
+    private void BotonAceptarIncorrecta3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarIncorrecta3ActionPerformed
+        // TODO add your handling code here:
+        jDialogFechaIncorrecta.dispose();
+    }//GEN-LAST:event_BotonAceptarIncorrecta3ActionPerformed
+
+    private void BotonAceptarIncorrecta4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAceptarIncorrecta4ActionPerformed
+        // TODO add your handling code here:
+        jDialogHoraIncorrecta.dispose();
+    }//GEN-LAST:event_BotonAceptarIncorrecta4ActionPerformed
+
+    public void setMenuUs(MenuUsuario menuUs) {
         this.menuUs = menuUs;
     }
-    
+
     /**
      * @param args the command line arguments
      */
@@ -414,12 +609,23 @@ public class CrearTarea extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotonAceptarIncorrecta2;
+    private javax.swing.JButton BotonAceptarIncorrecta3;
+    private javax.swing.JButton BotonAceptarIncorrecta4;
     private javax.swing.JButton aceptar1;
     private javax.swing.JButton cancelar;
+    public javax.swing.JDialog jDialogFechaIncorrecta;
+    public javax.swing.JDialog jDialogHoraIncorrecta;
+    public javax.swing.JDialog jDialogLleneLosCampos;
     private javax.swing.JLabel jLabel1;
+    public javax.swing.JLabel jLabel13;
+    public javax.swing.JLabel jLabel14;
+    public javax.swing.JLabel jLabel15;
+    public javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    public javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lblBienvenida;
     private javax.swing.JLabel lblEvento;
     private javax.swing.JLabel lblEvento3;

@@ -1,10 +1,4 @@
-pol|Pol@1234|ardidas|3
-Miguel2|Sebas@123|InkaCola|3
-Sebas|Miguel@123|Lima peru|2
-Pol2|Pol@1234|ardidas|3
-PolOficial|Polsito@1|Star wars 8|4
-MateoChupapichi|Miguel@123|Culiacan|2
-Miguel|Perrito123?|negro|1
-PruebaOficial|Polsito@1|Pantera|3
-Juancito|Pepe123?|Batman|4
-Anahi|Bruno123@|Redragon|3
+d|a|A|1
+asd|Holacausas123@|asd|1
+PolOficial|Apolinar123@|Cochabamba|2
+Apolinar|@123456Apolinar|cochabamba|2
