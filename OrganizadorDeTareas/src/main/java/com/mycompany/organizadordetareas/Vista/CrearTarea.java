@@ -81,15 +81,17 @@ public class CrearTarea extends javax.swing.JFrame {
         cancelar = new javax.swing.JButton();
         aceptar1 = new javax.swing.JButton();
 
-        jLabel9.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(234, 234, 235));
         jLabel9.setText("Llene los campos");
 
         BotonAceptarIncorrecta2.setBackground(new java.awt.Color(32, 34, 37));
-        BotonAceptarIncorrecta2.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        BotonAceptarIncorrecta2.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta2.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        BotonAceptarIncorrecta2.setForeground(new java.awt.Color(234, 234, 235));
         BotonAceptarIncorrecta2.setText("Aceptar");
-        BotonAceptarIncorrecta2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta2.setBorder(null);
+        BotonAceptarIncorrecta2.setMaximumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta2.setMinimumSize(new java.awt.Dimension(126, 36));
         BotonAceptarIncorrecta2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonAceptarIncorrecta2ActionPerformed(evt);
@@ -108,7 +110,7 @@ public class CrearTarea extends javax.swing.JFrame {
                     .addGroup(jDialogLleneLosCamposLayout.createSequentialGroup()
                         .addGap(171, 171, 171)
                         .addComponent(BotonAceptarIncorrecta2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addContainerGap(174, Short.MAX_VALUE))
         );
         jDialogLleneLosCamposLayout.setVerticalGroup(
             jDialogLleneLosCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,8 +118,8 @@ public class CrearTarea extends javax.swing.JFrame {
                 .addGap(91, 91, 91)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(BotonAceptarIncorrecta2)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addComponent(BotonAceptarIncorrecta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         jLabel13.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
@@ -125,10 +127,12 @@ public class CrearTarea extends javax.swing.JFrame {
         jLabel13.setText("Por favor ingrese la en el formato dd/mm/aaaa");
 
         BotonAceptarIncorrecta3.setBackground(new java.awt.Color(32, 34, 37));
-        BotonAceptarIncorrecta3.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        BotonAceptarIncorrecta3.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta3.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        BotonAceptarIncorrecta3.setForeground(new java.awt.Color(234, 234, 235));
         BotonAceptarIncorrecta3.setText("Aceptar");
-        BotonAceptarIncorrecta3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta3.setBorder(null);
+        BotonAceptarIncorrecta3.setMaximumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta3.setMinimumSize(new java.awt.Dimension(126, 36));
         BotonAceptarIncorrecta3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonAceptarIncorrecta3ActionPerformed(evt);
@@ -163,8 +167,8 @@ public class CrearTarea extends javax.swing.JFrame {
                 .addGap(137, 137, 137)
                 .addComponent(jLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BotonAceptarIncorrecta3)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addComponent(BotonAceptarIncorrecta3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(99, Short.MAX_VALUE))
             .addGroup(jDialogFechaIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jDialogFechaIncorrectaLayout.createSequentialGroup()
                     .addGap(110, 110, 110)
@@ -177,10 +181,12 @@ public class CrearTarea extends javax.swing.JFrame {
         jLabel14.setText("Por favor ingresela en el formato hh-mm");
 
         BotonAceptarIncorrecta4.setBackground(new java.awt.Color(32, 34, 37));
-        BotonAceptarIncorrecta4.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        BotonAceptarIncorrecta4.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta4.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        BotonAceptarIncorrecta4.setForeground(new java.awt.Color(234, 234, 235));
         BotonAceptarIncorrecta4.setText("Aceptar");
-        BotonAceptarIncorrecta4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta4.setBorder(null);
+        BotonAceptarIncorrecta4.setMaximumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta4.setMinimumSize(new java.awt.Dimension(126, 36));
         BotonAceptarIncorrecta4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonAceptarIncorrecta4ActionPerformed(evt);
@@ -215,8 +221,8 @@ public class CrearTarea extends javax.swing.JFrame {
                 .addGap(137, 137, 137)
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BotonAceptarIncorrecta4)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addComponent(BotonAceptarIncorrecta4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(99, Short.MAX_VALUE))
             .addGroup(jDialogHoraIncorrectaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jDialogHoraIncorrectaLayout.createSequentialGroup()
                     .addGap(110, 110, 110)
@@ -337,10 +343,11 @@ public class CrearTarea extends javax.swing.JFrame {
             }
         });
 
-        cancelar.setBackground(new java.awt.Color(10, 135, 55));
+        cancelar.setBackground(new java.awt.Color(32, 34, 37));
         cancelar.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
-        cancelar.setForeground(new java.awt.Color(234, 234, 235));
+        cancelar.setForeground(new java.awt.Color(28, 185, 85));
         cancelar.setText("Cancelar");
+        cancelar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelarActionPerformed(evt);
@@ -351,6 +358,7 @@ public class CrearTarea extends javax.swing.JFrame {
         aceptar1.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         aceptar1.setForeground(new java.awt.Color(234, 234, 235));
         aceptar1.setText("Aceptar");
+        aceptar1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         aceptar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 aceptar1ActionPerformed(evt);

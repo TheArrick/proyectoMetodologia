@@ -150,11 +150,13 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         txtTituloRecuperarContrasena.setForeground(new java.awt.Color(234, 234, 235));
         txtTituloRecuperarContrasena.setText("Recuperar contraseña");
 
-        btnRecuperar.setBackground(new java.awt.Color(32, 34, 37));
-        btnRecuperar.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        btnRecuperar.setForeground(new java.awt.Color(28, 185, 85));
+        btnRecuperar.setBackground(new java.awt.Color(10, 135, 55));
+        btnRecuperar.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
+        btnRecuperar.setForeground(new java.awt.Color(234, 234, 235));
         btnRecuperar.setText("Recuperar");
-        btnRecuperar.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        btnRecuperar.setBorder(null);
+        btnRecuperar.setMaximumSize(new java.awt.Dimension(126, 36));
+        btnRecuperar.setMinimumSize(new java.awt.Dimension(126, 36));
         btnRecuperar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRecuperarActionPerformed(evt);
@@ -168,10 +170,10 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         noCoinciden.setText("Las contraseñas no coinciden");
 
         btnAtras.setBackground(new java.awt.Color(32, 34, 37));
-        btnAtras.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        btnAtras.setForeground(new java.awt.Color(28, 185, 85));
+        btnAtras.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
+        btnAtras.setForeground(new java.awt.Color(234, 234, 235));
         btnAtras.setText("Atrás");
-        btnAtras.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        btnAtras.setBorder(null);
         btnAtras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAtrasActionPerformed(evt);
@@ -246,7 +248,7 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
                         .addComponent(noCoinciden)))
                 .addGap(18, 18, 18)
                 .addComponent(txtExito)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
                 .addComponent(btnAtras)
                 .addGap(28, 28, 28))
         );
@@ -258,11 +260,13 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         jLabel6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         BotonCerrarU.setBackground(new java.awt.Color(32, 34, 37));
-        BotonCerrarU.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        BotonCerrarU.setForeground(new java.awt.Color(28, 185, 85));
+        BotonCerrarU.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        BotonCerrarU.setForeground(new java.awt.Color(234, 234, 235));
         BotonCerrarU.setText("Aceptar");
-        BotonCerrarU.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonCerrarU.setBorder(null);
         BotonCerrarU.setFocusPainted(false);
+        BotonCerrarU.setMaximumSize(new java.awt.Dimension(126, 36));
+        BotonCerrarU.setMinimumSize(new java.awt.Dimension(126, 36));
         BotonCerrarU.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonCerrarUActionPerformed(evt);
@@ -289,8 +293,8 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
                 .addGap(54, 54, 54)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(BotonCerrarU)
-                .addContainerGap(162, Short.MAX_VALUE))
+                .addComponent(BotonCerrarU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(156, Short.MAX_VALUE))
         );
 
         jLabel7.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
@@ -298,10 +302,12 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         jLabel7.setText("La respuesta no es correcta, intente de nuevo");
 
         BotonAceptarIncorrecta.setBackground(new java.awt.Color(32, 34, 37));
-        BotonAceptarIncorrecta.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        BotonAceptarIncorrecta.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        BotonAceptarIncorrecta.setForeground(new java.awt.Color(234, 234, 235));
         BotonAceptarIncorrecta.setText("Aceptar");
-        BotonAceptarIncorrecta.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta.setBorder(null);
+        BotonAceptarIncorrecta.setMaximumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta.setMinimumSize(new java.awt.Dimension(126, 36));
         BotonAceptarIncorrecta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonAceptarIncorrectaActionPerformed(evt);
@@ -327,8 +333,8 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
                 .addGap(90, 90, 90)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
-                .addComponent(BotonAceptarIncorrecta)
-                .addContainerGap(128, Short.MAX_VALUE))
+                .addComponent(BotonAceptarIncorrecta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(122, Short.MAX_VALUE))
         );
 
         jLabel8.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
@@ -336,10 +342,12 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         jLabel8.setText("La contraseña no es segura");
 
         BotonAceptarIncorrecta1.setBackground(new java.awt.Color(32, 34, 37));
-        BotonAceptarIncorrecta1.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        BotonAceptarIncorrecta1.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta1.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        BotonAceptarIncorrecta1.setForeground(new java.awt.Color(234, 234, 235));
         BotonAceptarIncorrecta1.setText("Aceptar");
-        BotonAceptarIncorrecta1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta1.setBorder(null);
+        BotonAceptarIncorrecta1.setMaximumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta1.setMinimumSize(new java.awt.Dimension(126, 36));
         BotonAceptarIncorrecta1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonAceptarIncorrecta1ActionPerformed(evt);
@@ -365,8 +373,8 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
                 .addGap(75, 75, 75)
                 .addComponent(jLabel8)
                 .addGap(28, 28, 28)
-                .addComponent(BotonAceptarIncorrecta1)
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addComponent(BotonAceptarIncorrecta1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(143, Short.MAX_VALUE))
         );
 
         jLabel9.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
@@ -374,10 +382,12 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         jLabel9.setText("Llene los campos");
 
         BotonAceptarIncorrecta2.setBackground(new java.awt.Color(32, 34, 37));
-        BotonAceptarIncorrecta2.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        BotonAceptarIncorrecta2.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta2.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        BotonAceptarIncorrecta2.setForeground(new java.awt.Color(234, 234, 235));
         BotonAceptarIncorrecta2.setText("Aceptar");
-        BotonAceptarIncorrecta2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta2.setBorder(null);
+        BotonAceptarIncorrecta2.setMaximumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta2.setMinimumSize(new java.awt.Dimension(126, 36));
         BotonAceptarIncorrecta2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonAceptarIncorrecta2ActionPerformed(evt);
@@ -404,8 +414,8 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
                 .addGap(91, 91, 91)
                 .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(BotonAceptarIncorrecta2)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addComponent(BotonAceptarIncorrecta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         jLabel10.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
@@ -413,10 +423,12 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         jLabel10.setText("Las contraseñas no coinciden");
 
         BotonAceptarIncorrecta3.setBackground(new java.awt.Color(32, 34, 37));
-        BotonAceptarIncorrecta3.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        BotonAceptarIncorrecta3.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta3.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        BotonAceptarIncorrecta3.setForeground(new java.awt.Color(234, 234, 235));
         BotonAceptarIncorrecta3.setText("Aceptar");
         BotonAceptarIncorrecta3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta3.setMaximumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta3.setMinimumSize(new java.awt.Dimension(126, 36));
         BotonAceptarIncorrecta3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonAceptarIncorrecta3ActionPerformed(evt);
@@ -442,18 +454,18 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
                 .addGap(84, 84, 84)
                 .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(BotonAceptarIncorrecta3)
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addComponent(BotonAceptarIncorrecta3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(141, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1000, 600));
 
         jButton1.setBackground(new java.awt.Color(32, 34, 37));
-        jButton1.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(28, 185, 85));
+        jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(234, 234, 235));
         jButton1.setText("Atrás");
-        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        jButton1.setBorder(null);
         jButton1.setFocusPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -461,11 +473,11 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
             }
         });
 
-        btnBuscarUsuario.setBackground(new java.awt.Color(32, 34, 37));
-        btnBuscarUsuario.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        btnBuscarUsuario.setForeground(new java.awt.Color(28, 185, 85));
+        btnBuscarUsuario.setBackground(new java.awt.Color(28, 185, 85));
+        btnBuscarUsuario.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
+        btnBuscarUsuario.setForeground(new java.awt.Color(234, 234, 235));
         btnBuscarUsuario.setText("Aceptar");
-        btnBuscarUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        btnBuscarUsuario.setBorder(null);
         btnBuscarUsuario.setFocusPainted(false);
         btnBuscarUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -515,11 +527,11 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
         nomUsNoEncontrado.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
         nomUsNoEncontrado.setText("Nombre de usuario no encontrado");
 
-        verificarPreg.setBackground(new java.awt.Color(32, 34, 37));
-        verificarPreg.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        verificarPreg.setForeground(new java.awt.Color(28, 185, 85));
+        verificarPreg.setBackground(new java.awt.Color(28, 185, 85));
+        verificarPreg.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        verificarPreg.setForeground(new java.awt.Color(234, 234, 235));
         verificarPreg.setText("Verificar");
-        verificarPreg.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        verificarPreg.setBorder(null);
         verificarPreg.setFocusPainted(false);
         verificarPreg.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -558,8 +570,8 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
                                     .addComponent(cajitaRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(35, 35, 35)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(verificarPreg, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
-                                    .addComponent(btnBuscarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addComponent(btnBuscarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
+                                    .addComponent(verificarPreg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addComponent(PreguntaSeguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(68, 68, 68)
@@ -584,7 +596,7 @@ public class OlvidasteContrasena extends javax.swing.JFrame {
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cajitaRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(verificarPreg, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(verificarPreg))
                 .addGap(175, 175, 175)
                 .addComponent(nomUsNoEncontrado)
                 .addGap(27, 27, 27)

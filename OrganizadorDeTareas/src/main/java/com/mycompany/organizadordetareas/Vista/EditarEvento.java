@@ -111,15 +111,17 @@ public class EditarEvento extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
-        jLabel11.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Trebuchet MS", 0, 16)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(234, 234, 235));
         jLabel11.setText("Llene los campos");
 
         BotonAceptarIncorrecta2.setBackground(new java.awt.Color(32, 34, 37));
-        BotonAceptarIncorrecta2.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        BotonAceptarIncorrecta2.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta2.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        BotonAceptarIncorrecta2.setForeground(new java.awt.Color(234, 234, 235));
         BotonAceptarIncorrecta2.setText("Aceptar");
-        BotonAceptarIncorrecta2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta2.setBorder(null);
+        BotonAceptarIncorrecta2.setMaximumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta2.setMinimumSize(new java.awt.Dimension(126, 36));
         BotonAceptarIncorrecta2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonAceptarIncorrecta2ActionPerformed(evt);
@@ -138,7 +140,7 @@ public class EditarEvento extends javax.swing.JFrame {
                     .addGroup(jDialogLleneLosCamposLayout.createSequentialGroup()
                         .addGap(171, 171, 171)
                         .addComponent(BotonAceptarIncorrecta2, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(172, Short.MAX_VALUE))
+                .addContainerGap(174, Short.MAX_VALUE))
         );
         jDialogLleneLosCamposLayout.setVerticalGroup(
             jDialogLleneLosCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -146,8 +148,8 @@ public class EditarEvento extends javax.swing.JFrame {
                 .addGap(91, 91, 91)
                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(BotonAceptarIncorrecta2)
-                .addContainerGap(126, Short.MAX_VALUE))
+                .addComponent(BotonAceptarIncorrecta2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         jLabel12.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
@@ -155,10 +157,12 @@ public class EditarEvento extends javax.swing.JFrame {
         jLabel12.setText("Por favor ingrese dd/mm/aaaa");
 
         BotonAceptarIncorrecta3.setBackground(new java.awt.Color(32, 34, 37));
-        BotonAceptarIncorrecta3.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        BotonAceptarIncorrecta3.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta3.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        BotonAceptarIncorrecta3.setForeground(new java.awt.Color(234, 234, 235));
         BotonAceptarIncorrecta3.setText("Aceptar");
-        BotonAceptarIncorrecta3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta3.setBorder(null);
+        BotonAceptarIncorrecta3.setMaximumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta3.setMinimumSize(new java.awt.Dimension(126, 36));
         BotonAceptarIncorrecta3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonAceptarIncorrecta3ActionPerformed(evt);
@@ -194,8 +198,8 @@ public class EditarEvento extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(BotonAceptarIncorrecta3)
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addComponent(BotonAceptarIncorrecta3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(88, Short.MAX_VALUE))
         );
 
         jLabel13.setFont(new java.awt.Font("STXihei", 0, 16)); // NOI18N
@@ -203,10 +207,12 @@ public class EditarEvento extends javax.swing.JFrame {
         jLabel13.setText("Por favor ingrese hh-mm");
 
         BotonAceptarIncorrecta4.setBackground(new java.awt.Color(32, 34, 37));
-        BotonAceptarIncorrecta4.setFont(new java.awt.Font("STXihei", 1, 16)); // NOI18N
-        BotonAceptarIncorrecta4.setForeground(new java.awt.Color(28, 185, 85));
+        BotonAceptarIncorrecta4.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        BotonAceptarIncorrecta4.setForeground(new java.awt.Color(234, 234, 235));
         BotonAceptarIncorrecta4.setText("Aceptar");
-        BotonAceptarIncorrecta4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 185, 85), 1, true));
+        BotonAceptarIncorrecta4.setBorder(null);
+        BotonAceptarIncorrecta4.setMaximumSize(new java.awt.Dimension(126, 36));
+        BotonAceptarIncorrecta4.setMinimumSize(new java.awt.Dimension(126, 36));
         BotonAceptarIncorrecta4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonAceptarIncorrecta4ActionPerformed(evt);
@@ -242,8 +248,8 @@ public class EditarEvento extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel13)
                 .addGap(18, 18, 18)
-                .addComponent(BotonAceptarIncorrecta4)
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addComponent(BotonAceptarIncorrecta4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -318,10 +324,11 @@ public class EditarEvento extends javax.swing.JFrame {
         modificar_prioridad.setForeground(new java.awt.Color(234, 234, 235));
         modificar_prioridad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
 
-        cancelar.setBackground(new java.awt.Color(10, 135, 55));
+        cancelar.setBackground(new java.awt.Color(32, 34, 37));
         cancelar.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
-        cancelar.setForeground(new java.awt.Color(234, 234, 235));
+        cancelar.setForeground(new java.awt.Color(28, 185, 85));
         cancelar.setText("Cancelar");
+        cancelar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         cancelar.setFocusPainted(false);
         cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -333,6 +340,7 @@ public class EditarEvento extends javax.swing.JFrame {
         guardar.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         guardar.setForeground(new java.awt.Color(234, 234, 235));
         guardar.setText("Guardar");
+        guardar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         guardar.setFocusPainted(false);
         guardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -464,7 +472,7 @@ public class EditarEvento extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(modificar_prioridad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cancelar)
                     .addComponent(guardar))

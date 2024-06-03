@@ -31,15 +31,13 @@
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                   <Component id="jButton3" max="32767" attributes="0"/>
                   <Component id="textoPregunta" alignment="0" min="-2" pref="193" max="-2" attributes="0"/>
-                  <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="textoPregunta1" min="-2" pref="189" max="-2" attributes="0"/>
-                      <Component id="campoContras" alignment="0" max="32767" attributes="0"/>
-                      <Component id="nomUsuario" alignment="0" max="32767" attributes="0"/>
-                      <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="cancelar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      </Group>
+                  <Component id="textoPregunta1" alignment="0" min="-2" pref="189" max="-2" attributes="0"/>
+                  <Component id="campoContras" alignment="0" max="32767" attributes="0"/>
+                  <Component id="nomUsuario" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="cancelar" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
                   </Group>
                   <Component id="bienvenido" alignment="1" max="32767" attributes="0"/>
               </Group>
@@ -232,7 +230,16 @@
           <Color blue="eb" green="ea" red="ea" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Entrar"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="null"/>
+        </Property>
         <Property name="focusPainted" type="boolean" value="false"/>
+        <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[126, 36]"/>
+        </Property>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[126, 36]"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelarActionPerformed"/>
@@ -241,7 +248,7 @@
     <Component class="javax.swing.JButton" name="cancelar1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="37" green="87" red="a" type="rgb"/>
+          <Color blue="25" green="22" red="20" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Trebuchet MS" size="24" style="0"/>
@@ -250,6 +257,9 @@
           <Color blue="eb" green="ea" red="ea" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Cancelar"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="null"/>
+        </Property>
         <Property name="focusPainted" type="boolean" value="false"/>
       </Properties>
       <Events>

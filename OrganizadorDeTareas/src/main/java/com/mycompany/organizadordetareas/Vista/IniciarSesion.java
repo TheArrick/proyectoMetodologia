@@ -116,17 +116,21 @@ public class IniciarSesion extends javax.swing.JFrame {
         cancelar.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         cancelar.setForeground(new java.awt.Color(234, 234, 235));
         cancelar.setText("Entrar");
+        cancelar.setBorder(null);
         cancelar.setFocusPainted(false);
+        cancelar.setMaximumSize(new java.awt.Dimension(126, 36));
+        cancelar.setMinimumSize(new java.awt.Dimension(126, 36));
         cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelarActionPerformed(evt);
             }
         });
 
-        cancelar1.setBackground(new java.awt.Color(10, 135, 55));
+        cancelar1.setBackground(new java.awt.Color(32, 34, 37));
         cancelar1.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         cancelar1.setForeground(new java.awt.Color(234, 234, 235));
         cancelar1.setText("Cancelar");
+        cancelar1.setBorder(null);
         cancelar1.setFocusPainted(false);
         cancelar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,14 +147,13 @@ public class IniciarSesion extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(textoPregunta, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(textoPregunta1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(campoContras)
-                        .addComponent(nomUsuario)
-                        .addComponent(jLabel3)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(cancelar)
-                            .addGap(43, 43, 43)))
+                    .addComponent(textoPregunta1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(campoContras, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nomUsuario, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(43, 43, 43))
                     .addComponent(bienvenido, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(432, 432, 432))
             .addGroup(layout.createSequentialGroup()
@@ -181,7 +184,7 @@ public class IniciarSesion extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addGap(30, 30, 30)
-                .addComponent(cancelar)
+                .addComponent(cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bienvenido)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)

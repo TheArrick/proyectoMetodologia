@@ -36,6 +36,31 @@ public class Registrarse extends javax.swing.JFrame {
         preguntaSeguridad.setText(pregAleatoria);
         setLocationRelativeTo(null);
         getContentPane().setBackground(new Color(55, 57, 63));
+        
+        //LlenarCampos
+        llenarCampos.setSize(500,300 );
+        llenarCampos.getContentPane().setBackground(new Color(55, 57, 63));
+        llenarCampos.setLocationRelativeTo(null);
+        llenarCampos.setVisible(false);
+        // errorContra
+        errorContra.setSize(500,300 );
+        errorContra.getContentPane().setBackground(new Color(55, 57, 63));
+        errorContra.setLocationRelativeTo(null);
+        errorContra.setVisible(false);
+        
+        //errUsuari
+        errUsuari.setSize(500,300 );
+        errUsuari.getContentPane().setBackground(new Color(55, 57, 63));
+        errUsuari.setLocationRelativeTo(null);
+        errUsuari.setVisible(false);
+        
+        //errContr
+        errContr.setSize(500,300 );
+        errContr.getContentPane().setBackground(new Color(55, 57, 63));
+        errContr.setLocationRelativeTo(null);
+        errContr.setVisible(false);
+        
+        
     }
 
     /**
@@ -47,6 +72,22 @@ public class Registrarse extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        llenarCampos = new javax.swing.JDialog();
+        jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        errorContra = new javax.swing.JDialog();
+        jLabel2 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        errUsuari = new javax.swing.JDialog();
+        jLabel3 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        errContr = new javax.swing.JDialog();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
         text_usuario = new javax.swing.JTextField();
         usuarioLabel = new javax.swing.JLabel();
         contraLabel = new javax.swing.JLabel();
@@ -62,6 +103,214 @@ public class Registrarse extends javax.swing.JFrame {
         campoContra2 = new javax.swing.JPasswordField();
         cancelar = new javax.swing.JButton();
         cancelar1 = new javax.swing.JButton();
+
+        jLabel5.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setText("Complete los campos vacios, por favor.");
+        jLabel5.setToolTipText("");
+        jLabel5.setMaximumSize(new java.awt.Dimension(400, 300));
+        jLabel5.setName(""); // NOI18N
+
+        jButton1.setBackground(new java.awt.Color(32, 34, 37));
+        jButton1.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(234, 234, 235));
+        jButton1.setText("ACEPTAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout llenarCamposLayout = new javax.swing.GroupLayout(llenarCampos.getContentPane());
+        llenarCampos.getContentPane().setLayout(llenarCamposLayout);
+        llenarCamposLayout.setHorizontalGroup(
+            llenarCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(llenarCamposLayout.createSequentialGroup()
+                .addContainerGap(34, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, 453, Short.MAX_VALUE)
+                .addContainerGap(13, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, llenarCamposLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(186, 186, 186))
+        );
+        llenarCamposLayout.setVerticalGroup(
+            llenarCamposLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(llenarCamposLayout.createSequentialGroup()
+                .addContainerGap(81, Short.MAX_VALUE)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(71, 71, 71))
+        );
+
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Las contraseñas no coinciden");
+        jLabel2.setToolTipText("");
+        jLabel2.setMaximumSize(new java.awt.Dimension(400, 300));
+        jLabel2.setName(""); // NOI18N
+
+        jButton4.setBackground(new java.awt.Color(32, 34, 37));
+        jButton4.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(234, 234, 235));
+        jButton4.setText("ACEPTAR");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout errorContraLayout = new javax.swing.GroupLayout(errorContra.getContentPane());
+        errorContra.getContentPane().setLayout(errorContraLayout);
+        errorContraLayout.setHorizontalGroup(
+            errorContraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(errorContraLayout.createSequentialGroup()
+                .addContainerGap(89, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(89, Short.MAX_VALUE))
+            .addGroup(errorContraLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        errorContraLayout.setVerticalGroup(
+            errorContraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(errorContraLayout.createSequentialGroup()
+                .addContainerGap(95, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(73, 73, 73)
+                .addComponent(jButton4)
+                .addGap(67, 67, 67))
+        );
+
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("ingrese otro por favor.");
+        jLabel3.setToolTipText("");
+        jLabel3.setName(""); // NOI18N
+
+        jButton3.setBackground(new java.awt.Color(32, 34, 37));
+        jButton3.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(234, 234, 235));
+        jButton3.setText("ACEPTAR");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Usuario ya existente,");
+        jLabel8.setToolTipText("");
+        jLabel8.setName(""); // NOI18N
+
+        javax.swing.GroupLayout errUsuariLayout = new javax.swing.GroupLayout(errUsuari.getContentPane());
+        errUsuari.getContentPane().setLayout(errUsuariLayout);
+        errUsuariLayout.setHorizontalGroup(
+            errUsuariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, errUsuariLayout.createSequentialGroup()
+                .addContainerGap(89, Short.MAX_VALUE)
+                .addGroup(errUsuariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(90, Short.MAX_VALUE))
+            .addGroup(errUsuariLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        errUsuariLayout.setVerticalGroup(
+            errUsuariLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(errUsuariLayout.createSequentialGroup()
+                .addGap(91, 91, 91)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3)
+                .addGap(46, 46, 46)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(68, Short.MAX_VALUE))
+        );
+
+        jLabel9.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("La contraseña debe contener al menos ");
+        jLabel9.setToolTipText("");
+        jLabel9.setMaximumSize(new java.awt.Dimension(400, 300));
+        jLabel9.setName(""); // NOI18N
+
+        jLabel10.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("8 caracteres,incluyendo al menos");
+        jLabel10.setToolTipText("");
+        jLabel10.setMaximumSize(new java.awt.Dimension(400, 300));
+        jLabel10.setName(""); // NOI18N
+
+        jLabel11.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("una letra mayúscula, una minúscula,");
+        jLabel11.setToolTipText("");
+        jLabel11.setMaximumSize(new java.awt.Dimension(400, 300));
+        jLabel11.setName(""); // NOI18N
+
+        jLabel12.setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(234, 234, 235));
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("un número y un carácter especial.");
+        jLabel12.setToolTipText("");
+        jLabel12.setMaximumSize(new java.awt.Dimension(400, 300));
+        jLabel12.setName(""); // NOI18N
+
+        jButton5.setBackground(new java.awt.Color(32, 34, 37));
+        jButton5.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
+        jButton5.setForeground(new java.awt.Color(234, 234, 235));
+        jButton5.setText("ACEPTAR");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout errContrLayout = new javax.swing.GroupLayout(errContr.getContentPane());
+        errContr.getContentPane().setLayout(errContrLayout);
+        errContrLayout.setHorizontalGroup(
+            errContrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(errContrLayout.createSequentialGroup()
+                .addContainerGap(89, Short.MAX_VALUE)
+                .addGroup(errContrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(89, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, errContrLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        errContrLayout.setVerticalGroup(
+            errContrLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, errContrLayout.createSequentialGroup()
+                .addContainerGap(53, Short.MAX_VALUE)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(49, 49, 49)
+                .addComponent(jButton5)
+                .addContainerGap(60, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -124,6 +373,7 @@ public class Registrarse extends javax.swing.JFrame {
         cancelar.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         cancelar.setForeground(new java.awt.Color(234, 234, 235));
         cancelar.setText("Registrarse");
+        cancelar.setBorder(null);
         cancelar.setFocusPainted(false);
         cancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,10 +381,11 @@ public class Registrarse extends javax.swing.JFrame {
             }
         });
 
-        cancelar1.setBackground(new java.awt.Color(10, 135, 55));
+        cancelar1.setBackground(new java.awt.Color(32, 34, 37));
         cancelar1.setFont(new java.awt.Font("Trebuchet MS", 0, 24)); // NOI18N
         cancelar1.setForeground(new java.awt.Color(234, 234, 235));
         cancelar1.setText("Cancelar");
+        cancelar1.setBorder(null);
         cancelar1.setFocusPainted(false);
         cancelar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -167,12 +418,13 @@ public class Registrarse extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(errUsuario)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(156, 156, 156)
+                .addComponent(cancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(rellenar_label)
-                        .addGap(376, 376, 376))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(exito)
                         .addGap(390, 390, 390))
@@ -182,15 +434,13 @@ public class Registrarse extends javax.swing.JFrame {
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(preguntaSeguridad, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(campoResp, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(42, 42, 42))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(cancelar)
-                .addGap(389, 389, 389))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(156, 156, 156)
-                .addComponent(cancelar1)
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(42, 42, 42))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(rellenar_label)
+                        .addGap(376, 376, 376))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(398, 398, 398))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,7 +455,7 @@ public class Registrarse extends javax.swing.JFrame {
                     .addComponent(text_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(5, 5, 5)
                 .addComponent(campoResp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addComponent(contraLabel)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,14 +471,14 @@ public class Registrarse extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(errContra, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
-                .addComponent(cancelar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(rellenar_label)
                 .addGap(12, 12, 12)
                 .addComponent(exito, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
-                .addComponent(cancelar1)
-                .addGap(49, 49, 49))
+                .addComponent(cancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41))
         );
 
         pack();
@@ -271,20 +521,33 @@ public class Registrarse extends javax.swing.JFrame {
         rellenar_label.setVisible(false);
         boolean valida = validarContraSegura(tex_contra);
         if(tex_usuario.equals("") || tex_contra.equals("")||textResp.equals("")){
-            rellenar_label.setVisible(true);
+            llenarCampos.setVisible(true);
+            llenarCampos.setLocationRelativeTo(null);
+            
+
         }else{
-            if(!valida){             
-                errContra.setVisible(true);            
+            if(!valida){ 
+                //errContra
+                errContr.setVisible(true);
+                errContr.setLocationRelativeTo(null);
+                // poner en todos 
+                            
             }else{                
                 if(!tex_contra.equals(tex_recontra)){
-                    errContras.setVisible(true);
+                    //errContras  
+                    errorContra.setLocationRelativeTo(null);
+                    errorContra.setVisible(true);
                   
                 }else{
                    Usuario user = gestorUsuarios.buscarUsuarioNom(tex_usuario);
                    if (!gestorUsuarios.registrarUsuario(new Usuario(tex_usuario, tex_contra, textResp, ind))) {
-                        errUsuario.setVisible(true);
+                        //errUsuario
+                        errUsuari.setLocationRelativeTo(null);
+                        errUsuari.setVisible(true);
                     } else {
-                        exito.setVisible(true);
+                       // exito, registro completado 
+                       
+                       exito.setVisible(true);
                         v1.setVisible(true);
                         this.dispose();
                     }
@@ -297,6 +560,22 @@ public class Registrarse extends javax.swing.JFrame {
         v1.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_cancelar1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        llenarCampos.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        errUsuari.dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        errorContra.dispose();
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        errContr.dispose();
+    }//GEN-LAST:event_jButton5ActionPerformed
     public void setV1(VentanaInicio v1){
         this.v1 = v1;
     }
@@ -342,10 +621,26 @@ public class Registrarse extends javax.swing.JFrame {
     private javax.swing.JButton cancelar;
     private javax.swing.JButton cancelar1;
     private javax.swing.JLabel contraLabel;
+    private javax.swing.JDialog errContr;
     private javax.swing.JLabel errContra;
     private javax.swing.JLabel errContras;
+    private javax.swing.JDialog errUsuari;
     private javax.swing.JLabel errUsuario;
+    private javax.swing.JDialog errorContra;
     private javax.swing.JLabel exito;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JDialog llenarCampos;
     private javax.swing.JLabel preguntaSeguridad;
     private javax.swing.JLabel reescribrirLabel;
     private javax.swing.JLabel rellenar_label;
